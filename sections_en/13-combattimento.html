@@ -1,0 +1,232 @@
+<section id="combattimento" class="page-break">
+  <h1>12.0 Combat</h1>
+
+  <p class="lead">
+    Combat represents fire, advance, losses, suppression, assault, panic, morale endurance,
+    and the ability to keep cohesion under pressure.
+  </p>
+
+  <p>
+    This chapter is where almost all the previous systems converge: the artillery preparation
+    of chapter 9.0, any gas from chapter 10.0, the Morale and Fatigue framework of chapter 5.0,
+    the position on the map from chapter 4.0. An assault that looks simple on paper — "the
+    attacker gets more successes than the defender" — is in reality the result of every
+    decision made in the previous phases of the turn. The following procedure should therefore
+    be read not as an isolated event, but as the moment when the investment made in logistics,
+    artillery, and aviation pays off, or is lost.
+  </p>
+
+  <h2>12.1 Declaring an Attack</h2>
+
+  <table>
+    <tr>
+      <th>Action</th>
+      <th>Cost</th>
+      <th>Feasible if...</th>
+      <th>Procedure</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Attack / assault</td>
+      <td>0 LP base</td>
+      <td>
+        Order written; division not at Fatigue 5; division not at Morale 1; valid target;
+        reachable line.
+      </td>
+      <td>
+        Each division rolls 1d12 for every 1,000 men. Every result equal to or higher than
+        the current VT is a success.
+      </td>
+      <td>
+        Compare attacker's and defender's successes. Apply the results table.
+      </td>
+    </tr>
+  </table>
+
+  <h2>12.1A Simultaneous Fire Limit</h2>
+
+  <p>
+    Regardless of how many divisions are present or included in the order, at most 2 divisions
+    per side roll dice in the success comparison of 12.4 in a single turn, for the same line —
+    the same limit already set by defensive capacity (chap. 4.3). It represents the fact that,
+    beyond a certain number of men, it is not possible to bring useful, effective fire to bear
+    on the same stretch of front on the same day.
+  </p>
+
+  <ul>
+    <li>
+      If a player has more than 2 divisions eligible to intervene on the same line in the same
+      turn, he indicates in the orders which 2 fight; the others remain in place, do not roll
+      dice, and take no losses that turn.
+    </li>
+    <li>
+      Waiting divisions can be committed in a later turn, without having to repeat the move
+      into the sector.
+    </li>
+    <li>
+      The limit applies only to divisions. MG companies follow their own separate cap
+      (chap. 4.3: maximum 4 per line, unless stated otherwise by the scenario) and continue to
+      fire under 12.3 regardless of this limit.
+    </li>
+  </ul>
+
+  <h2>12.2 VT Modifiers</h2>
+
+  <table>
+    <tr>
+      <th>Condition</th>
+      <th>Effect</th>
+    </tr>
+    <tr><td>Division at Morale 5 in a prepared attack</td><td>VT improved by 1.</td></tr>
+    <tr><td>Division at Morale 2</td><td>VT worsened by 1 when attacking.</td></tr>
+    <tr><td>Division at Fatigue 4</td><td>VT worsened by 1 when attacking.</td></tr>
+    <tr><td>Attack without reconnaissance in a wooded/fortified sector</td><td>VT worsened by 1, if called for by the terrain.</td></tr>
+    <tr><td>Target line in gas Disorder</td><td>Defender's VT worsened by 1.</td></tr>
+  </table>
+
+  <h2>12.3 Supporting Fire</h2>
+
+  <p>
+    MG units that are not suppressed and are eligible may fire in support of the combat, both
+    when their own side is attacking and when it is defending. On defense, the fire happens
+    before the main combat, as automatic fire against the incoming assault. On attack, the
+    successes are simply added to the assault's total in the 12.4 comparison.
+  </p>
+
+  <ul>
+    <li>Every MG in the sector rolls 2d12 at 9+, both attacking and defending.</li>
+    <li>
+      Every MG supporting from an adjacent sector rolls 1d12 at 9+, both attacking and
+      defending — it is the same flanking fire, applied depending on which side receives it.
+    </li>
+    <li>A suppressed MG does not roll.</li>
+    <li>An MG on a contested line does not roll.</li>
+  </ul>
+
+  <h2>12.4 Resolving the Attack</h2>
+
+  <p>
+    This is the table where the value of all the preparation done in the previous phases is
+    concretely measured: every artillery success dedicated to the rolling barrage, every
+    machine gun suppressed in time, every point of Morale saved, weighs directly on the final
+    difference. A modest difference (1-2) is not wasted effort: it still inflicts losses, but
+    is not enough to shift the line. Only from a difference of 3 does the attack start to bite
+    into the ground, with the trench combat described in the next section.
+  </p>
+
+  <p>
+    Add up the attacker's and defender's successes. Calculate the difference in the attacker's
+    favor.
+  </p>
+
+  <table>
+    <tr>
+      <th>Difference in the attacker's favor</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>0 or less</td>
+      <td>Attack repulsed.</td>
+    </tr>
+    <tr>
+      <td>1-2</td>
+      <td>Mutual losses, no advance.</td>
+    </tr>
+    <tr>
+      <td>3-4</td>
+      <td>The attacker enters the line: trench combat.</td>
+    </tr>
+    <tr>
+      <td>5-6</td>
+      <td>Line nearly taken: trench combat with attacker advantage.</td>
+    </tr>
+    <tr>
+      <td>7+</td>
+      <td>Local breakthrough: the defender must retreat or suffer heavy losses.</td>
+    </tr>
+  </table>
+
+  <h2>12.5 Trench Combat</h2>
+
+  <p>
+    If the result allows the attacker to enter the line, trench combat is resolved.
+  </p>
+
+  <ul>
+    <li>The line's MGs do not fire.</li>
+    <li>The attacker rolls half of the remaining dice, rounded down.</li>
+    <li>The defender rolls all available dice.</li>
+    <li>The defender adds any automatic successes from fortification.</li>
+  </ul>
+
+  <table>
+    <tr>
+      <th>Outcome</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>Defender wins or ties</td>
+      <td>The line holds. The attacker stays outside the line.</td>
+    </tr>
+    <tr>
+      <td>Attacker wins by 1-2</td>
+      <td>The line becomes contested.</td>
+    </tr>
+    <tr>
+      <td>Attacker wins by 3 or more</td>
+      <td>The defender suffers a forced retreat.</td>
+    </tr>
+  </table>
+
+  <h2>12.6 Local, Sector, and Operational Breakthrough</h2>
+
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Condition</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Local breakthrough</td>
+      <td>Combat result with a difference of 7+ in the attacker's favor.</td>
+      <td>The defender must retreat or suffer heavy losses.</td>
+    </tr>
+    <tr>
+      <td>Sector breakthrough</td>
+      <td>A player controls all 3 lines of a sector that was previously enemy-held.</td>
+      <td>The sector is fully conquered.</td>
+    </tr>
+    <tr>
+      <td>Operational breakthrough</td>
+      <td>
+        A player fully or operationally controls an enemy sector and, in a later turn, moves
+        or attacks with at least one division into a deeper connected enemy sector.
+      </td>
+      <td>May award VP or deny scenario defensive bonuses.</td>
+    </tr>
+  </table>
+
+  <h2>12.7 Losses</h2>
+
+  <p>
+    Losses are calculated based on the scenario's intensity.
+  </p>
+
+  <table>
+    <tr>
+      <th>Intensity</th>
+      <th>Rule</th>
+    </tr>
+    <tr><td>Low</td><td>Every 4 enemy successes cause 1,000 losses.</td></tr>
+    <tr><td>Medium</td><td>Every 3 enemy successes cause 1,000 losses.</td></tr>
+    <tr><td>High</td><td>Every 2 enemy successes cause 1,000 losses.</td></tr>
+  </table>
+
+  <div class="box example">
+    <strong>Example:</strong>
+    G02 gets 7 successes. F02 gets 4 successes and an MG gets 1 success.
+    Defender total 5. German difference +2: mutual losses, no advance.
+    At High intensity, F02 suffers 3,000 losses from the 7 German successes;
+    G02 suffers 2,000 losses from the 5 French successes.
+  </div>
+</section>

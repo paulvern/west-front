@@ -1,0 +1,216 @@
+<section id="sequenza" class="page-break">
+  <h1>3.0 Sequenza del turno</h1>
+
+  <p class="lead">
+    Ogni turno rappresenta un giorno di operazioni e si svolge attraverso undici fasi, sempre
+    nello stesso ordine. Le regole dei capitoli precedenti e successivi indicano costantemente
+    “nella Fase X” o “durante la Fase Y”: questo capitolo è il punto di riferimento che definisce
+    quali fasi esistono, in che ordine si susseguono e che cosa succede esattamente in ciascuna.
+  </p>
+
+  <p>
+    Rispettare l’ordine delle fasi non è un dettaglio burocratico: è ciò che rende il sistema
+    prevedibile e verificabile da entrambi i giocatori. Un’azione dichiarata nella fase sbagliata,
+    o pagata dopo che la fase corretta è già passata, non è valida — coerentemente con la
+    Regola d’oro del capitolo 1.0. Nei casi controversi, la domanda “in quale fase siamo?” risolve
+    quasi sempre il dubbio.
+  </p>
+
+  <h2>3.1 Struttura generale del turno</h2>
+
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Fase</th>
+      <th>Cosa succede in sintesi</th>
+    </tr>
+    <tr><td>1</td><td>Meteo e Vento</td><td>Si determinano le condizioni atmosferiche del turno.</td></tr>
+    <tr><td>2</td><td>Logistica</td><td>Si ricevono, conservano e spendono i Punti Logistica.</td></tr>
+    <tr><td>3</td><td>Ordini</td><td>Si scrivono gli ordini in segreto, si rivelano insieme, si determina l’Iniziativa Operativa.</td></tr>
+    <tr><td>4</td><td>Aviazione</td><td>Si risolvono le missioni aeree: caccia, ricognizione, osservazione, interdizione.</td></tr>
+    <tr><td>5</td><td>Artiglieria e Gas</td><td>Si risolvono bombardamenti, controbatteria, tiro di disturbo e missioni gas.</td></tr>
+    <tr><td>6</td><td>Movimento</td><td>Le divisioni si spostano: movimento interno, operativo, ingresso riserve.</td></tr>
+    <tr><td>7</td><td>Combattimento</td><td>Si risolvono gli assalti dichiarati: fuoco difensivo, attacco, combattimento in trincea.</td></tr>
+    <tr><td>8</td><td>Ritirate e avanzate</td><td>Ritirate forzate, avanzate dopo combattimento, rotta.</td></tr>
+    <tr><td>9</td><td>Isolamento e rifornimento</td><td>Si verifica quali divisioni sono rifornite e quali isolate; eventuali test di resa.</td></tr>
+    <tr><td>10</td><td>Recupero</td><td>Le divisioni idonee rimuovono Fatica.</td></tr>
+    <tr><td>11</td><td>Fine turno</td><td>Controllo vittoria e annotazione dello stato per il turno successivo.</td></tr>
+  </table>
+
+  <p>
+    Alcune azioni, come si è visto nel capitolo 2.0, attraversano più di una fase: l’Entrata
+    riserva si paga in Logistica, si ordina in Ordini e si completa in Movimento; il gas si
+    verifica nella Fase Meteo e Vento, si paga in Logistica, si ordina in Ordini e si risolve
+    in Artiglieria e Gas. Questo non è incoerenza: significa semplicemente che l’azione ha un
+    “momento di impegno” (quando il giocatore si vincola a farla) diverso dal suo “momento di
+    risoluzione” (quando l’effetto si applica sulla mappa).
+  </p>
+
+  <h2>3.2 Fase Meteo e Vento</h2>
+
+  <p>
+    Per prima cosa si stabiliscono le condizioni del turno. Il Meteo influenza soprattutto
+    l’aviazione (vedi capitolo 11.0), mentre il Vento influenza soprattutto le missioni gas
+    (vedi capitolo 10.0). Salvo diversa indicazione dello scenario in corso, entrambi si
+    determinano tirando 1d12 secondo le tabelle seguenti, prima che i giocatori sappiano
+    quanti PL riceveranno o cosa scriveranno negli ordini: in questo modo nessuno può decidere
+    un piano d’attacco già sapendo se il cielo sarà sereno o se il vento sarà favorevole al gas.
+  </p>
+
+  <table>
+    <tr><th>1d12 (Meteo)</th><th>Risultato</th></tr>
+    <tr><td>1-2</td><td>Nebbia o foschia</td></tr>
+    <tr><td>3-6</td><td>Pioggia o fango</td></tr>
+    <tr><td>7-12</td><td>Sereno</td></tr>
+  </table>
+
+  <table>
+    <tr><th>1d12 (Vento)</th><th>Risultato</th></tr>
+    <tr><td>1-6</td><td>Favorevole</td></tr>
+    <tr><td>7-9</td><td>Variabile</td></tr>
+    <tr><td>10-11</td><td>Forte</td></tr>
+    <tr><td>12</td><td>Contrario</td></tr>
+  </table>
+
+  <div class="box rule">
+    <strong>Nota:</strong>
+    il Vento è rilevante solo nei turni in cui almeno un giocatore intende dichiarare una missione
+    Gas; può comunque essere annotato ogni turno per comodità, così da non doverlo tirare
+    all’ultimo momento se un piano di gas viene deciso a sorpresa. Uno scenario può sostituire
+    queste tabelle con condizioni fisse o con una propria tabella stagionale, come indicato
+    nelle sue regole speciali.
+  </div>
+
+  <h2>3.3 Fase Logistica</h2>
+
+  <p>
+    Ogni giocatore applica la procedura del capitolo 6.1: riceve i PL del turno, li somma a
+    quelli conservati, verifica il massimo accumulabile e paga tutte le azioni che intende
+    effettuare durante il turno e che hanno un costo in PL — bombardamenti, gas, missioni aeree,
+    movimento operativo, ingresso di riserve, rimpiazzi, fortificazioni, recupero extra. È qui
+    che si prende, in pratica, la decisione più importante del turno: come distribuire una
+    risorsa limitata fra tutte le operazioni desiderate. I PL non spesi restano disponibili nel
+    turno successivo, entro il massimo previsto dallo scenario.
+  </p>
+
+  <h2>3.4 Fase Ordini</h2>
+
+  <p>
+    Entrambi i giocatori scrivono in segreto tutti gli ordini del turno, secondo le indicazioni
+    del capitolo 7.1 (movimento, attacco, ritirata volontaria, artiglieria, gas, aviazione,
+    riserva). Un’azione a costo 0 PL, come un attacco base, richiede comunque di essere scritta
+    qui: nessuna divisione compie di sua iniziativa un’azione non ordinata. Terminata la
+    scrittura, gli ordini vengono rivelati simultaneamente. Subito dopo la rivelazione si
+    determina l’Iniziativa Operativa del turno, secondo la procedura del capitolo 7.2: entrambi
+    i giocatori tirano 1d12, applicano i modificatori e il risultato più alto vince. L’Iniziativa
+    non modifica gli ordini già scritti: decide solo l’ordine di risoluzione quando due eventi
+    del turno sono in conflitto, come illustrato nei capitoli 7.3, 7.4 e 8.3.
+  </p>
+
+  <h2>3.5 Fase Aviazione</h2>
+
+  <p>
+    Si risolvono tutte le missioni aeree, seguendo la procedura del capitolo 11.2: prima i
+    duelli e i modificatori di caccia (scorta, intercettazione, superiorità locale), poi
+    ricognizione, osservazione artiglieria e interdizione. L’ordine interno non è casuale:
+    una scorta o un’intercettazione riuscita deve essere nota prima di risolvere la missione
+    che protegge o disturba, ed è per questo che si risolve prima. L’osservazione artiglieria
+    che ha successo in questa fase resta “in attesa” e si applica come modificatore quando la
+    missione d’artiglieria collegata verrà risolta nella fase seguente.
+  </p>
+
+  <h2>3.6 Fase Artiglieria e Gas</h2>
+
+  <p>
+    Si risolvono in sequenza le missioni d’artiglieria dichiarate — bombardamento preparatorio,
+    sbarramento mobile, controbatteria, tiro di disturbo — e le missioni gas, applicando i
+    bonus di osservazione ottenuti nella fase precedente e gli effetti del vento determinato in
+    apertura di turno (capitoli 9.0 e 10.0). Gli effetti immediati, come la soppressione di
+    mitragliatrici o la riduzione di una fortificazione, si applicano subito e restano validi
+    per il resto del turno; i bonus destinati a un assalto (come il successo aggiuntivo dello
+    sbarramento mobile) restano assegnati e si useranno nella Fase Combattimento.
+  </p>
+
+  <h2>3.7 Fase Movimento</h2>
+
+  <p>
+    Le divisioni che hanno ordine di movimento interno o operativo si spostano, secondo il
+    capitolo 8.0; le riserve pagate e ordinate entrano in mappa in Linea 3 del settore
+    d’ingresso, secondo il capitolo 6.3. Un’eventuale interdizione aerea o tiro di disturbo
+    riusciti nella fase precedente possono già aver reso più costoso o più rischioso questo
+    movimento. Le divisioni che hanno mosso in questa fase restano soggette ai limiti del
+    capitolo 8.2: in particolare, una divisione entrata dalla riserva o che ha effettuato
+    movimento operativo con Fatica 3 o più non potrà comunque partecipare a un assalto nello
+    stesso turno.
+  </p>
+
+  <h2>3.8 Fase Combattimento</h2>
+
+  <p>
+    Si risolvono tutti gli assalti dichiarati nella Fase Ordini, uno alla volta o nell’ordine
+    concordato dai giocatori quando non ci sono dipendenze dirette fra loro. Per ciascun
+    assalto si applica la procedura del capitolo 12.0: prima il fuoco difensivo delle
+    mitragliatrici non soppresse, poi il confronto dei successi tra attaccante e difensore,
+    poi, se il risultato lo consente, il combattimento in trincea. È in questa fase che si
+    concretizzano gli effetti preparati nelle fasi precedenti: un bombardamento riuscito, una
+    missione gas che ha indebolito la linea o uno sbarramento mobile che aggiunge un successo
+    fanno tutti la differenza proprio qui.
+  </p>
+
+  <h2>3.9 Fase Ritirate e avanzate</h2>
+
+  <p>
+    Le divisioni che devono ritirarsi forzatamente per un risultato di combattimento, secondo
+    il capitolo 13.2, lo fanno ora seguendo le vie di ritirata del capitolo 13.3; le divisioni
+    vittoriose che ne hanno diritto avanzano nella linea conquistata, come descritto nel
+    capitolo 12.7 e nella tabella delle azioni di movimento. Le ritirate volontarie ordinate
+    nella Fase Ordini, se non già risolte per effetto dell’Iniziativa Operativa (capitolo 7.4),
+    si completano qui.
+  </p>
+
+  <h2>3.10 Fase Isolamento e rifornimento</h2>
+
+  <p>
+    Con le posizioni del turno ormai definitive, si verifica per ogni divisione sulla mappa se
+    esiste un percorso di settori amici fino a una retrovia valida, secondo il capitolo 14.4.
+    Le divisioni che risultano isolate subiscono gli effetti previsti (niente rimpiazzi, niente
+    supporto d’artiglieria, -1 Morale e +1 Fatica) e, se già a Morale 1 o Fatica 5, effettuano
+    in questa fase il test di resa del capitolo 13.7.
+  </p>
+
+  <h2>3.11 Fase Recupero</h2>
+
+  <p>
+    Le divisioni che soddisfano le condizioni del capitolo 14.5 — non in Linea 1, non contese,
+    non isolate, non bombardate, non impegnate in un attacco questo turno — rimuovono 1 Fatica
+    gratuitamente. Spendendo 1 PL aggiuntivo, già stanziato durante la Fase Logistica, una
+    divisione può rimuovere 1 Fatica in più. Questa è l’unica fase in cui lo stato delle unità
+    migliora invece di peggiorare: rappresenta il riposo, la sostituzione dei turni di guardia
+    e il riordino dei reparti lontano dal contatto diretto.
+  </p>
+
+  <h2>3.12 Fine turno</h2>
+
+  <p>
+    Si esegue il controllo vittoria previsto dallo scenario in corso (capitolo 16.0 per Verdun,
+    capitolo 18.0 per Isonzo), si annotano perdite cumulative, divisioni arrese o in rotta e ogni
+    altro dato richiesto dalle condizioni di vittoria. Il turno successivo inizia di nuovo dalla
+    Fase Meteo e Vento.
+  </p>
+
+  <div class="box example">
+    <strong>Esempio riassuntivo:</strong>
+    è il Turno 1 dello scenario Verdun. Si tira il Meteo (Sereno) e il Vento (Favorevole).
+    In Logistica, il tedesco riceve i PL del turno più i 6 PL speciali di preparazione e li
+    destina a bombardamento, osservazione e scorta. In Ordini, entrambi scrivono i piani e li
+    rivelano; il tedesco ha automaticamente l’Iniziativa nel Turno 1 per regola speciale dello
+    scenario. In Aviazione si risolve la scorta e poi l’osservazione. In Artiglieria il
+    bombardamento tedesco, assistito dall’osservazione, colpisce a 9+ invece che a 10+ e
+    sopprime alcune mitragliatrici francesi. In Movimento le divisioni tedesche si portano in
+    posizione d’assalto. In Combattimento si risolve l’attacco su C2 Beaumont L1. In Ritirate
+    e avanzate il francese, se sconfitto, arretra o il tedesco avanza. In Isolamento e
+    rifornimento si verificano le divisioni coinvolte. In Recupero le unità non impegnate
+    rimuovono Fatica. In Fine turno si calcolano gli eventuali PV di ritmo previsti dallo
+    scenario.
+  </div>
+</section>

@@ -1,0 +1,244 @@
+<section id="divisioni">
+  <h1>5.0 Divisions, Morale, and Fatigue</h1>
+
+  <p class="lead">
+    The division is the main unit of the game. It represents not just armed men, but also
+    officers, communications, cohesion, services, the ability to absorb losses, and the will
+    to stay in the line.
+  </p>
+
+  <p>
+    For this reason a division is never described by a single number. Men measure its raw
+    firepower; Experience and VT measure the quality of its training and officers; Morale
+    measures its will to keep fighting; Fatigue measures the physical and organizational wear
+    it has accumulated. Two divisions with the same number of men can behave very differently
+    in battle: a Veteran with high Morale and low Fatigue hits more often and holds up better
+    under pressure than a numerically identical Recruit division already worn down by days of
+    combat. The following sections define each of these values and how they interact with one
+    another.
+  </p>
+
+  <h2>5.1 Division Fields</h2>
+
+  <table>
+    <tr>
+      <th>Field</th>
+      <th>Use</th>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>Permanent identifier. Does not change even if the division is reduced or reconstituted.</td>
+    </tr>
+    <tr>
+      <td>Men</td>
+      <td>Every 1,000 men provide 1d12 in combat. Fractions below 1,000 give no dice.</td>
+    </tr>
+    <tr>
+      <td>Experience</td>
+      <td>Determines the division's base VT.</td>
+    </tr>
+    <tr>
+      <td>VT</td>
+      <td>Minimum result on d12 needed for a success.</td>
+    </tr>
+    <tr>
+      <td>Morale</td>
+      <td>Value from 1 to 5. Affects morale tests, routs, and surrender.</td>
+    </tr>
+    <tr>
+      <td>Fatigue</td>
+      <td>Value from 0 to 5. Represents wear, disorder, tiredness, and attrition.</td>
+    </tr>
+    <tr>
+      <td>Position</td>
+      <td>Sector and line occupied.</td>
+    </tr>
+  </table>
+
+  <h2>5.2 Men and Dice</h2>
+
+  <p>
+    Every 1,000 men provide <strong>1d12</strong> in combat. A division with 12,300 men rolls
+    12d12. A division with 5,900 men rolls 5d12.
+  </p>
+
+  <div class="box example">
+    <strong>Example:</strong>
+    G02 has 12,000 men and is Veteran, VT 8+. In combat it rolls 12d12.
+    Every result of 8 or higher is a success.
+  </div>
+
+  <h2>5.3 Experience and VT</h2>
+
+  <table>
+    <tr>
+      <th>Experience</th>
+      <th>VT</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>Guard</td>
+      <td>7+</td>
+      <td>Elite. Rare, costly to reconstitute, and very effective.</td>
+    </tr>
+    <tr>
+      <td>Veteran</td>
+      <td>8+</td>
+      <td>Experienced. Holds up better under pressure and attacks more effectively.</td>
+    </tr>
+    <tr>
+      <td>Regular</td>
+      <td>9+</td>
+      <td>Trained. Average quality for operational divisions.</td>
+    </tr>
+    <tr>
+      <td>Recruit</td>
+      <td>10+</td>
+      <td>Inexperienced. Less effective, more vulnerable to fatigue and low morale.</td>
+    </tr>
+    <tr>
+      <td>Militia</td>
+      <td>11+</td>
+      <td>Low quality or poor cohesion.</td>
+    </tr>
+  </table>
+
+  <p>
+    It is worth noting right away how Experience and VT combine with Morale and Fatigue to
+    determine combat effectiveness: VT sets how hard it is to score a single success, while
+    Morale and Fatigue shift it by 1 point one way or the other depending on circumstances. A
+    Veteran division (VT 8+) with low Morale can therefore end up hitting like a Regular
+    division, while a Regular division (VT 9+) with excellent Morale in a prepared attack can
+    temporarily hit like a Veteran. These two values, described in the next two sections, are
+    what makes the same division more or less effective from one turn to the next, regardless
+    of its baseline training.
+  </p>
+
+  <h2>5.4 Morale</h2>
+
+  <table>
+    <tr>
+      <th>Morale</th>
+      <th>State</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Excellent</td>
+      <td>May improve VT by 1 in a prepared attack.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Good</td>
+      <td>No effect.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Unstable</td>
+      <td>No immediate effect.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Low</td>
+      <td>VT worsened by 1 when attacking.</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Broken</td>
+      <td>Cannot attack. Risks routing or surrendering under further pressure.</td>
+    </tr>
+  </table>
+
+  <p>
+    Morale, then, is not just a bar to be drained: above value 3 it can even give an
+    advantage, while below value 3 it starts to penalize the attack, up to making the division
+    unable to attack at Morale 1. It is the value that most directly distinguishes a division
+    still fit to fight from one at risk of falling apart at the next shock.
+  </p>
+
+  <h2>5.5 Fatigue</h2>
+
+  <table>
+    <tr>
+      <th>Fatigue</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>0-1</td>
+      <td>No effect.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Morale recovery becomes harder, if the scenario provides for it.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Cannot move and attack in the same turn.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>VT worsened by 1 when attacking.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Exhausted: cannot attack and must be withdrawn as soon as possible.</td>
+    </tr>
+  </table>
+
+  <h2>5.6 Morale Test</h2>
+
+  <p>
+    While Morale and Fatigue are values that change slowly, usually by 1 point at a time
+    following a specific event, the morale test is the moment when these values are put to a
+    more direct test. It does not measure firepower: it measures whether a division, hit hard,
+    manages to stay cohesive. Good Morale does not guarantee success, but makes it more likely;
+    a division already under strain risks entering a spiral in which every failure adds
+    Fatigue, which in turn makes the next failure more likely.
+  </p>
+
+  <p>
+    When a rule calls for a morale test, roll:
+  </p>
+
+  <p><strong>1d12 + Morale</strong></p>
+
+  <table>
+    <tr>
+      <th>Total</th>
+      <th>Outcome</th>
+    </tr>
+    <tr>
+      <td>5 or less</td>
+      <td>Serious failure: the division loses 1 Morale and gains +1 Fatigue.</td>
+    </tr>
+    <tr>
+      <td>6-8</td>
+      <td>Failure: the division gains +1 Fatigue.</td>
+    </tr>
+    <tr>
+      <td>9-12</td>
+      <td>Success: no effect.</td>
+    </tr>
+    <tr>
+      <td>13+</td>
+      <td>Full success: no effect; if on defense, also ignores the turn's first +1 Fatigue.</td>
+    </tr>
+  </table>
+
+  <h2>5.7 When to Test Morale</h2>
+
+  <ul>
+    <li>When a division suffers at least 2,000 losses in the same combat.</li>
+    <li>When a division is hit by gas and the effect requires it.</li>
+    <li>When a division loses a trench combat.</li>
+    <li>When a division becomes isolated.</li>
+    <li>When a division at Morale 1 would lose further Morale.</li>
+    <li>When a scenario rule requires it.</li>
+  </ul>
+
+  <div class="box example">
+    <strong>Example:</strong>
+    F02 has Morale 4 and suffers 2,000 losses. It rolls 1d12 and gets 5.
+    Total 9: success. It suffers no further morale effects.
+  </div>
+</section>

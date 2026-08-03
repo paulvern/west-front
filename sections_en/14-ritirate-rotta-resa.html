@@ -1,0 +1,295 @@
+<section id="ritirate" class="page-break">
+  <h1>13.0 Losses, Retreats, Rout, and Surrender</h1>
+
+  <p class="lead">
+    A defeated division is not automatically eliminated. It first tries to retreat. If it
+    cannot retreat, or if its morale and cohesion collapse, it may rout or surrender.
+  </p>
+
+  <p>
+    This chapter describes the less glorious but more important part of the system: what
+    happens to a division after a defeat. A repulsed attack or a lost trench combat does not
+    simply make units vanish; it triggers a chain of decisions and checks — retreat, where, at
+    what cost, or hold in place at the risk of surrender — which chapter 12.0 deliberately
+    leaves to this section so as not to overload the resolution of combat itself. It is useful
+    to read this chapter together with 12.0: every combat result refers back here for its
+    long-term operational consequences.
+  </p>
+
+  <h2>13.1 Voluntary Retreat</h2>
+
+  <p>
+    A voluntary retreat must be written in the orders. It is used to save a division before it
+    is worn down, encircled, or destroyed.
+  </p>
+
+  <p>
+    Retreating by choice, before the situation collapses, is often the hardest decision for a
+    player to make: it means giving up ground the enemy has not yet taken by force. The system
+    still rewards this prudent choice by making it cheap (0 or 1 LP) compared to the far higher
+    cost, in Morale and Fatigue, of a forced retreat suffered after a defeat. A shrewd commander
+    will use a voluntary retreat to save an already tired division before it is exposed to an
+    attack it could hardly withstand.
+  </p>
+
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Cost</th>
+      <th>Conditions</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Fall back one line within the same sector</td>
+      <td>0 LP</td>
+      <td>Division not isolated, not contested, valid route.</td>
+      <td>The division falls back one line.</td>
+    </tr>
+    <tr>
+      <td>Retreat into an adjacent friendly sector</td>
+      <td>1 LP</td>
+      <td>Adjacent friendly sector, capacity available, valid route.</td>
+      <td>The division enters the friendly sector, normally in Line 3.</td>
+    </tr>
+  </table>
+
+  <ul>
+    <li>A division that retreats voluntarily cannot attack the same turn.</li>
+    <li>If it retreats from Line 1 or from a bombarded sector the same turn, it gains +1 Fatigue.</li>
+    <li>If the enemy attacks the same line, Operational Initiative decides whether the retreat happens first.</li>
+  </ul>
+
+  <h2>13.2 Forced Retreat</h2>
+
+  <p>
+    A forced retreat is imposed by a combat, morale, or rout result.
+  </p>
+
+  <p>
+    Unlike a voluntary retreat, this is never a choice: it is the direct consequence of an
+    event that has already happened on the field. A division does not decide to retreat
+    forcibly; it suffers the retreat as an automatic effect of one of the results listed below,
+    and pays a higher price in Fatigue and Morale than a voluntary retreat, as shown in table
+    13.4.
+  </p>
+
+  <p>A division must retreat forcibly if:</p>
+
+  <ul>
+    <li>it loses a trench combat by 3 or more successes;</li>
+    <li>it suffers a local breakthrough;</li>
+    <li>it seriously fails a morale test;</li>
+    <li>it is at Morale 1 and would lose further Morale;</li>
+    <li>it is at Fatigue 5 and loses a combat.</li>
+  </ul>
+
+  <h2>13.3 Retreat Routes</h2>
+
+  <p>
+    A retreating division, whether voluntarily or forcibly, always follows the same pattern: it
+    first tries to fall back within its own sector, then toward an adjacent friendly sector,
+    and only as a last resort risks a rout. This hierarchy reflects the defensive logic of the
+    three lines from chapter 4.0: Line 3 also exists to give a repulsed division somewhere to
+    reorganize without having to immediately abandon the sector.
+  </p>
+
+  <table>
+    <tr>
+      <th>Current position</th>
+      <th>First choice</th>
+      <th>Second choice</th>
+      <th>Third choice</th>
+    </tr>
+    <tr>
+      <td>Line 1</td>
+      <td>Line 2, same sector</td>
+      <td>Line 3, same sector</td>
+      <td>Adjacent friendly sector</td>
+    </tr>
+    <tr>
+      <td>Line 2</td>
+      <td>Line 3, same sector</td>
+      <td>Adjacent friendly sector</td>
+      <td>Rout</td>
+    </tr>
+    <tr>
+      <td>Line 3</td>
+      <td>Adjacent friendly sector</td>
+      <td>Sector toward the rear</td>
+      <td>Rout</td>
+    </tr>
+    <tr>
+      <td>Contested line</td>
+      <td>Free friendly line in the same sector</td>
+      <td>Adjacent friendly sector</td>
+      <td>Rout or surrender</td>
+    </tr>
+  </table>
+
+  <p>
+    A route is valid if it is not occupied exclusively by the enemy, does not exceed capacity,
+    does not cross an enemy sector, and, if possible, moves closer to the rear.
+  </p>
+
+  <h2>13.4 Effects of Retreat</h2>
+
+  <p>
+    The table below sums up why it is almost always better to retreat voluntarily rather than
+    wait for a forced retreat: the latter always involves a loss of Morale as well as Fatigue,
+    and aggravating circumstances (bombarded sector, difficult route) stack instead of
+    replacing one another.
+  </p>
+
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Ordered voluntary retreat</td>
+      <td>+1 Fatigue if from Line 1 or under bombardment.</td>
+    </tr>
+    <tr>
+      <td>Forced retreat</td>
+      <td>+1 Fatigue and -1 Morale.</td>
+    </tr>
+    <tr>
+      <td>Through a bombarded or interdicted sector</td>
+      <td>An additional +1 Fatigue.</td>
+    </tr>
+    <tr>
+      <td>Difficult but possible retreat</td>
+      <td>Loses 1,000 men, then retreats.</td>
+    </tr>
+    <tr>
+      <td>Impossible retreat</td>
+      <td>Take a surrender test.</td>
+    </tr>
+  </table>
+
+  <h2>13.5 Rout</h2>
+
+  <p>
+    A rout represents a chaotic retreat and the temporary loss of operational control.
+  </p>
+
+  <p>
+    A routed division is no longer a reliable tool in the player's hands: for several turns it
+    cannot be used offensively or reconstituted, and it will still take up space and capacity
+    in the rear. It is the state in the system closest to what really happened when a unit lost
+    cohesion under the pressure of fire: the problem was no longer winning the fight, but
+    simply bringing the men back under functioning command.
+  </p>
+
+  <ul>
+    <li>The division falls back toward the nearest rear area.</li>
+    <li>It loses 1,000 men.</li>
+    <li>It gains +2 Fatigue.</li>
+    <li>It loses 1 Morale, minimum 1.</li>
+    <li>It cannot attack.</li>
+    <li>It cannot receive offensive orders until it recovers.</li>
+    <li>It cannot receive replacements while routed.</li>
+  </ul>
+
+  <h2>13.6 When to Test for Surrender</h2>
+
+  <p>
+    The surrender test is the last resort: it applies only when retreating is no longer an
+    available option, or when isolation and attrition have already pushed a division to the
+    limits described in chapter 5.0. Precisely listing the cases that trigger it, as the list
+    below does, prevents the test from being called for arbitrarily: if none of these
+    conditions is met, the division does not test for surrender, no matter how desperate its
+    situation may look.
+  </p>
+
+  <p>
+    A division must take a surrender test if:
+  </p>
+
+  <ul>
+    <li>it must retreat but has no valid route;</li>
+    <li>it is isolated and at Morale 1;</li>
+    <li>it is isolated and at Fatigue 5;</li>
+    <li>it is on a contested line, loses the combat, and cannot fall back;</li>
+    <li>it has fewer than 3,000 men and suffers a forced retreat;</li>
+    <li>it is hit by gas, loses Morale, and has no way out;</li>
+    <li>it is in a surrounded fort and fails the morale test.</li>
+  </ul>
+
+  <h2>13.7 Surrender Test</h2>
+
+  <p>
+    The surrender test formula deliberately mirrors that of the morale test in chapter 5.6, but
+    subtracts Fatigue instead of ignoring it: at this critical moment, physical wear counts as
+    much as the will to fight. The modifiers in the table below reflect the same circumstances
+    already seen elsewhere in the manual — Experience, isolation, fortification, gas, losses —
+    all applied together at the moment they matter most.
+  </p>
+
+  <p>
+    Roll:
+  </p>
+
+  <p><strong>1d12 + Morale - Fatigue</strong></p>
+
+  <table>
+    <tr>
+      <th>Condition</th>
+      <th>Modifier</th>
+    </tr>
+    <tr><td>Guard or Veteran</td><td>+1</td></tr>
+    <tr><td>Recruit or Militia</td><td>-1</td></tr>
+    <tr><td>Isolated</td><td>-2</td></tr>
+    <tr><td>No retreat route</td><td>-2</td></tr>
+    <tr><td>In a fort or Fortification level 4</td><td>+1</td></tr>
+    <tr><td>Hit by gas this turn</td><td>-1</td></tr>
+    <tr><td>Suffered 3,000 or more losses this turn</td><td>-1</td></tr>
+  </table>
+
+  <table>
+    <tr>
+      <th>Total</th>
+      <th>Outcome</th>
+    </tr>
+    <tr>
+      <td>8+</td>
+      <td>Holds out: stays in place at Morale 1 and Fatigue 5.</td>
+    </tr>
+    <tr>
+      <td>5-7</td>
+      <td>Rout: loses 1,000 men and attempts a chaotic retreat.</td>
+    </tr>
+    <tr>
+      <td>2-4</td>
+      <td>Partial surrender: loses 2,000 men, falls back if possible, otherwise is removed.</td>
+    </tr>
+    <tr>
+      <td>1 or less</td>
+      <td>Full surrender: division removed from the game.</td>
+    </tr>
+  </table>
+
+  <h2>13.8 Effects of Surrender</h2>
+
+  <p>
+    Surrender, unlike a rout, is a permanent state: it is not a division that will
+    reorganize in later turns, but a permanent loss for the current scenario. The consequences
+    listed below therefore apply for the rest of the game, not just for the turn in which the
+    surrender happens.
+  </p>
+
+  <ul>
+    <li>A division removed by surrender cannot receive replacements for the rest of the scenario.</li>
+    <li>MGs on the line are captured or eliminated.</li>
+    <li>The line passes to the winner if no enemy units remain.</li>
+    <li>The scenario may award VP for surrendered divisions.</li>
+    <li>A surrender in a fort may award additional VP.</li>
+  </ul>
+
+  <div class="box example">
+    <strong>Example:</strong>
+    F02 is isolated, at Morale 1 and Fatigue 5. It must retreat but has no valid route.
+    It rolls for surrender: 1d12 +1 -5 -2 isolation -2 no route. Even with a good roll,
+    it risks a rout or full surrender.
+  </div>
+</section>

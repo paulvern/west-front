@@ -1,0 +1,220 @@
+<section id="settori" class="page-break">
+  <h1>4.0 Settori, linee e controllo</h1>
+
+  <p class="lead">
+    Ogni settore è un’area operativa astratta. Non rappresenta una distanza fissa, ma un insieme di posizioni,
+    trincee, villaggi, alture, boschi, strade e opere difensive. Ogni settore contiene tre linee interne:
+    Linea 1, Linea 2 e Linea 3.
+  </p>
+
+  <p>
+    Questa astrazione è deliberata. Rappresentare ogni singola trincea, camminamento o nido di
+    mitragliatrice avrebbe reso il gioco ingestibile senza aggiungere decisioni interessanti:
+    ciò che conta operativamente non è il metro esatto di terreno, ma la profondità della
+    difesa. Un settore con tre linee piene, fortificate e collegate alla retrovia è molto più
+    difficile da conquistare di uno stesso settore con una sola linea presidiata, anche se sulla
+    mappa occupano lo stesso spazio. Pensare in termini di settori e linee, invece che di
+    coordinate precise, è anche più fedele al modo in cui i comandi del 1916 ragionavano:
+    raramente un generale sapeva l’esatta disposizione di ogni compagnia, ma sapeva sempre
+    quali posizioni erano tenute “in profondità” e quali no.
+  </p>
+
+  <h2>4.1 Le tre linee</h2>
+
+  <table>
+    <tr>
+      <th>Linea</th>
+      <th>Significato operativo</th>
+      <th>Uso tipico</th>
+    </tr>
+    <tr>
+      <td>Linea 1</td>
+      <td>Prima posizione a contatto con il nemico.</td>
+      <td>Difesa avanzata, MG, bombardamenti, assalti principali.</td>
+    </tr>
+    <tr>
+      <td>Linea 2</td>
+      <td>Seconda posizione o linea di sostegno.</td>
+      <td>Riserve locali, contrattacchi, assorbimento ritirate.</td>
+    </tr>
+    <tr>
+      <td>Linea 3</td>
+      <td>Retrolinea del settore.</td>
+      <td>Ingresso riserve, ultima difesa, collegamento con retrovia.</td>
+    </tr>
+  </table>
+
+  <p>
+    Le tre linee non sono intercambiabili: rappresentano una progressione, dalla trincea di
+    contatto fino alla zona da cui provengono i rinforzi. Un attaccante che sfonda la Linea 1
+    non ha ancora vinto il settore; deve poi affrontare la Linea 2, dove il difensore tiene
+    tipicamente le proprie riserve locali per il contrattacco, e solo dopo la Linea 3, l’ultimo
+    ostacolo prima che il settore sia perso del tutto. Questa struttura è il motivo per cui,
+    come si vedrà nel capitolo 12.0, anche un attacco vincente raramente conquista un settore
+    intero in un solo turno.
+  </p>
+
+  <h2>4.2 Controllo delle linee</h2>
+
+  <table>
+    <tr>
+      <th>Situazione</th>
+      <th>Controllo</th>
+    </tr>
+    <tr>
+      <td>Linea con solo unità di un giocatore</td>
+      <td>Linea controllata da quel giocatore.</td>
+    </tr>
+    <tr>
+      <td>Linea con unità di entrambi i giocatori</td>
+      <td>Linea contesa.</td>
+    </tr>
+    <tr>
+      <td>Linea vuota</td>
+      <td>Mantiene il controllo precedente, salvo diversa indicazione dello scenario.</td>
+    </tr>
+    <tr>
+      <td>Almeno una linea contesa nel settore</td>
+      <td>Il settore è conteso ai fini di vittoria, rifornimento e movimento operativo.</td>
+    </tr>
+    <tr>
+      <td>Un giocatore controlla almeno 2 linee su 3 e nessuna è contesa</td>
+      <td>Quel giocatore controlla operativamente il settore.</td>
+    </tr>
+    <tr>
+      <td>Un giocatore controlla tutte e 3 le linee</td>
+      <td>Controllo completo del settore.</td>
+    </tr>
+  </table>
+
+  <h2>4.3 Capienza</h2>
+
+  <p>
+    La capienza limita la concentrazione di truppe e supporti in una singola linea. Questo evita
+    ammassi irrealistici e rende importante la gestione della profondità.
+  </p>
+
+  <table>
+    <tr>
+      <th>Elemento</th>
+      <th>Limite</th>
+    </tr>
+    <tr>
+      <td>Divisioni amiche in linea non contesa</td>
+      <td>Massimo 2.</td>
+    </tr>
+    <tr>
+      <td>Divisioni per parte in linea contesa</td>
+      <td>Massimo 2 per giocatore.</td>
+    </tr>
+    <tr>
+      <td>Compagnie MG in una linea</td>
+      <td>Massimo 4, salvo scenario.</td>
+    </tr>
+    <tr>
+      <td>Fortificazione</td>
+      <td>Un solo livello per linea.</td>
+    </tr>
+  </table>
+
+  <p>
+    Questo stesso limite governa anche il Movimento operativo (cap. 3.0) quando viene usato per
+    rimpiazzare una linea rimasta scoperta dopo l’avanzata di una divisione locale: se la linea
+    di destinazione non ha capienza libera, il movimento fallisce e il PL speso è perso. Governa
+    inoltre quante divisioni possono effettivamente tirare i dadi in un singolo turno di
+    combattimento (cap. 12.1A).
+  </p>
+
+  <h2>4.4 Linee senza divisioni ma con MG o fortificazione</h2>
+
+  <p>
+    Alcune linee possono non contenere divisioni, ma avere ancora mitragliatrici, fortificazioni,
+    nuclei di presidio, osservatori, genieri o elementi locali. Queste linee non sono considerate
+    completamente vuote ai fini del combattimento.
+  </p>
+
+  <p>
+    Questa distinzione evita un comportamento innaturale che si osserva spesso in wargame più
+    semplici: l’idea che una linea “senza truppe” sia automaticamente indifesa e attraversabile
+    senza conseguenze. Nella realtà del fronte occidentale, una linea di trincee scarsamente
+    presidiata poteva comunque contenere postazioni fisse di mitragliatrici, piccoli presidi di
+    genieri o osservatori d’artiglieria capaci di opporre resistenza per un tempo limitato.
+    Le regole seguenti distinguono quattro casi, a seconda che la linea abbia solo mitragliatrici,
+    solo fortificazione, entrambe, o nessuna delle due.
+  </p>
+
+  <table>
+    <tr>
+      <th>Situazione della linea</th>
+      <th>Effetto</th>
+    </tr>
+    <tr>
+      <td>Linea senza divisioni, senza MG e senza fortificazione</td>
+      <td>Se attaccata da una divisione nemica, viene occupata automaticamente.</td>
+    </tr>
+    <tr>
+      <td>Linea senza divisioni ma con MG</td>
+      <td>
+        Le MG possono effettuare fuoco difensivo. Se l’attaccante ottiene almeno 1 successo netto
+        dopo il fuoco difensivo, la linea è conquistata.
+      </td>
+    </tr>
+    <tr>
+      <td>Linea senza divisioni ma con fortificazione</td>
+      <td>
+        La linea usa il bonus di fortificazione come presidio locale. Se l’attaccante ottiene almeno
+        1 successo netto, la linea è conquistata.
+      </td>
+    </tr>
+    <tr>
+      <td>Linea senza divisioni ma con MG e fortificazione</td>
+      <td>
+        La linea usa sia le MG sia il bonus di fortificazione. Se l’attaccante ottiene almeno
+        1 successo netto, la linea è conquistata.
+      </td>
+    </tr>
+  </table>
+
+  <div class="box rule">
+    <strong>Regola chiave:</strong>
+    una linea senza divisioni non può ritirarsi, non può andare in rotta e non può testare il morale.
+    Se viene superata, MG e fortificazioni sono catturate, eliminate o abbandonate secondo l’esito del combattimento.
+  </div>
+
+  <h2>4.5 Settori fortificati e forti</h2>
+
+  <p>
+    Nei settori con terreno <strong>Forte</strong> o <strong>Forte/Altura</strong>, il controllo operativo
+    può non coincidere con il pieno controllo ai fini dei Punti Vittoria. Un forte può essere dominato
+    operativamente ma non ancora completamente messo in sicurezza.
+  </p>
+
+  <table>
+    <tr>
+      <th>Situazione</th>
+      <th>Controllo operativo</th>
+      <th>PV del forte</th>
+    </tr>
+    <tr>
+      <td>Un giocatore controlla 2 linee su 3 e nessuna linea è contesa</td>
+      <td>Controlla operativamente il settore.</td>
+      <td>Ottiene il valore operativo indicato dallo scenario.</td>
+    </tr>
+    <tr>
+      <td>Nessuna divisione nemica resta nel settore</td>
+      <td>Controllo completo.</td>
+      <td>Ottiene il valore completo indicato dallo scenario.</td>
+    </tr>
+    <tr>
+      <td>Almeno una linea è contesa</td>
+      <td>Settore conteso.</td>
+      <td>Nessun PV pieno del forte.</td>
+    </tr>
+  </table>
+
+  <div class="box example">
+    <strong>Esempio:</strong>
+    il tedesco controlla D2 Douaumont L1 e L2, ma F04 francese resta in D2 L3.
+    Il tedesco controlla operativamente Douaumont, ma non lo controlla completamente.
+  </div>
+</section>

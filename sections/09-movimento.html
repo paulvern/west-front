@@ -1,0 +1,125 @@
+<section id="movimento" class="page-break">
+  <h1>8.0 Movimento</h1>
+
+  <p class="lead">
+    Il movimento rappresenta la capacità di una divisione di cambiare posizione operativa in un giorno.
+    Non misura metri percorsi, ma coordinamento, ordini, strade, fatica, pressione nemica e logistica.
+  </p>
+
+  <p>
+    Proprio perché il movimento è un’astrazione operativa e non una misura di distanza, le
+    regole seguenti si concentrano su ciò che conta davvero al livello di comando rappresentato
+    dal gioco: quali collegamenti esistono tra settori, quanto costano in PL e in tempo, e che
+    cosa succede quando due divisioni nemiche cercano di occupare lo stesso spazio nello stesso
+    momento. Un giocatore non deve calcolare chilometri; deve decidere se vale la pena spostare
+    una divisione adesso, sapendo che il movimento la impegna per il resto del turno e ne limita
+    le altre opzioni.
+  </p>
+
+  <h2>8.1 Tipi di movimento</h2>
+
+  <table>
+    <tr>
+      <th>Movimento</th>
+      <th>Costo</th>
+      <th>Procedura</th>
+      <th>Effetto</th>
+    </tr>
+    <tr>
+      <td>Movimento interno</td>
+      <td>0 PL</td>
+      <td>Ordine scritto; spostamento di una linea nello stesso settore controllato.</td>
+      <td>La divisione cambia linea.</td>
+    </tr>
+    <tr>
+      <td>Movimento operativo</td>
+      <td>1 PL</td>
+      <td>Ordine scritto; spostamento verso settore amico adiacente e collegato.</td>
+      <td>La divisione cambia settore.</td>
+    </tr>
+    <tr>
+      <td>Entrata in settore nemico</td>
+      <td>0 PL base</td>
+      <td>Richiede ordine di attacco.</td>
+      <td>Non è movimento normale: si risolve come combattimento.</td>
+    </tr>
+    <tr>
+      <td>Ritirata volontaria</td>
+      <td>0 o 1 PL</td>
+      <td>Ordine scritto; vedere regole ritirata.</td>
+      <td>La divisione arretra e può guadagnare Fatica.</td>
+    </tr>
+    <tr>
+      <td>Ritirata forzata</td>
+      <td>0 PL</td>
+      <td>Conseguenza di combattimento, morale o rotta.</td>
+      <td>La divisione arretra secondo priorità obbligatoria.</td>
+    </tr>
+  </table>
+
+  <h2>8.2 Limitazioni al movimento</h2>
+
+  <ul>
+    <li>Una divisione con Fatica 3 o più non può muovere e attaccare nello stesso turno.</li>
+    <li>Una divisione con Fatica 5 non può attaccare.</li>
+    <li>Una divisione in linea contesa non può muovere normalmente: deve combattere o ritirarsi secondo regole.</li>
+    <li>Una divisione isolata non può effettuare movimento operativo volontario, salvo scenario.</li>
+    <li>Una divisione appena entrata dalla riserva non può attaccare nello stesso turno.</li>
+  </ul>
+
+  <h2>8.3 Movimento simultaneo e conflitti</h2>
+
+  <table>
+    <tr>
+      <th>Situazione</th>
+      <th>Risultato</th>
+    </tr>
+    <tr>
+      <td>Due divisioni nemiche entrano nella stessa linea vuota</td>
+      <td>La linea diventa contesa; si risolve combattimento d’incontro.</td>
+    </tr>
+    <tr>
+      <td>Una divisione attacca mentre il difensore tenta di ritirarsi</td>
+      <td>L’Iniziativa Operativa decide se il difensore si sgancia.</td>
+    </tr>
+    <tr>
+      <td>Due divisioni nemiche tentano di scambiarsi settore</td>
+      <td>Scambio vietato; entrambe restano nel settore d’origine e guadagnano +1 Fatica.</td>
+    </tr>
+    <tr>
+      <td>Due unità entrano nella stessa linea da direzioni diverse</td>
+      <td>Linea contesa. Bonus difensivi solo a chi già controllava la linea con unità presenti.</td>
+    </tr>
+  </table>
+
+  <h2>8.4 Combattimento d’incontro</h2>
+
+  <p>
+    Il combattimento d’incontro rappresenta uno scontro confuso, non pienamente preparato.
+  </p>
+
+  <p>
+    A differenza dell’assalto pianificato del capitolo 12.0, che presuppone un attaccante e un
+    difensore ben definiti, il combattimento d’incontro nasce quando nessuno dei due giocatori
+    “possiede” ancora la linea contesa: entrambi vi arrivano nello stesso turno, senza tempo per
+    prepararsi. Per questo si usa una procedura più semplice, senza fortificazioni e senza
+    l’intera tabella di risoluzione del capitolo 12.4 — solo un confronto diretto di successi
+    netti, coerente con la confusione tattica che la regola vuole rappresentare.
+  </p>
+
+  <ul>
+    <li>Se la linea era vuota, nessuno usa fortificazioni.</li>
+    <li>Le MG sparano solo se erano già presenti e controllate da una parte all’inizio del turno.</li>
+    <li>Entrambe le parti tirano normalmente i dadi delle divisioni coinvolte.</li>
+    <li>Con 3 o più successi netti, il vincitore controlla la linea.</li>
+    <li>Con 1-2 successi netti, la linea resta contesa.</li>
+    <li>Con pareggio, entrambe le parti restano impegnate e guadagnano +1 Fatica.</li>
+  </ul>
+
+  <div class="box example">
+    <strong>Esempio:</strong>
+    G07 entra in D2 L1 mentre F08 entra nella stessa linea da F2. La linea era vuota.
+    Nessuno usa fortificazioni. Si risolve un combattimento d’incontro. Se il tedesco vince di 3 successi,
+    controlla D2 L1; se vince di 1-2, la linea resta contesa.
+  </div>
+</section>

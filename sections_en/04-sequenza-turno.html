@@ -1,0 +1,211 @@
+<section id="sequenza" class="page-break">
+  <h1>3.0 Turn Sequence</h1>
+
+  <p class="lead">
+    Each turn represents one day of operations and unfolds through eleven phases, always in
+    the same order. The rules in the preceding and following chapters constantly say "in
+    Phase X" or "during Phase Y": this chapter is the reference point that defines which
+    phases exist, in what order they follow one another, and exactly what happens in each.
+  </p>
+
+  <p>
+    Respecting the order of phases is not a bureaucratic detail: it is what makes the system
+    predictable and verifiable by both players. An action declared in the wrong phase, or paid
+    for after the correct phase has already passed, is not valid — consistent with the Golden
+    Rule of chapter 1.0. In disputed cases, the question "which phase are we in?" almost
+    always settles the doubt.
+  </p>
+
+  <h2>3.1 General Turn Structure</h2>
+
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Phase</th>
+      <th>What happens, in brief</th>
+    </tr>
+    <tr><td>1</td><td>Weather and Wind</td><td>The turn's weather conditions are determined.</td></tr>
+    <tr><td>2</td><td>Logistics</td><td>Logistics Points are received, stored, and spent.</td></tr>
+    <tr><td>3</td><td>Orders</td><td>Orders are written in secret, revealed together, and Operational Initiative is determined.</td></tr>
+    <tr><td>4</td><td>Aviation</td><td>Air missions are resolved: fighters, reconnaissance, observation, interdiction.</td></tr>
+    <tr><td>5</td><td>Artillery and Gas</td><td>Bombardments, counter-battery fire, harassing fire, and gas missions are resolved.</td></tr>
+    <tr><td>6</td><td>Movement</td><td>Divisions move: internal movement, operational movement, reserve entry.</td></tr>
+    <tr><td>7</td><td>Combat</td><td>Declared assaults are resolved: defensive fire, attack, trench combat.</td></tr>
+    <tr><td>8</td><td>Retreats and advances</td><td>Forced retreats, advances after combat, routs.</td></tr>
+    <tr><td>9</td><td>Isolation and supply</td><td>It is checked which divisions are supplied and which are isolated; any surrender tests.</td></tr>
+    <tr><td>10</td><td>Recovery</td><td>Eligible divisions remove Fatigue.</td></tr>
+    <tr><td>11</td><td>End of turn</td><td>Victory check and recording of the state for the next turn.</td></tr>
+  </table>
+
+  <p>
+    Some actions, as seen in chapter 2.0, span more than one phase: Reserve Entry is paid for
+    in Logistics, ordered in Orders, and completed in Movement; gas is checked in the Weather
+    and Wind Phase, paid for in Logistics, ordered in Orders, and resolved in Artillery and
+    Gas. This is not an inconsistency: it simply means the action has a "commitment moment"
+    (when the player commits to doing it) that is different from its "resolution moment"
+    (when the effect is applied on the map).
+  </p>
+
+  <h2>3.2 Weather and Wind Phase</h2>
+
+  <p>
+    The first thing established is the turn's conditions. Weather mainly affects aviation (see
+    chapter 11.0), while Wind mainly affects gas missions (see chapter 10.0). Unless the
+    scenario in play states otherwise, both are determined by rolling 1d12 on the tables below,
+    before the players know how many LP they will receive or what they will write in their
+    orders: this way no one can decide an attack plan already knowing whether the sky will be
+    clear or whether the wind will favor gas.
+  </p>
+
+  <table>
+    <tr><th>1d12 (Weather)</th><th>Result</th></tr>
+    <tr><td>1-2</td><td>Fog or mist</td></tr>
+    <tr><td>3-6</td><td>Rain or mud</td></tr>
+    <tr><td>7-12</td><td>Clear</td></tr>
+  </table>
+
+  <table>
+    <tr><th>1d12 (Wind)</th><th>Result</th></tr>
+    <tr><td>1-6</td><td>Favorable</td></tr>
+    <tr><td>7-9</td><td>Variable</td></tr>
+    <tr><td>10-11</td><td>Strong</td></tr>
+    <tr><td>12</td><td>Adverse</td></tr>
+  </table>
+
+  <div class="box rule">
+    <strong>Note:</strong>
+    Wind only matters in turns where at least one player intends to declare a Gas mission; it
+    can still be noted every turn for convenience, so it does not have to be rolled at the last
+    moment if a gas plan is decided as a surprise. A scenario may replace these tables with
+    fixed conditions or with its own seasonal table, as indicated in its special rules.
+  </div>
+
+  <h2>3.3 Logistics Phase</h2>
+
+  <p>
+    Each player applies the procedure of chapter 6.1: receives the turn's LP, adds them to
+    those stored, checks the maximum stockpile, and pays for all the actions he intends to
+    carry out during the turn that have a LP cost — bombardments, gas, air missions,
+    operational movement, reserve entry, replacements, fortifications, extra recovery. This is
+    where, in practice, the most important decision of the turn is made: how to distribute a
+    limited resource across every desired operation. Unspent LP remain available next turn, up
+    to the maximum allowed by the scenario.
+  </p>
+
+  <h2>3.4 Orders Phase</h2>
+
+  <p>
+    Both players secretly write all of the turn's orders, following the guidelines of chapter
+    7.1 (movement, attack, voluntary retreat, artillery, gas, aviation, reserve). A 0 LP
+    action, such as a base attack, still needs to be written here: no division carries out an
+    unordered action on its own initiative. Once writing is finished, the orders are revealed
+    simultaneously. Immediately after the reveal, the turn's Operational Initiative is
+    determined, following the procedure of chapter 7.2: both players roll 1d12, apply
+    modifiers, and the higher result wins. Initiative does not change orders already written:
+    it only decides the resolution order when two events of the turn are in conflict, as
+    illustrated in chapters 7.3, 7.4, and 8.3.
+  </p>
+
+  <h2>3.5 Aviation Phase</h2>
+
+  <p>
+    All air missions are resolved, following the procedure of chapter 11.2: first fighter
+    duels and fighter modifiers (escort, interception, local superiority), then reconnaissance,
+    artillery observation, and interdiction. The internal order is not arbitrary: a successful
+    escort or interception must be known before resolving the mission it protects or disrupts,
+    which is why it is resolved first. Artillery observation that succeeds in this phase
+    remains "pending" and is applied as a modifier when the linked artillery mission is
+    resolved in the following phase.
+  </p>
+
+  <h2>3.6 Artillery and Gas Phase</h2>
+
+  <p>
+    Declared artillery missions are resolved in sequence — preparatory bombardment, rolling
+    barrage, counter-battery fire, harassing fire — along with gas missions, applying the
+    observation bonuses obtained in the previous phase and the effects of the wind determined
+    at the start of the turn (chapters 9.0 and 10.0). Immediate effects, such as the
+    suppression of machine guns or the reduction of a fortification, apply at once and remain
+    valid for the rest of the turn; bonuses intended for an assault (such as the extra success
+    from a rolling barrage) remain assigned and will be used in the Combat Phase.
+  </p>
+
+  <h2>3.7 Movement Phase</h2>
+
+  <p>
+    Divisions with orders for internal or operational movement move, following chapter 8.0;
+    reserves that have been paid for and ordered enter the map in Line 3 of the entry sector,
+    following chapter 6.3. Any successful air interdiction or harassing fire from the previous
+    phase may already have made this movement more costly or more risky. Divisions that have
+    moved in this phase remain subject to the restrictions of chapter 8.2: in particular, a
+    division that entered from reserve, or that carried out operational movement while at
+    Fatigue 3 or higher, still cannot take part in an assault the same turn.
+  </p>
+
+  <h2>3.8 Combat Phase</h2>
+
+  <p>
+    All assaults declared in the Orders Phase are resolved, one at a time or in an order
+    agreed by the players when there are no direct dependencies between them. For each assault,
+    the procedure of chapter 12.0 applies: first the defensive fire of unsuppressed machine
+    guns, then the comparison of successes between attacker and defender, then, if the result
+    allows it, trench combat. It is in this phase that the effects prepared in the previous
+    phases become concrete: a successful bombardment, a gas mission that weakened the line, or
+    a rolling barrage that adds a success all make the difference right here.
+  </p>
+
+  <h2>3.9 Retreats and Advances Phase</h2>
+
+  <p>
+    Divisions that must retreat forcibly due to a combat result, per chapter 13.2, do so now,
+    following the retreat routes of chapter 13.3; victorious divisions entitled to do so
+    advance into the conquered line, as described in chapter 12.7 and the movement actions
+    table. Voluntary retreats ordered in the Orders Phase, if not already resolved due to
+    Operational Initiative (chapter 7.4), are completed here.
+  </p>
+
+  <h2>3.10 Isolation and Supply Phase</h2>
+
+  <p>
+    With the turn's positions now final, it is checked for every division on the map whether
+    there is a path of friendly sectors through to a valid rear area, per chapter 14.4.
+    Divisions found isolated suffer the prescribed effects (no replacements, no artillery
+    support, -1 Morale and +1 Fatigue) and, if already at Morale 1 or Fatigue 5, take the
+    surrender test of chapter 13.7 in this phase.
+  </p>
+
+  <h2>3.11 Recovery Phase</h2>
+
+  <p>
+    Divisions that meet the conditions of chapter 14.5 — not in Line 1, not contested, not
+    isolated, not bombarded, not committed to an attack this turn — remove 1 Fatigue for free.
+    By spending 1 additional LP, already allocated during the Logistics Phase, a division may
+    remove 1 more point of Fatigue. This is the only phase in which the state of units improves
+    rather than worsens: it represents rest, the rotation of guard duty, and the reorganizing
+    of units away from direct contact.
+  </p>
+
+  <h2>3.12 End of Turn</h2>
+
+  <p>
+    The victory check called for by the current scenario is carried out (chapter 16.0 for
+    Verdun, chapter 18.0 for Isonzo, chapter 20.0 for Messines), cumulative losses, surrendered or routed divisions, and any
+    other data required by the victory conditions are recorded. The next turn begins again
+    from the Weather and Wind Phase.
+  </p>
+
+  <div class="box example">
+    <strong>Summary example:</strong>
+    it is Turn 1 of the Verdun scenario. Weather (Clear) and Wind (Favorable) are rolled. In
+    Logistics, the German receives the turn's LP plus the 6 special preparation LP and devotes
+    them to bombardment, observation, and escort. In Orders, both players write their plans and
+    reveal them; the German automatically has Initiative in Turn 1 by a special scenario rule.
+    In Aviation, the escort is resolved and then the observation. In Artillery, the German
+    bombardment, aided by the observation, hits on 9+ instead of 10+ and suppresses some French
+    machine guns. In Movement, the German divisions move into assault position. In Combat, the
+    attack on C2 Beaumont L1 is resolved. In Retreats and Advances, the Frenchman, if defeated,
+    falls back, or the German advances. In Isolation and Supply, the divisions involved are
+    checked. In Recovery, uncommitted units remove Fatigue. In End of Turn, any pace-related VP
+    called for by the scenario are calculated.
+  </div>
+</section>

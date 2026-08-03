@@ -1,0 +1,737 @@
+<section id="isonzo" class="page-break">
+  <h1>17.0 Scenario: Italian Front — Isonzo 1916</h1>
+
+  <p class="lead">
+    Gorizia, Sabotino, and the Karst: an operational scenario for the Battles of the Isonzo.
+  </p>
+
+  <h2>17.1 Introduction to the Scenario</h2>
+
+  <p>
+    This scenario represents an Italian offensive on the Isonzo, inspired chiefly by the
+    <strong>Sixth Battle of the Isonzo</strong> of August 1916. The Italian player must cross
+    or exploit the bridgeheads on the Isonzo, capture dominating heights, and open the way to
+    <strong>Gorizia</strong>. The Austro-Hungarian player must hold the heights, slow the pace
+    of the offensive, and inflict losses heavy enough to make every Italian gain too costly.
+    Victory conditions are gathered separately, in chapter 18.0.
+  </p>
+
+  <div class="box history">
+    <strong>Historical note:</strong>
+    the Battles of the Isonzo were a long series of Italian offensives against strong
+    Austro-Hungarian positions, often anchored on mountains, karst heights, rivers, and
+    trenches cut into rock. The capture of Gorizia in August 1916 was one of the most
+    significant Italian successes of the front.
+  </div>
+
+  <h2>17.2 Duration</h2>
+
+  <p>
+    The scenario lasts <strong>8 turns</strong>. Each turn represents one day of operations.
+  </p>
+
+  <h2>17.3 Players</h2>
+
+  <table>
+    <tr>
+      <th>Player</th>
+      <th>Role</th>
+      <th>General objective</th>
+    </tr>
+    <tr>
+      <td>Italian</td>
+      <td>Attacker</td>
+      <td>Capture Gorizia, Sabotino, Podgora/Oslavia, and the Karst positions.</td>
+    </tr>
+    <tr>
+      <td>Austro-Hungarian</td>
+      <td>Defender</td>
+      <td>Hold the heights, block the crossings of the Isonzo, and wear down the Italian attack.</td>
+    </tr>
+  </table>
+
+  <h2>17.4 Scenario Sectors</h2>
+
+  <p>
+    The map is abstract and represents the middle Isonzo and the Gorizia sector. Each sector
+    contains three internal defensive lines, as in the base rulebook.
+  </p>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Terrain</th>
+      <th>Initial control</th>
+    </tr>
+    <tr><td>I1</td><td>Plava</td><td>River/Bridgehead</td><td>Italian</td></tr>
+    <tr><td>I2</td><td>Monte Sabotino</td><td>Height/Fortified</td><td>Austro-Hungarian</td></tr>
+    <tr><td>I3</td><td>Oslavia-Podgora</td><td>Height/Village</td><td>Austro-Hungarian</td></tr>
+    <tr><td>I4</td><td>Lucinico</td><td>Village/Open</td><td>Italian</td></tr>
+    <tr><td>I5</td><td>Gradisca</td><td>River/Village</td><td>Italian</td></tr>
+
+    <tr><td>A1</td><td>Monte Santo</td><td>Height/Fort</td><td>Austro-Hungarian</td></tr>
+    <tr><td>A2</td><td>San Gabriele</td><td>Height/Fort</td><td>Austro-Hungarian</td></tr>
+    <tr><td>A3</td><td>Gorizia</td><td>City/Objective</td><td>Austro-Hungarian</td></tr>
+    <tr><td>A4</td><td>Monte San Michele</td><td>Karst/Height</td><td>Austro-Hungarian</td></tr>
+    <tr><td>A5</td><td>Doberdò</td><td>Karst/Fortified</td><td>Austro-Hungarian</td></tr>
+    <tr><td>A6</td><td>Vallone del Carso</td><td>Karst/Rear area</td><td>Austro-Hungarian</td></tr>
+  </table>
+
+  <h2>17.5 Recommended Connections</h2>
+
+  <table>
+    <tr>
+      <th>Sector</th>
+      <th>Connected to</th>
+    </tr>
+    <tr><td>I1 Plava</td><td>I2, I3, A1</td></tr>
+    <tr><td>I2 Monte Sabotino</td><td>I1, I3, A1, A3</td></tr>
+    <tr><td>I3 Oslavia-Podgora</td><td>I1, I2, I4, A3</td></tr>
+    <tr><td>I4 Lucinico</td><td>I3, I5, A3, A4</td></tr>
+    <tr><td>I5 Gradisca</td><td>I4, A4, A5</td></tr>
+    <tr><td>A1 Monte Santo</td><td>I1, I2, A2, A3</td></tr>
+    <tr><td>A2 San Gabriele</td><td>A1, A3, A6</td></tr>
+    <tr><td>A3 Gorizia</td><td>I2, I3, I4, A1, A2, A4</td></tr>
+    <tr><td>A4 Monte San Michele</td><td>I4, I5, A3, A5, A6</td></tr>
+    <tr><td>A5 Doberdò</td><td>I5, A4, A6</td></tr>
+    <tr><td>A6 Vallone del Carso</td><td>A2, A4, A5</td></tr>
+  </table>
+
+  <h2>17.6 Special Terrain of the Italian Front</h2>
+
+  <h3>17.6.1 The Isonzo and River Crossings</h3>
+
+  <p>
+    The Isonzo is an operational obstacle. Wherever the scenario states <strong>River</strong>
+    or <strong>Bridgehead</strong>, offensive movement is harder and requires preparation.
+  </p>
+
+  <table>
+    <tr>
+      <th>Action</th>
+      <th>Cost</th>
+      <th>Feasible if...</th>
+      <th>Procedure</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Prepared crossing of the Isonzo</td>
+      <td>2 LP</td>
+      <td>The starting sector is controlled; no flood or prohibitive weather; order written.</td>
+      <td>Pay 2 LP, state starting sector and target sector.</td>
+      <td>A division may attack or enter a line across the river. It suffers +1 Fatigue after the action.</td>
+    </tr>
+    <tr>
+      <td>Building or repairing footbridges/bridges</td>
+      <td>2 LP</td>
+      <td>Starting sector controlled and not bombarded the same turn.</td>
+      <td>Pay 2 LP in the Logistics Phase.</td>
+      <td>The first Italian movement across that connection next turn costs 0 additional LP.</td>
+    </tr>
+    <tr>
+      <td>Improvised crossing</td>
+      <td>0 LP</td>
+      <td>Only if ordered and the player accepts the risk.</td>
+      <td>The division attacks with VT +1 and gains +1 Fatigue before combat.</td>
+      <td>Allows a risky attack without logistical preparation.</td>
+    </tr>
+  </table>
+
+  <div class="box rule">
+    <strong>Key rule:</strong>
+    the river does not always prevent an attack, but it turns the action into a logistics
+    problem. An attack across the Isonzo without preparation can succeed, but it will be
+    costly.
+  </div>
+
+  <h3>17.6.2 The Karst</h3>
+
+  <p>
+    The Karst is harsh, rocky terrain, poor in soft cover but rich in trenches cut into stone,
+    sinkholes, observation posts, and positions that are difficult to storm.
+  </p>
+
+  <table>
+    <tr>
+      <th>Terrain</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Karst</td>
+      <td>
+        The defender ignores 1 assault success. Fortifications cost normally, but artillery
+        must obtain 2 successes to reduce a level 3 or 4 fortification by 1.
+      </td>
+    </tr>
+    <tr>
+      <td>Karst/Fortified</td>
+      <td>
+        As Karst. In addition, the first Italian attack without a preparatory bombardment
+        suffers VT +1.
+      </td>
+    </tr>
+    <tr>
+      <td>Height</td>
+      <td>
+        The defender ignores 1 assault success. Successful reconnaissance or observation
+        cancels this bonus for the turn's first bombardment, but not for combat.
+      </td>
+    </tr>
+    <tr>
+      <td>City/Objective</td>
+      <td>
+        The defender receives +1 automatic success in trench combat, unless the line has no divisions.
+      </td>
+    </tr>
+  </table>
+
+  <h3>17.6.3 Austro-Hungarian Caverns and Shelters</h3>
+
+  <p>
+    In many sectors of the Isonzo, the Austro-Hungarian defense exploited caverns, shelters
+    dug into rock, and positions in depth.
+  </p>
+
+  <table>
+    <tr>
+      <th>Action or condition</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Austro-Hungarian line in Karst or Height with Fortification 3+</td>
+      <td>Ignores the first Fatigue effect caused by bombardment that turn.</td>
+    </tr>
+    <tr>
+      <td>Heavy bombardment or mortars against caverns</td>
+      <td>Can cancel this protection if it obtains at least 3 successes.</td>
+    </tr>
+  </table>
+
+  <h2>17.7 Italian Forces</h2>
+
+  <h3>17.7.1 Italian Divisions on the Map</h3>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Men</th>
+      <th>Experience</th>
+      <th>VT</th>
+      <th>Morale</th>
+      <th>Fatigue</th>
+      <th>Position</th>
+    </tr>
+    <tr><td>IT01</td><td>12,000</td><td>Regular</td><td>9+</td><td>4</td><td>1</td><td>I1 L2</td></tr>
+    <tr><td>IT02</td><td>11,000</td><td>Regular</td><td>9+</td><td>4</td><td>1</td><td>I3 L1</td></tr>
+    <tr><td>IT03</td><td>10,000</td><td>Recruit</td><td>10+</td><td>3</td><td>1</td><td>I4 L2</td></tr>
+    <tr><td>IT04</td><td>12,000</td><td>Veteran</td><td>8+</td><td>4</td><td>0</td><td>I5 L2</td></tr>
+    <tr><td>IT05</td><td>9,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>I4 L3</td></tr>
+    <tr><td>IT06 Alpini</td><td>8,000</td><td>Veteran</td><td>8+</td><td>5</td><td>0</td><td>I1 L3</td></tr>
+  </table>
+
+  <h3>17.7.2 Italian Reserves</h3>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Men</th>
+      <th>Experience</th>
+      <th>Availability</th>
+    </tr>
+    <tr><td>IT07</td><td>11,000</td><td>Regular</td><td>Turn 3</td></tr>
+    <tr><td>IT08</td><td>10,000</td><td>Recruit</td><td>Turn 4</td></tr>
+    <tr><td>IT09</td><td>12,000</td><td>Regular</td><td>Turn 5</td></tr>
+  </table>
+
+  <p>
+    Italian reserves enter from I1, I4, or I5, always in Line 3, paying 2 LP.
+  </p>
+
+  <h3>17.7.3 Italian Support Assets</h3>
+
+  <table>
+    <tr>
+      <th>Support</th>
+      <th>Availability</th>
+    </tr>
+    <tr><td>Field artillery</td><td>4 batteries</td></tr>
+    <tr><td>Heavy artillery</td><td>3 batteries</td></tr>
+    <tr><td>Bombards / mortars</td><td>2 batteries, success on 9+</td></tr>
+    <tr><td>MG</td><td>8 companies</td></tr>
+    <tr><td>Aviation</td><td>2 reconnaissance + 1 fighter</td></tr>
+    <tr><td>Engineers</td><td>Used via LP for river crossings, bridges, and preparation</td></tr>
+  </table>
+
+  <h2>17.8 Austro-Hungarian Forces</h2>
+
+  <h3>17.8.1 Austro-Hungarian Divisions on the Map</h3>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Men</th>
+      <th>Experience</th>
+      <th>VT</th>
+      <th>Morale</th>
+      <th>Fatigue</th>
+      <th>Position</th>
+    </tr>
+    <tr><td>AH01</td><td>10,000</td><td>Veteran</td><td>8+</td><td>4</td><td>1</td><td>I2 L2</td></tr>
+    <tr><td>AH02</td><td>11,000</td><td>Regular</td><td>9+</td><td>4</td><td>1</td><td>I3 L2</td></tr>
+    <tr><td>AH03</td><td>10,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>A3 L1</td></tr>
+    <tr><td>AH04</td><td>9,000</td><td>Veteran</td><td>8+</td><td>4</td><td>0</td><td>A4 L2</td></tr>
+    <tr><td>AH05</td><td>10,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>A5 L2</td></tr>
+    <tr><td>AH06</td><td>8,000</td><td>Recruit</td><td>10+</td><td>3</td><td>0</td><td>A1 L2</td></tr>
+  </table>
+
+  <h3>17.8.2 Austro-Hungarian Reserves</h3>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Men</th>
+      <th>Experience</th>
+      <th>Availability</th>
+    </tr>
+    <tr><td>AH07</td><td>10,000</td><td>Regular</td><td>Turn 3</td></tr>
+    <tr><td>AH08</td><td>9,000</td><td>Veteran</td><td>Turn 5</td></tr>
+  </table>
+
+  <p>
+    Austro-Hungarian reserves enter from A2, A3, or A6, always in Line 3, paying 2 LP.
+  </p>
+
+  <h3>17.8.3 Austro-Hungarian Support Assets</h3>
+
+  <table>
+    <tr>
+      <th>Support</th>
+      <th>Availability</th>
+    </tr>
+    <tr><td>Field artillery</td><td>3 batteries</td></tr>
+    <tr><td>Heavy artillery</td><td>2 batteries</td></tr>
+    <tr><td>Mortars</td><td>1 battery, success on 9+</td></tr>
+    <tr><td>MG</td><td>12 companies</td></tr>
+    <tr><td>Aviation</td><td>1 reconnaissance + 1 fighter</td></tr>
+  </table>
+
+  <h2>17.9 Scenario Logistics</h2>
+
+  <table>
+    <tr>
+      <th>Player</th>
+      <th>Starting LP</th>
+      <th>LP per turn</th>
+      <th>Maximum stockpile</th>
+    </tr>
+    <tr>
+      <td>Italian</td>
+      <td>16</td>
+      <td>13</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>Austro-Hungarian</td>
+      <td>12</td>
+      <td>10</td>
+      <td>20</td>
+    </tr>
+  </table>
+
+  <ul>
+    <li>In Turn 1 the Italian receives +4 special LP for bombardment, observation, engineers, or an offensive plan.</li>
+    <li>From Turn 4 the Austro-Hungarian receives +2 LP if he still controls A3 Gorizia.</li>
+    <li>Gas is not available in the base Isonzo 1916 scenario.</li>
+  </ul>
+
+  <h2>17.10 Scenario Special Rules</h2>
+
+  <h3>17.10.1 Italian Preparation</h3>
+
+  <p>
+    In Turn 1, the Italian may declare an <strong>Offensive Plan</strong> on one of:
+    I2 Sabotino, I3 Podgora/Oslavia, A4 San Michele. If he does, he pays 3 LP and receives +1
+    to the initiative roll in Turns 1-2.
+  </p>
+
+  <h3>17.10.2 Alpini</h3>
+
+  <table>
+    <tr>
+      <th>Action</th>
+      <th>Cost</th>
+      <th>Feasible if...</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Alpine assault on a height</td>
+      <td>1 LP</td>
+      <td>Alpini unit, target Height or Fort/Height, order written.</td>
+      <td>
+        The Alpini unit ignores the first VT penalty from Height or Karst terrain in that
+        turn's combat. It gains +1 Fatigue after combat.
+      </td>
+    </tr>
+  </table>
+
+  <h3>17.10.3 Karst Trenches</h3>
+
+  <p>
+    In Karst or Karst/Fortified sectors, the defender ignores 1 assault success.
+    This effect does not apply if the line was hit by a preparatory bombardment with at least
+    4 successes in the same turn.
+  </p>
+
+  <h3>17.10.4 Gorizia</h3>
+
+  <p>
+    A3 Gorizia is a City/Objective sector. To get full VP, the Italian must control at least
+    2 of 3 lines and no line may be contested. If an Austro-Hungarian division remains in a
+    line of the sector, Gorizia is considered contested for the purposes of full VP.
+  </p>
+
+  <h3>17.10.5 Loss Intensity</h3>
+
+  <p>
+    The scenario uses <strong>High Intensity</strong>: every 2 enemy successes cause 1,000 losses.
+  </p>
+
+  <div class="box warning">
+    <strong>Historical accuracy note:</strong>
+    the following sections focus mainly on the <strong>Sixth Battle of the Isonzo</strong>
+    (August 1916), but include elements and sectors that were prominent in other phases of the
+    Isonzo campaign (1915-1917). The operational map represents a complete decision-making arc,
+    while compressing events that in reality unfolded across later battles and at different
+    intensities. These historical notes are not rules, except where explicitly stated.
+  </div>
+
+  <h2>17.11 The Context of the Battles of the Isonzo</h2>
+
+  <p>
+    The <strong>Battles of the Isonzo</strong> were a series of twelve Italian offensives
+    against Austro-Hungarian positions along the Isonzo river, in the Friuli-Venezia Giulia
+    region, between June 1915 and November 1917. The Italian strategic objective was the
+    capture of <strong>Trieste</strong> and opening the way toward <strong>Ljubljana</strong>
+    and the heart of the Austro-Hungarian Empire.
+  </p>
+
+  <p>
+    The geography of the operational theatre was extremely unfavorable to the attacker. The
+    Isonzo river was a significant natural obstacle, the surrounding heights offered dominant
+    defensive positions, and the Karst plateau was brutally harsh terrain where every position
+    had to be taken by frontal assault against trenches cut into rock.
+  </p>
+
+  <div class="box history">
+    <strong>Operational reading:</strong>
+    Italian offensive doctrine under General Luigi Cadorna relied on massive artillery
+    preparation followed by concentrated infantry assaults. The Austro-Hungarian defense,
+    led by Svetozar Boroević, exploited the geography, defense in depth, and the ability to
+    withstand enormous losses while holding key positions.
+  </div>
+
+  <p>
+    The <strong>Sixth Battle of the Isonzo</strong> (6-17 August 1916) was the campaign's
+    first major Italian success. The capture of <strong>Monte Sabotino</strong> on 6 August
+    and the entry into <strong>Gorizia</strong> on 9 August were celebrated as significant
+    victories, even though the advance stalled shortly beyond the city.
+  </p>
+
+  <h2>17.12 Summary Chronology of Summer 1916</h2>
+
+  <table>
+    <tr>
+      <th>Historical date</th>
+      <th>Summary historical event</th>
+      <th>Reflected in the scenario as</th>
+    </tr>
+    <tr>
+      <td>4-5 August 1916</td>
+      <td>
+        Intensive Italian artillery preparation on Austro-Hungarian positions around Gorizia
+        and on the Karst.
+      </td>
+      <td>
+        Turn 1: Italian LP bonus for bombardment, observation, and offensive preparation.
+      </td>
+    </tr>
+    <tr>
+      <td>6 August</td>
+      <td>
+        Italian assault on Monte Sabotino. The Alpini capture the summit after brutal fighting,
+        opening the way to Gorizia from the northwest.
+      </td>
+      <td>
+        I2 Sabotino is the first critical objective. Its fall unbalances the defense of Gorizia.
+      </td>
+    </tr>
+    <tr>
+      <td>7-8 August</td>
+      <td>
+        Italian consolidation on the Sabotino and pressure on Podgora-Oslavia. The
+        Austro-Hungarians begin withdrawing from some forward positions.
+      </td>
+      <td>
+        I3 Podgora/Oslavia represents the second axis of attack toward Gorizia.
+      </td>
+    </tr>
+    <tr>
+      <td>9 August</td>
+      <td>
+        Italian troops enter Gorizia. The city is captured after urban fighting, though the
+        eastern bank (the Gorizia bridgehead) remains contested.
+      </td>
+      <td>
+        A3 Gorizia is the scenario's main objective. Its operational control awards significant VP.
+      </td>
+    </tr>
+    <tr>
+      <td>9-12 August</td>
+      <td>
+        Intense fighting on the Karst. The Italians attack Monte San Michele, Doberdò, and
+        other Karst positions, suffering extremely heavy losses against very strong defenses.
+      </td>
+      <td>
+        A4 San Michele and A5 Doberdò are high-intensity sectors. The Karst terrain penalizes the attack.
+      </td>
+    </tr>
+    <tr>
+      <td>10-17 August</td>
+      <td>
+        The Italians try to exploit their success toward the east and northeast, but the
+        assaults against Monte Santo, San Gabriele, and the Karst positions in depth fail.
+        The offensive runs out of steam.
+      </td>
+      <td>
+        A1 Monte Santo and A2 San Gabriele remain Austro-Hungarian in the base scenario,
+        representing the limits of the Italian advance.
+      </td>
+    </tr>
+  </table>
+
+  <h2>17.13 Local Offensives and the Scenario's Sectors</h2>
+
+  <h3>17.13.1 I1 Plava — Bridgehead on the Isonzo</h3>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    Plava was one of the Italian bridgeheads on the Isonzo, captured in the early phases of
+    the war. It was an essential logistics base for offensives toward Gorizia and the
+    northern heights. Holding and supplying troops across the river was a constant challenge.
+  </div>
+
+  <p>
+    In the game, I1 Plava represents the northern starting point of the Italian offensive.
+    Italian divisions must move from here to attack the Sabotino and the surrounding heights.
+  </p>
+
+  <div class="box example">
+    <strong>In game terms:</strong>
+    crossings of the Isonzo cost LP. Plava, as an already consolidated bridgehead, reduces
+    this cost for the turn's first movement.
+  </div>
+
+  <h3>17.13.2 I2 Monte Sabotino — The Decisive Height</h3>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    Monte Sabotino (609 m) dominated Gorizia from the northwest. Its capture on 6 August 1916
+    by the Alpini of the Sassari Brigade was decisive for the offensive's success. Italian
+    troops attacked at night, surprising the defenders and quickly consolidating the position
+    before counterattacks could arrive.
+  </div>
+
+  <p>
+    In the scenario, the Sabotino is the first critical objective. Without its capture, Gorizia
+    remains very hard to threaten, because the Austro-Hungarian defenders keep observation and
+    enfilading fire on the approach routes.
+  </p>
+
+  <table>
+    <tr>
+      <th>State of the Sabotino</th>
+      <th>Operational meaning</th>
+    </tr>
+    <tr>
+      <td>Austro-Hungarian control</td>
+      <td>Gorizia well defended; the Italians suffer penalties attacking from the west.</td>
+    </tr>
+    <tr>
+      <td>Italian control</td>
+      <td>Open road to Gorizia; Italian observation over the enemy rear.</td>
+    </tr>
+  </table>
+
+  <h3>17.13.3 I3 Oslavia-Podgora — The Northern Flank</h3>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    the complex of villages and positions of Oslavia and Podgora, north of Gorizia, was the
+    scene of brutal fighting in many of the Battles of the Isonzo. The position allowed a
+    threat to Gorizia from the north, but was well defended and required repeated attacks.
+  </div>
+
+  <p>
+    In the scenario, I3 represents a second axis of attack toward Gorizia. If the Italian
+    captures both the Sabotino (I2) and Podgora-Oslavia (I3), the defense of Gorizia becomes
+    untenable for the Austro-Hungarian.
+  </p>
+
+  <h3>17.13.4 I4 Lucinico — Intermediate Crossing</h3>
+
+  <div class="box history">
+    <strong>Historical-operational context:</strong>
+    Lucinico was a village south of Gorizia, on the Italian axis linking the Isonzo
+    bridgeheads to the city. Less fortified than the mountain sectors, but still defended
+    and contested.
+  </div>
+
+  <p>
+    In the game, I4 is a transit sector. The Italian starts already in control of it, but must
+    use it as a base to attack Gorizia (A3) or the Karst (A4).
+  </p>
+
+  <h3>17.13.5 I5 Gradisca — Southern Sector</h3>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    Gradisca d'Isonzo was a southern crossing point of the river. The sector was the
+    logistical link for offensives on the Karst and allowed a threat to the southern flank of
+    the Austro-Hungarian defense.
+  </div>
+
+  <p>
+    In the scenario, I5 is the starting base for offensives on the Karst (A4, A5). Like
+    Lucinico, it starts under Italian control but requires an investment of LP to sustain
+    divisions attacking eastward.
+  </p>
+
+  <h3>17.13.6 A1 Monte Santo — The Unconquered Height</h3>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    Monte Santo (Sveta Gora, 682 m) was one of the most contested objectives, never
+    permanently captured by the Italians during the Battles of the Isonzo. Its dominant
+    position, heavy fortifications, and Austro-Hungarian determination made it a symbol of
+    resistance. Only in the defeat of Caporetto (October 1917) did Monte Santo fall, but
+    because of the general Austro-German advance, not because of an Italian frontal assault.
+  </div>
+
+  <p>
+    In the scenario, A1 Monte Santo represents a very difficult objective. If the Italian
+    manages to capture it, it means he has achieved an operational success well beyond the
+    historical result of the Sixth Battle.
+  </p>
+
+  <h3>17.13.7 A2 San Gabriele — The Karst Fortress</h3>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    San Gabriele (646 m) was part of the Austro-Hungarian defensive system east of Gorizia.
+    Like Monte Santo, it withstood every Italian assault until Caporetto. Its positions were
+    integrated with those of Monte Santo, creating an extremely solid defense in depth.
+  </div>
+
+  <p>
+    In the game, A2 San Gabriele is the Austro-Hungarian second defensive line. Capturing it
+    means penetrating the enemy rear and threatening the logistics system that sustains the
+    entire Isonzo defense.
+  </p>
+
+  <h3>17.13.8 A3 Gorizia — The Symbolic Objective</h3>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    Gorizia had enormous military, political, and symbolic value. Its capture in August 1916
+    was the first great Italian victory on the Isonzo front and was celebrated with
+    enthusiasm. However, the city was devastated, and its capture did not lead to a collapse
+    of the Austro-Hungarian defense, which reorganized shortly beyond it.
+  </div>
+
+  <p>
+    In the scenario, A3 Gorizia is the main objective. Operational control of the sector (at
+    least 2 of 3 lines and no contested line) awards significant VP to the Italian. If it
+    remains Austro-Hungarian, the Italian offensive has failed.
+  </p>
+
+  <table>
+    <tr>
+      <th>State of Gorizia</th>
+      <th>Meaning in the game</th>
+    </tr>
+    <tr>
+      <td>Italian operational control</td>
+      <td>At least 2 Italian lines, no line contested. Full VP.</td>
+    </tr>
+    <tr>
+      <td>Contested sector</td>
+      <td>At least one contested line, or a significant Austro-Hungarian presence. Reduced VP.</td>
+    </tr>
+    <tr>
+      <td>Austro-Hungarian control</td>
+      <td>The Italian offensive has failed. Zero or negative VP for the Italian.</td>
+    </tr>
+  </table>
+
+  <h3>17.13.9 A4 Monte San Michele — The Bloody Karst</h3>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    Monte San Michele (275 m) was probably the bloodiest sector of the entire Isonzo front.
+    Captured and lost repeatedly in different battles, it became synonymous with attrition,
+    desperate frontal attacks, and enormous losses on both sides. The Karst terrain, the
+    trenches cut into rock, and the dominant position made every assault a massacre.
+  </div>
+
+  <p>
+    In the scenario, A4 San Michele is an extremely high-casualty sector. The Karst/Fortified
+    terrain penalizes the Italian attack, but its capture is necessary to advance in depth
+    toward the Vallone del Carso (A6).
+  </p>
+
+  <div class="box rule">
+    <strong>Key rule:</strong>
+    in Karst sectors the defender ignores 1 assault success. This makes A4 San Michele
+    extremely costly to capture without massive artillery preparation.
+  </div>
+
+  <h3>17.13.10 A5 Doberdò — The Caverns of the Karst</h3>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    Doberdò (Doberdob) was a Karst sector where Austro-Hungarian troops exploited natural
+    caverns and shelters dug into rock to withstand Italian bombardments. Even after intense
+    artillery preparation, the defenders would emerge from their shelters and repel the
+    assaults.
+  </div>
+
+  <p>
+    In the scenario, A5 Doberdò represents Karst defense at its peak. The special rules on
+    Austro-Hungarian caverns mean that divisions in this sector ignore the first Fatigue
+    effect from bombardment if the fortification is 3+.
+  </p>
+
+  <h3>17.13.11 A6 Vallone del Carso — Rear Area and Depth</h3>
+
+  <div class="box history">
+    <strong>Historical-operational context:</strong>
+    the Vallone represents Austro-Hungarian strategic depth on the Karst. Reserves,
+    logistics rear areas, and second defensive lines were organized in this belt. Capturing
+    it would mean penetrating beyond the main defensive belt and threatening Trieste itself.
+  </div>
+
+  <p>
+    In the game, A6 Vallone del Carso is the final sector. If the Italian manages to capture
+    it, it means he has achieved an operational success well beyond the historical result of
+    the Sixth Battle. It is the entry point for Austro-Hungarian reserves and the heart of the
+    defensive system.
+  </p>
+
+  <div class="box example">
+    <strong>Scenario reading:</strong>
+    if the Italian controls Gorizia (A3) and at least two of San Michele (A4), Doberdò (A5),
+    and the Vallone (A6), he has achieved a decisive victory that never actually happened in
+    real history.
+  </div>
+</section>

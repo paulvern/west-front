@@ -1,0 +1,203 @@
+<section id="gas" class="page-break">
+  <h1>10.0 Gas</h1>
+
+  <p class="lead">
+    Gas is a special mission. It can weaken a line, suppress machine guns, increase fatigue,
+    and cause panic, but it does not conquer ground by itself.
+  </p>
+
+  <p>
+    This deliberate limitation — gas never takes a line by itself — is the chapter's most
+    important design choice. Historically, gas was a weapon that disorganized and terrified
+    more than it killed decisively, and it remained vulnerable to protection that grew steadily
+    more effective as the war went on. The game system reflects this: gas is an effectiveness
+    multiplier for an infantry assault that must still take place, not a shortcut to avoid one.
+    A player who pays 4 LP for a Gas mission without also having a division ready to attack the
+    same turn wastes most of its potential.
+  </p>
+
+  <div class="box history">
+    <strong>Historical note:</strong>
+    by 1916 gas protection was more widespread than in 1915, but it remained imperfect. Gas
+    could still disorganize a defense, especially when combined with bombardment and an
+    immediate assault.
+  </div>
+
+  <h2>10.1 When It Is Used</h2>
+
+  <table>
+    <tr>
+      <th>Action</th>
+      <th>Phase</th>
+      <th>Cost</th>
+      <th>Feasible if...</th>
+      <th>Procedure</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Gas mission</td>
+      <td>Artillery and Gas</td>
+      <td>4 LP</td>
+      <td>
+        The scenario allows gas; the mission has been paid for; the order has been written;
+        the wind does not prevent its use, or the player accepts the risk.
+      </td>
+      <td>
+        Choose the target sector and line. Roll 4d12. Every 9+ is a success.
+        Apply wind, gas protection, and effects.
+      </td>
+      <td>
+        MG suppression, Fatigue, Morale test, Disorder, or limited losses.
+      </td>
+    </tr>
+  </table>
+
+  <h2>10.2 Full Procedure</h2>
+
+  <div class="box procedure">
+    <strong>Gas Procedure:</strong>
+    <ol>
+      <li>Check wind direction and strength in the Weather and Wind Phase.</li>
+      <li>Pay 4 LP in the Logistics Phase.</li>
+      <li>Write the order in the Orders Phase, stating the target sector and line.</li>
+      <li>Resolve the mission in the Artillery and Gas Phase.</li>
+      <li>Roll 4d12: every 9+ is a success.</li>
+      <li>Apply any changes due to wind.</li>
+      <li>Choose the effects obtained.</li>
+      <li>Apply any gas protection.</li>
+    </ol>
+  </div>
+
+  <h2>10.3 Effect of Wind</h2>
+
+  <p>
+    Wind, determined at the start of the turn together with weather (chapter 3.2), is what
+    makes gas a risky weapon to plan in advance: a player must decide to pay 4 LP and write the
+    order before knowing for certain whether conditions will be favorable. With an adverse
+    wind, the weapon can literally turn against whoever uses it.
+  </p>
+
+  <table>
+    <tr>
+      <th>Wind</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Favorable</td>
+      <td>The mission is resolved normally.</td>
+    </tr>
+    <tr>
+      <td>Variable</td>
+      <td>
+        The mission suffers -1 success. In addition, roll 1d12: on 1-3 it drifts onto an
+        adjacent line of the same sector, if one exists.
+      </td>
+    </tr>
+    <tr>
+      <td>Strong</td>
+      <td>
+        The gas disperses. Even if it gets more successes, it can apply a maximum of 2 effects.
+      </td>
+    </tr>
+    <tr>
+      <td>Adverse</td>
+      <td>
+        The player may cancel the mission or resolve it against one of his own lines in the
+        starting sector or in the sector stated by the scenario.
+      </td>
+    </tr>
+  </table>
+
+  <h2>10.4 Effects per Success</h2>
+
+  <p>
+    For every success obtained, the player chooses one effect from the table below. Some
+    effects can be chosen more than once, others have limits.
+  </p>
+
+  <table>
+    <tr>
+      <th>Effect</th>
+      <th>Limit</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>Suppress MG</td>
+      <td>Repeatable</td>
+      <td>One MG on the target line is suppressed until the end of the turn.</td>
+    </tr>
+    <tr>
+      <td>Fatigue</td>
+      <td>Repeatable</td>
+      <td>One division on the target line gains +1 Fatigue.</td>
+    </tr>
+    <tr>
+      <td>Morale</td>
+      <td>Once per division</td>
+      <td>One target division takes a morale test. If it fails, it loses 1 Morale.</td>
+    </tr>
+    <tr>
+      <td>Disorder</td>
+      <td>Once per line</td>
+      <td>The target line suffers VT +1 on defense until the end of the turn.</td>
+    </tr>
+    <tr>
+      <td>Losses</td>
+      <td>Maximum once</td>
+      <td>If the mission got at least 3 total successes, one target division loses 1,000 men.</td>
+    </tr>
+  </table>
+
+  <h2>10.5 Gas Protection</h2>
+
+  <p>
+    When a division suffers a <strong>Morale</strong> or <strong>Losses</strong> effect from
+    gas, roll 1d12 for gas protection.
+  </p>
+
+  <table>
+    <tr>
+      <th>1d12</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>1-4</td>
+      <td>Protection ineffective: apply the effect normally.</td>
+    </tr>
+    <tr>
+      <td>5-9</td>
+      <td>Partial protection: ignore the Morale loss, or reduce losses to 0.</td>
+    </tr>
+    <tr>
+      <td>10-12</td>
+      <td>Effective protection: ignore the effect; the division gains at most +1 Fatigue if not already assigned.</td>
+    </tr>
+  </table>
+
+  <h2>10.6 Gas and Assault</h2>
+
+  <p>
+    If a line has been hit by gas the same turn, divisions attacking it receive
+    <strong>+1 success on the assault</strong>, but only if the gas produced at least one of
+    the following effects:
+  </p>
+
+  <ul>
+    <li>suppressed at least 1 MG;</li>
+    <li>inflicted at least +1 Fatigue on a defending division;</li>
+    <li>caused Disorder on the line;</li>
+    <li>caused a morale test to fail.</li>
+  </ul>
+
+  <div class="box rule">
+    <strong>Balance rule:</strong>
+    gas cannot conquer a line by itself. It can only make an infantry attack more effective.
+  </div>
+
+  <div class="box example">
+    <strong>Example:</strong>
+    the German uses gas on C2 Beaumont L1. He rolls 4d12 and gets 4, 9, 11, 12: 3 successes.
+    He chooses to suppress 1 MG, inflict +1 Fatigue on F02, and force a morale test.
+    Since the gas weakened the line, the German assault the same turn receives +1 success.
+  </div>
+</section>

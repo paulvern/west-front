@@ -1,0 +1,144 @@
+<section id="iniziativa">
+  <h1>7.0 Ordini simultanei e Iniziativa Operativa</h1>
+
+  <p class="lead">
+    Gli ordini sono scritti segretamente e rivelati simultaneamente. Questo rappresenta l’incertezza del comando:
+    nessun giocatore sa con certezza se il nemico attaccherà, arretrerà, userà riserve o concentrerà artiglieria.
+  </p>
+
+  <p>
+    La scrittura simultanea è il cuore del sistema decisionale del gioco: non esiste un
+    “giocatore attivo” e uno passivo, come in molti giochi da tavolo classici. Entrambi
+    pianificano nello stesso momento, senza conoscere le intenzioni dell’altro, ed entrambi
+    devono vivere con le conseguenze di un piano scritto prima di sapere come reagirà
+    l’avversario. È questo che rende utile, e non solo decorativa, la fase di ricognizione
+    aerea del capitolo 11.0: ridurre l’incertezza prima di scrivere gli ordini ha un valore
+    concreto.
+  </p>
+
+  <h2>7.1 Scrivere gli ordini</h2>
+
+  <p>
+    Ogni ordine deve essere chiaro. Deve indicare unità, settore di partenza, settore o linea bersaglio,
+    eventuali supporti e PL pagati.
+  </p>
+
+  <table>
+    <tr>
+      <th>Tipo ordine</th>
+      <th>Deve indicare</th>
+    </tr>
+    <tr>
+      <td>Movimento</td>
+      <td>Divisione, settore/linea di partenza, settore/linea di destinazione.</td>
+    </tr>
+    <tr>
+      <td>Attacco</td>
+      <td>Divisioni attaccanti, settore e linea bersaglio, eventuale supporto.</td>
+    </tr>
+    <tr>
+      <td>Ritirata volontaria</td>
+      <td>Divisione, linea di partenza e destinazione preferita.</td>
+    </tr>
+    <tr>
+      <td>Artiglieria</td>
+      <td>Missione, batterie assegnate, settore e linea bersaglio.</td>
+    </tr>
+    <tr>
+      <td>Gas</td>
+      <td>Settore, linea bersaglio e PL pagati.</td>
+    </tr>
+    <tr>
+      <td>Aviazione</td>
+      <td>Squadriglia, missione, settore e linea se necessaria.</td>
+    </tr>
+    <tr>
+      <td>Riserva</td>
+      <td>Divisione, settore di ingresso e PL pagati.</td>
+    </tr>
+  </table>
+
+  <div class="box example">
+    <strong>Esempio di ordine valido:</strong>
+    “G02 e G05 attaccano C2 Beaumont L1 da B1. Bombardamento preparatorio su C2 L1 con 1 batteria pesante
+    e 1 campale. Squadriglia R1 osserva C2 L1. Caccia C1 scorta R1.”
+  </div>
+
+  <h2>7.2 Determinare l’Iniziativa Operativa</h2>
+
+  <p>
+    Una volta rivelati gli ordini, entrambi i giocatori sanno già che cosa l’altro intende fare:
+    l’incertezza sulle intenzioni è finita. Resta però da stabilire in che ordine risolvere gli
+    eventi quando due azioni si toccano — un attacco contro una divisione che sta ritirandosi,
+    due divisioni che entrano nella stessa linea vuota, movimenti che si escludono a vicenda.
+    L’Iniziativa Operativa risponde a questa domanda residua.
+  </p>
+
+  <p>
+    Dopo la rivelazione degli ordini, entrambi i giocatori tirano <strong>1d12</strong> e applicano
+    i modificatori. Il risultato più alto ottiene l’Iniziativa Operativa per il turno.
+  </p>
+
+  <table>
+    <tr>
+      <th>Condizione</th>
+      <th>Modificatore</th>
+    </tr>
+    <tr><td>Piano d’Offensiva attivo</td><td>+2</td></tr>
+    <tr><td>Superiorità aerea locale nel settore principale</td><td>+1</td></tr>
+    <tr><td>Maggior spesa di PL offensivi nel turno</td><td>+1</td></tr>
+    <tr><td>Difensore in settore fortificato</td><td>+1 solo nel settore interessato</td></tr>
+    <tr><td>Divisioni coinvolte con Fatica 4 o più</td><td>-1</td></tr>
+    <tr><td>Attaccante con nebbia o fango</td><td>-1</td></tr>
+  </table>
+
+  <p>
+    In caso di pareggio, mantiene l’iniziativa il giocatore che l’aveva nel turno precedente.
+    Se è il primo turno, l’iniziativa è assegnata dallo scenario.
+  </p>
+
+  <h2>7.3 Cosa decide l’iniziativa</h2>
+
+  <ul>
+    <li>Chi risolve per primo movimenti in conflitto.</li>
+    <li>Se una ritirata volontaria riesce prima che l’attaccante agganci il difensore.</li>
+    <li>Chi entra per primo in una linea quando due movimenti simultanei si urtano.</li>
+    <li>L’ordine di risoluzione dei combattimenti dipendenti l’uno dall’altro.</li>
+    <li>La priorità in casi non esplicitamente coperti dalle regole.</li>
+  </ul>
+
+  <div class="box rule">
+    <strong>Limite:</strong>
+    l’Iniziativa Operativa non permette mai di modificare ordini già scritti.
+    Serve solo a risolvere l’ordine degli eventi.
+  </div>
+
+  <h2>7.4 Ritirata contestata</h2>
+
+  <p>
+    Se una divisione ha ordine di ritirarsi e una divisione nemica ha ordine di attaccarla nello stesso turno,
+    l’Iniziativa Operativa decide se il difensore si sgancia prima o viene agganciato.
+  </p>
+
+  <table>
+    <tr>
+      <th>Chi ha iniziativa</th>
+      <th>Risultato</th>
+    </tr>
+    <tr>
+      <td>Difensore</td>
+      <td>La ritirata volontaria si risolve prima. L’attaccante può occupare la linea se resta vuota.</td>
+    </tr>
+    <tr>
+      <td>Attaccante</td>
+      <td>L’attaccante aggancia il difensore. Si risolve il combattimento prima della ritirata.</td>
+    </tr>
+  </table>
+
+  <div class="box example">
+    <strong>Esempio:</strong>
+    G02 attacca C2 L1. F02 ha ordine di ritirarsi da C2 L1 a C2 L2.
+    Se il francese ha iniziativa, F02 si ritira prima. Se il tedesco ha iniziativa, G02 aggancia F02
+    e il combattimento avviene.
+  </div>
+</section>

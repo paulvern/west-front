@@ -1,0 +1,436 @@
+<section id="catalogo">
+  <h1>2.0 Full Catalogue of Actions</h1>
+
+  <p class="lead">
+    This section is the main reference. Every possible action is listed with its cost, phase,
+    conditions, procedure, and effect. The detailed rules in the following chapters explain
+    special cases.
+  </p>
+
+  <p>
+    It is recommended to treat this chapter as a quick reference during play, not as
+    preparatory reading: each row answers the five questions of chapter 1.0 in compressed
+    form, and implicitly refers back to the chapter of the base rulebook where the procedure
+    is explained in full, with examples. The actions are grouped by functional area —
+    logistics, movement, combat, aviation, gas/morale/supply — because in practice a player
+    tends to decide by area: first how much logistics to devote to the turn's operations, then
+    how to move divisions, then where and how to attack, and so on. Keeping chapter 3.0 (Turn
+    Sequence) at hand as well helps to understand the order in which these actions, even
+    though listed here by category, will actually be resolved at the table.
+  </p>
+
+  <h2>2.1 Logistical and Administrative Actions</h2>
+
+  <p>
+    Actions in this category do not move troops or cause combat: they regulate the flow of
+    Logistics Points that makes everything else possible. Receiving, holding, and spending LP
+    is an activity repeated every turn, and one that often decides, well in advance, how long
+    an offensive can be sustained. The arrival of reserves, the assignment of replacements, and
+    the construction of fortifications also belong here, because they share the same
+    administrative nature: they are decisions that prepare the ground for later turns rather
+    than resolve something immediately.
+  </p>
+
+  <table>
+    <tr>
+      <th>Action</th>
+      <th>Phase</th>
+      <th>Cost</th>
+      <th>Feasible if...</th>
+      <th>How it's done</th>
+      <th>Effect</th>
+    </tr>
+
+    <tr>
+      <td>Receive LP</td>
+      <td>Logistics</td>
+      <td>0 LP</td>
+      <td>Every turn, per the scenario.</td>
+      <td>Add the received LP to the stored LP, respecting the maximum stockpile.</td>
+      <td>LP available to pay for actions.</td>
+    </tr>
+
+    <tr>
+      <td>Store LP</td>
+      <td>End of Logistics</td>
+      <td>0 LP</td>
+      <td>The total does not exceed the maximum stockpile.</td>
+      <td>Note down unspent LP.</td>
+      <td>The LP remain available next turn.</td>
+    </tr>
+
+    <tr>
+      <td>Reserve entry</td>
+      <td>Logistics + Orders + Movement</td>
+      <td>2 LP</td>
+      <td>The division is available and the entry sector is valid.</td>
+      <td>Pay 2 LP, write the order, place in Line 3 of the entry sector.</td>
+      <td>The division enters the map; it cannot attack the same turn.</td>
+    </tr>
+
+    <tr>
+      <td>Assign replacements</td>
+      <td>Logistics</td>
+      <td>1 LP per 1,000 men</td>
+      <td>The division is not in Line 1, is not contested, is not isolated, and has access to the rear.</td>
+      <td>Pay LP and add men to the division.</td>
+      <td>Increases available manpower. If it receives recruits, it may lose experience.</td>
+    </tr>
+
+    <tr>
+      <td>Build/repair fortification</td>
+      <td>Logistics</td>
+      <td>2 LP per level</td>
+      <td>Controlled line, not contested, not bombarded the same turn.</td>
+      <td>Pay 2 LP and increase the level by 1, up to the allowed maximum.</td>
+      <td>Improves the line's defense.</td>
+    </tr>
+
+    <tr>
+      <td>Extra Fatigue recovery</td>
+      <td>Recovery</td>
+      <td>1 LP</td>
+      <td>The division is eligible for base recovery.</td>
+      <td>Pay 1 LP during the Recovery Phase.</td>
+      <td>Removes 1 additional Fatigue.</td>
+    </tr>
+
+    <tr>
+      <td>Declare Offensive Plan</td>
+      <td>Orders</td>
+      <td>3 LP per turn of preparation</td>
+      <td>The player indicates a main sector and secondary sectors.</td>
+      <td>Write the plan and pay for at least 2 turns of preparation.</td>
+      <td>Once activated, gives bonuses to prepared attacks.</td>
+    </tr>
+  </table>
+
+  <h2>2.2 Movement Actions</h2>
+
+  <p>
+    Moving a division looks like the simplest action in the game, but the system carefully
+    distinguishes between moving within one's own sector, moving toward a friendly sector, and
+    attempting to enter an enemy sector. Only the first two are "movement" in the strict sense;
+    the third, as the table shows, is not movement at all but an attack disguised as a move,
+    and is resolved with the combat rules of chapter 12.0. This distinction avoids ambiguity
+    on the field: a division never "slides" into a contested line without fighting.
+  </p>
+
+  <table>
+    <tr>
+      <th>Action</th>
+      <th>Phase</th>
+      <th>Cost</th>
+      <th>Feasible if...</th>
+      <th>How it's done</th>
+      <th>Effect</th>
+    </tr>
+
+    <tr>
+      <td>Internal movement</td>
+      <td>Movement</td>
+      <td>0 LP</td>
+      <td>Destination line in the same friendly sector, not full and not forbidden.</td>
+      <td>Write the order and move the division one line.</td>
+      <td>The division changes line within the same sector.</td>
+    </tr>
+
+    <tr>
+      <td>Operational movement</td>
+      <td>Movement</td>
+      <td>1 LP</td>
+      <td>
+        Adjacent, connected, friendly sector; division not blocked by Fatigue or combat;
+        destination line with capacity available (chap. 4.3). Also used to replace a line left
+        uncovered after a local division has advanced.
+      </td>
+      <td>Pay 1 LP, write the order, move to Line 3 or an allowed line.</td>
+      <td>
+        The division changes sector. If the destination line no longer has capacity at the
+        time of resolution, the move fails, the division stays in its starting sector, and the
+        LP spent is lost regardless.
+      </td>
+    </tr>
+
+    <tr>
+      <td>Enter enemy sector</td>
+      <td>Combat</td>
+      <td>0 LP + any support</td>
+      <td>An attack order is written and there is a valid enemy target line.</td>
+      <td>Does not move like normal movement: an assault is resolved.</td>
+      <td>If the attack succeeds, the attacker may enter the line.</td>
+    </tr>
+
+    <tr>
+      <td>Move 1 MG company</td>
+      <td>Logistics + Movement</td>
+      <td>1 LP</td>
+      <td>Starting and arrival lines controlled, not contested; valid route.</td>
+      <td>Pay 1 LP and indicate origin/destination.</td>
+      <td>The MG changes line or sector per the scenario; it does not fire if it has moved.</td>
+    </tr>
+
+    <tr>
+      <td>Voluntary retreat</td>
+      <td>Orders + Movement</td>
+      <td>0 LP within the same internal line; 1 LP toward an adjacent sector</td>
+      <td>Unit not isolated, not contested, with a valid route.</td>
+      <td>Write the retreat order and move according to priority.</td>
+      <td>The division falls back; it may gain Fatigue.</td>
+    </tr>
+
+    <tr>
+      <td>Forced retreat</td>
+      <td>Retreats</td>
+      <td>0 LP</td>
+      <td>A combat or morale result imposes it.</td>
+      <td>Follow the Retreat Routes table.</td>
+      <td>The division falls back, loses Morale/gains Fatigue; if impossible, tests for surrender.</td>
+    </tr>
+  </table>
+
+  <h2>2.3 Combat and Ground Support Actions</h2>
+
+  <p>
+    Combat proper is almost always the endpoint of a longer preparation: a bombardment that
+    suppresses machine guns, a rolling barrage that accompanies the assault, counter-battery
+    fire that reduces the enemy's artillery response. The table below lists these actions
+    together, from automatic defensive fire to the advance that follows a victory, to show how
+    they fit into the same causal sequence: first the ground is prepared with artillery, then
+    the assault is declared, then the immediate consequences on the field are managed.
+  </p>
+
+  <table>
+    <tr>
+      <th>Action</th>
+      <th>Phase</th>
+      <th>Cost</th>
+      <th>Feasible if...</th>
+      <th>How it's done</th>
+      <th>Effect</th>
+    </tr>
+
+    <tr>
+      <td>Attack / assault</td>
+      <td>Orders + Combat</td>
+      <td>0 LP base</td>
+      <td>The division may attack an adjacent target or the indicated line.</td>
+      <td>Write the order, indicate divisions and target line, resolve the combat.</td>
+      <td>May cause losses, a contested line, enemy retreat, or an advance.</td>
+    </tr>
+
+    <tr>
+      <td>MG supporting fire</td>
+      <td>Combat</td>
+      <td>0 LP</td>
+      <td>MG not suppressed, line not contested, valid target; applies whether the line is attacking or being attacked (12.3).</td>
+      <td>Every MG rolls 2d12 in its own sector or 1d12 in support from an adjacent sector.</td>
+      <td>Successes are added to the total of the side the MG belongs to, whether attacking or defending.</td>
+    </tr>
+
+    <tr>
+      <td>Preparatory bombardment</td>
+      <td>Artillery</td>
+      <td>3 LP</td>
+      <td>Batteries available, valid target, order written.</td>
+      <td>Each battery rolls 4d12; success on 10+, or 9+ with observation.</td>
+      <td>Suppresses MGs, reduces fortifications, inflicts Fatigue, triggers a morale test, or gives an assault bonus.</td>
+    </tr>
+
+    <tr>
+      <td>Rolling barrage</td>
+      <td>Artillery + Combat</td>
+      <td>2 LP</td>
+      <td>Linked to an assault declared the same turn.</td>
+      <td>Roll the assigned batteries and apply the barrage table.</td>
+      <td>Suppresses MGs and may give +1 success to the assault.</td>
+    </tr>
+
+    <tr>
+      <td>Counter-battery fire</td>
+      <td>Artillery</td>
+      <td>2 LP</td>
+      <td>Batteries available and enemy artillery type chosen.</td>
+      <td>Roll the assigned batteries; every 10+ is a success.</td>
+      <td>Suppresses or damages enemy batteries.</td>
+    </tr>
+
+    <tr>
+      <td>Harassing fire</td>
+      <td>Artillery</td>
+      <td>1 LP</td>
+      <td>Battery available, valid target sector.</td>
+      <td>Roll the battery's dice.</td>
+      <td>Inflicts Fatigue or increases the enemy's movement cost.</td>
+    </tr>
+
+    <tr>
+      <td>Advance after combat</td>
+      <td>Retreats and advances</td>
+      <td>0 LP</td>
+      <td>The combat result allows it and the line is not full.</td>
+      <td>Move the winning unit into the conquered line.</td>
+      <td>The attacker occupies or contests the line.</td>
+    </tr>
+  </table>
+
+  <h2>2.4 Air Actions</h2>
+
+  <p>
+    Aviation, as chapter 11.0 explains more fully, rarely decides the outcome of a turn by
+    itself: its job is to make the other arms more effective. A successful reconnaissance
+    strips the enemy of the advantage of surprise, successful observation makes artillery more
+    accurate, and a successful escort or interception decides who controls the sky over a
+    sector for that turn. These are relatively cheap actions in LP terms, but their value is
+    measured in the effects they unlock elsewhere, not in the direct damage they deal.
+  </p>
+
+  <table>
+    <tr>
+      <th>Action</th>
+      <th>Phase</th>
+      <th>Cost</th>
+      <th>Feasible if...</th>
+      <th>How it's done</th>
+      <th>Effect</th>
+    </tr>
+
+    <tr>
+      <td>Reconnaissance</td>
+      <td>Aviation</td>
+      <td>1 LP</td>
+      <td>Reconnaissance squadron available, weather allows flight.</td>
+      <td>Write down the sector; roll 1d12, success on 7+.</td>
+      <td>You gain two pieces of information about the sector and cancel any "no reconnaissance" penalty.</td>
+    </tr>
+
+    <tr>
+      <td>Artillery observation</td>
+      <td>Aviation</td>
+      <td>1 LP</td>
+      <td>Reconnaissance squadron available and a linked artillery mission.</td>
+      <td>Indicate sector, line, and linked bombardment; roll 1d12, success on 7+.</td>
+      <td>The linked artillery mission hits on 9+ instead of 10+.</td>
+    </tr>
+
+    <tr>
+      <td>Fighter escort</td>
+      <td>Aviation</td>
+      <td>1 LP</td>
+      <td>Fighter squadron available and a friendly mission in the same sector.</td>
+      <td>Resolve any fighter duel; if successful, apply +1.</td>
+      <td>The friendly air mission receives +1.</td>
+    </tr>
+
+    <tr>
+      <td>Interception</td>
+      <td>Aviation</td>
+      <td>1 LP</td>
+      <td>Fighter squadron available and an enemy mission in the same sector.</td>
+      <td>Resolve the duel or the fighter mission's fire.</td>
+      <td>The enemy air mission receives -1.</td>
+    </tr>
+
+    <tr>
+      <td>Local superiority</td>
+      <td>Aviation</td>
+      <td>1 LP</td>
+      <td>Fighters available, sector indicated.</td>
+      <td>Roll 1d12, success on 7+.</td>
+      <td>Friendly air missions in the sector receive +1 during the phase.</td>
+    </tr>
+
+    <tr>
+      <td>Air interdiction</td>
+      <td>Aviation</td>
+      <td>2 LP</td>
+      <td>Squadron eligible and weather allows flight.</td>
+      <td>Indicate the sector; roll 1d12, success on 7+.</td>
+      <td>Increases the enemy's movement cost or inflicts Fatigue.</td>
+    </tr>
+  </table>
+
+  <h2>2.5 Gas, Morale, Supply, and Surrender</h2>
+
+  <p>
+    This last group brings together very different actions — a chemical weapon, a
+    psychological test, an end-of-turn administrative check — but they all share the same
+    role: they measure how much longer a division can hold out. Gas weakens the enemy before
+    the infantry attacks; the morale test checks whether a unit holds after taking a blow; the
+    supply check establishes whether a division is still connected to its logistics
+    organization; the surrender test is the last resort, when retreat is no longer possible.
+    The victory check, finally, closes the turn by translating everything that happened into a
+    score.
+  </p>
+
+  <table>
+    <tr>
+      <th>Action / Check</th>
+      <th>Phase</th>
+      <th>Cost</th>
+      <th>Feasible if...</th>
+      <th>How it's done</th>
+      <th>Effect</th>
+    </tr>
+
+    <tr>
+      <td>Gas mission</td>
+      <td>Artillery and Gas</td>
+      <td>4 LP</td>
+      <td>Scenario allows gas, wind does not prevent it, order written.</td>
+      <td>Roll 4d12, success on 9+; apply effects per success.</td>
+      <td>Suppresses MGs, inflicts Fatigue, triggers a Morale test, disorder, or limited losses.</td>
+    </tr>
+
+    <tr>
+      <td>Morale test</td>
+      <td>When required</td>
+      <td>0 LP</td>
+      <td>Losses, gas, isolation, combat, or a rule requires it.</td>
+      <td>Roll 1d12 + Morale.</td>
+      <td>May cause Fatigue, loss of Morale, retreat, rout, or surrender.</td>
+    </tr>
+
+    <tr>
+      <td>Supply check</td>
+      <td>Isolation and supply</td>
+      <td>0 LP</td>
+      <td>Every division on the map.</td>
+      <td>Trace a path through friendly sectors to a valid rear area.</td>
+      <td>If isolated: no replacements/support, -1 Morale and +1 Fatigue.</td>
+    </tr>
+
+    <tr>
+      <td>Base recovery</td>
+      <td>Recovery</td>
+      <td>0 LP</td>
+      <td>Division not in L1, not contested, not isolated, not bombarded, has not attacked.</td>
+      <td>Remove 1 Fatigue.</td>
+      <td>The division recovers efficiency.</td>
+    </tr>
+
+    <tr>
+      <td>Surrender test</td>
+      <td>Retreats / Supply</td>
+      <td>0 LP</td>
+      <td>No retreat route, critical isolation, or surrender conditions.</td>
+      <td>Roll 1d12 + Morale - Fatigue and modifiers.</td>
+      <td>Holds out, routs, partial surrender, or removal.</td>
+    </tr>
+
+    <tr>
+      <td>Victory check</td>
+      <td>End of turn</td>
+      <td>0 LP</td>
+      <td>Every turn or end of scenario.</td>
+      <td>Calculate VP per the scenario.</td>
+      <td>Determines the level of victory.</td>
+    </tr>
+  </table>
+
+  <div class="box warning">
+    <strong>Consistency note:</strong>
+    an action may cost 0 LP but still require an order. For example, the base attack costs
+    0 LP, but it must be written in the orders. Without an order, the division does not attack.
+  </div>
+</section>

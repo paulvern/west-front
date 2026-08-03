@@ -1,0 +1,738 @@
+<section id="isonzo" class="page-break">
+  <h1>17.0 Scenario: Fronte Italiano — Isonzo 1916</h1>
+
+  <p class="lead">
+    Gorizia, Sabotino e il Carso: scenario operativo per le battaglie dell’Isonzo.
+  </p>
+
+  <h2>17.1 Introduzione allo scenario</h2>
+
+  <p>
+    Questo scenario rappresenta un’offensiva italiana sull’Isonzo, ispirata soprattutto alla
+    <strong>Sesta battaglia dell’Isonzo</strong> dell’agosto 1916. Il giocatore italiano deve
+    attraversare o sfruttare le teste di ponte sull’Isonzo, conquistare quote dominanti e aprire
+    la via verso <strong>Gorizia</strong>. Il giocatore austro-ungarico deve conservare le alture,
+    rallentare il ritmo dell’offensiva e infliggere perdite tali da trasformare ogni conquista
+    italiana in un successo troppo costoso. Le condizioni di vittoria sono raccolte a parte,
+    nel capitolo 18.0.
+  </p>
+
+  <div class="box history">
+    <strong>Nota storica:</strong>
+    le battaglie dell’Isonzo furono una lunga serie di offensive italiane contro posizioni
+    austro-ungariche forti, spesso appoggiate a montagne, alture carsiche, fiumi e trincee scavate
+    nella roccia. La conquista di Gorizia nell’agosto 1916 fu uno dei successi italiani più rilevanti
+    del fronte.
+  </div>
+
+  <h2>17.2 Durata</h2>
+
+  <p>
+    Lo scenario dura <strong>8 turni</strong>. Ogni turno rappresenta un giorno di operazioni.
+  </p>
+
+  <h2>17.3 Giocatori</h2>
+
+  <table>
+    <tr>
+      <th>Giocatore</th>
+      <th>Ruolo</th>
+      <th>Obiettivo generale</th>
+    </tr>
+    <tr>
+      <td>Italiano</td>
+      <td>Attaccante</td>
+      <td>Conquistare Gorizia, Sabotino, Podgora/Oslavia e posizioni carsiche.</td>
+    </tr>
+    <tr>
+      <td>Austro-ungarico</td>
+      <td>Difensore</td>
+      <td>Tenere le alture, bloccare i passaggi sull’Isonzo e logorare l’attacco italiano.</td>
+    </tr>
+  </table>
+
+  <h2>17.4 Settori dello scenario</h2>
+
+  <p>
+    La mappa è astratta e rappresenta il medio Isonzo e il settore di Gorizia. Ogni settore contiene
+    tre linee difensive interne, come nel regolamento base.
+  </p>
+
+  <table>
+    <tr>
+      <th>Codice</th>
+      <th>Nome</th>
+      <th>Terreno</th>
+      <th>Controllo iniziale</th>
+    </tr>
+    <tr><td>I1</td><td>Plava</td><td>Fiume/Testa di ponte</td><td>Italiano</td></tr>
+    <tr><td>I2</td><td>Monte Sabotino</td><td>Altura/Fortificato</td><td>Austro-ungarico</td></tr>
+    <tr><td>I3</td><td>Oslavia-Podgora</td><td>Altura/Villaggio</td><td>Austro-ungarico</td></tr>
+    <tr><td>I4</td><td>Lucinico</td><td>Villaggio/Aperto</td><td>Italiano</td></tr>
+    <tr><td>I5</td><td>Gradisca</td><td>Fiume/Villaggio</td><td>Italiano</td></tr>
+
+    <tr><td>A1</td><td>Monte Santo</td><td>Altura/Forte</td><td>Austro-ungarico</td></tr>
+    <tr><td>A2</td><td>San Gabriele</td><td>Altura/Forte</td><td>Austro-ungarico</td></tr>
+    <tr><td>A3</td><td>Gorizia</td><td>Città/Obiettivo</td><td>Austro-ungarico</td></tr>
+    <tr><td>A4</td><td>Monte San Michele</td><td>Carso/Altura</td><td>Austro-ungarico</td></tr>
+    <tr><td>A5</td><td>Doberdò</td><td>Carso/Fortificato</td><td>Austro-ungarico</td></tr>
+    <tr><td>A6</td><td>Vallone del Carso</td><td>Carso/Retrovia</td><td>Austro-ungarico</td></tr>
+  </table>
+
+  <h2>17.5 Collegamenti consigliati</h2>
+
+  <table>
+    <tr>
+      <th>Settore</th>
+      <th>Collegato a</th>
+    </tr>
+    <tr><td>I1 Plava</td><td>I2, I3, A1</td></tr>
+    <tr><td>I2 Monte Sabotino</td><td>I1, I3, A1, A3</td></tr>
+    <tr><td>I3 Oslavia-Podgora</td><td>I1, I2, I4, A3</td></tr>
+    <tr><td>I4 Lucinico</td><td>I3, I5, A3, A4</td></tr>
+    <tr><td>I5 Gradisca</td><td>I4, A4, A5</td></tr>
+    <tr><td>A1 Monte Santo</td><td>I1, I2, A2, A3</td></tr>
+    <tr><td>A2 San Gabriele</td><td>A1, A3, A6</td></tr>
+    <tr><td>A3 Gorizia</td><td>I2, I3, I4, A1, A2, A4</td></tr>
+    <tr><td>A4 Monte San Michele</td><td>I4, I5, A3, A5, A6</td></tr>
+    <tr><td>A5 Doberdò</td><td>I5, A4, A6</td></tr>
+    <tr><td>A6 Vallone del Carso</td><td>A2, A4, A5</td></tr>
+  </table>
+
+  <h2>17.6 Terreno speciale del fronte italiano</h2>
+
+  <h3>17.6.1 Isonzo e attraversamenti</h3>
+
+  <p>
+    L’Isonzo è un ostacolo operativo. Dove lo scenario indica <strong>Fiume</strong> o
+    <strong>Testa di ponte</strong>, il movimento offensivo è più difficile e richiede preparazione.
+  </p>
+
+  <table>
+    <tr>
+      <th>Azione</th>
+      <th>Costo</th>
+      <th>Fattibile se...</th>
+      <th>Procedura</th>
+      <th>Effetto</th>
+    </tr>
+    <tr>
+      <td>Attraversamento preparato dell’Isonzo</td>
+      <td>2 PL</td>
+      <td>Il settore di partenza è controllato; non c’è piena o meteo proibitivo; ordine scritto.</td>
+      <td>Pagare 2 PL, indicare settore di partenza e settore bersaglio.</td>
+      <td>Una divisione può attaccare o entrare in una linea oltre il fiume. Subisce +1 Fatica dopo l’azione.</td>
+    </tr>
+    <tr>
+      <td>Costruzione o ripristino passerelle/ponti</td>
+      <td>2 PL</td>
+      <td>Settore di partenza controllato e non bombardato nello stesso turno.</td>
+      <td>Pagare 2 PL nella Fase Logistica.</td>
+      <td>Il primo movimento italiano attraverso quel collegamento nel turno successivo costa 0 PL aggiuntivi.</td>
+    </tr>
+    <tr>
+      <td>Attraversamento improvvisato</td>
+      <td>0 PL</td>
+      <td>Solo se ordinato e se il giocatore accetta il rischio.</td>
+      <td>La divisione attacca con VT +1 e guadagna +1 Fatica prima del combattimento.</td>
+      <td>Permette un attacco rischioso senza preparazione logistica.</td>
+    </tr>
+  </table>
+
+  <div class="box rule">
+    <strong>Regola chiave:</strong>
+    il fiume non impedisce sempre l’attacco, ma trasforma l’azione in un problema logistico.
+    Un attacco oltre l’Isonzo senza preparazione può riuscire, ma sarà costoso.
+  </div>
+
+  <h3>17.6.2 Carso</h3>
+
+  <p>
+    Il Carso è terreno duro, roccioso, povero di copertura morbida ma ricco di trincee scavate
+    nella pietra, doline, osservatori e posizioni difficili da espugnare.
+  </p>
+
+  <table>
+    <tr>
+      <th>Terreno</th>
+      <th>Effetto</th>
+    </tr>
+    <tr>
+      <td>Carso</td>
+      <td>
+        Il difensore ignora 1 successo d’assalto. Le fortificazioni costano normalmente,
+        ma l’artiglieria deve ottenere 2 successi per ridurre di 1 una fortificazione di livello 3 o 4.
+      </td>
+    </tr>
+    <tr>
+      <td>Carso/Fortificato</td>
+      <td>
+        Come Carso. Inoltre, il primo attacco italiano senza bombardamento preparatorio subisce VT +1.
+      </td>
+    </tr>
+    <tr>
+      <td>Altura</td>
+      <td>
+        Il difensore ignora 1 successo d’assalto. La ricognizione o osservazione riuscita annulla questo bonus
+        per il primo bombardamento del turno, non per il combattimento.
+      </td>
+    </tr>
+    <tr>
+      <td>Città/Obiettivo</td>
+      <td>
+        Il difensore riceve +1 successo automatico in combattimento in trincea, salvo linea priva di divisioni.
+      </td>
+    </tr>
+  </table>
+
+  <h3>17.6.3 Caverne e ricoveri austro-ungarici</h3>
+
+  <p>
+    In molti settori dell’Isonzo, la difesa austro-ungarica sfruttava caverne, ricoveri scavati nella roccia
+    e posizioni in profondità.
+  </p>
+
+  <table>
+    <tr>
+      <th>Azione o condizione</th>
+      <th>Effetto</th>
+    </tr>
+    <tr>
+      <td>Linea austro-ungarica in Carso o Altura con Fortificazione 3+</td>
+      <td>Ignora il primo effetto Fatica causato da bombardamento in quel turno.</td>
+    </tr>
+    <tr>
+      <td>Bombardamento pesante o mortai contro caverne</td>
+      <td>Può annullare questa protezione se ottiene almeno 3 successi.</td>
+    </tr>
+  </table>
+
+  <h2>17.7 Forze italiane</h2>
+
+  <h3>17.7.1 Divisioni italiane in mappa</h3>
+
+  <table>
+    <tr>
+      <th>Codice</th>
+      <th>Uomini</th>
+      <th>Esperienza</th>
+      <th>VT</th>
+      <th>Morale</th>
+      <th>Fatica</th>
+      <th>Posizione</th>
+    </tr>
+    <tr><td>IT01</td><td>12.000</td><td>Regolare</td><td>9+</td><td>4</td><td>1</td><td>I1 L2</td></tr>
+    <tr><td>IT02</td><td>11.000</td><td>Regolare</td><td>9+</td><td>4</td><td>1</td><td>I3 L1</td></tr>
+    <tr><td>IT03</td><td>10.000</td><td>Reclute</td><td>10+</td><td>3</td><td>1</td><td>I4 L2</td></tr>
+    <tr><td>IT04</td><td>12.000</td><td>Veterana</td><td>8+</td><td>4</td><td>0</td><td>I5 L2</td></tr>
+    <tr><td>IT05</td><td>9.000</td><td>Regolare</td><td>9+</td><td>4</td><td>0</td><td>I4 L3</td></tr>
+    <tr><td>IT06 Alpini</td><td>8.000</td><td>Veterana</td><td>8+</td><td>5</td><td>0</td><td>I1 L3</td></tr>
+  </table>
+
+  <h3>17.7.2 Riserve italiane</h3>
+
+  <table>
+    <tr>
+      <th>Codice</th>
+      <th>Uomini</th>
+      <th>Esperienza</th>
+      <th>Disponibilità</th>
+    </tr>
+    <tr><td>IT07</td><td>11.000</td><td>Regolare</td><td>Turno 3</td></tr>
+    <tr><td>IT08</td><td>10.000</td><td>Reclute</td><td>Turno 4</td></tr>
+    <tr><td>IT09</td><td>12.000</td><td>Regolare</td><td>Turno 5</td></tr>
+  </table>
+
+  <p>
+    Le riserve italiane entrano da I1, I4 o I5, sempre in Linea 3, pagando 2 PL.
+  </p>
+
+  <h3>17.7.3 Supporti italiani</h3>
+
+  <table>
+    <tr>
+      <th>Supporto</th>
+      <th>Disponibilità</th>
+    </tr>
+    <tr><td>Artiglieria campale</td><td>4 batterie</td></tr>
+    <tr><td>Artiglieria pesante</td><td>3 batterie</td></tr>
+    <tr><td>Bombarde / mortai</td><td>2 batterie, successo a 9+</td></tr>
+    <tr><td>MG</td><td>8 compagnie</td></tr>
+    <tr><td>Aviazione</td><td>2 ricognizione + 1 caccia</td></tr>
+    <tr><td>Genieri</td><td>Usati tramite PL per attraversamenti, ponti e preparazione</td></tr>
+  </table>
+
+  <h2>17.8 Forze austro-ungariche</h2>
+
+  <h3>17.8.1 Divisioni austro-ungariche in mappa</h3>
+
+  <table>
+    <tr>
+      <th>Codice</th>
+      <th>Uomini</th>
+      <th>Esperienza</th>
+      <th>VT</th>
+      <th>Morale</th>
+      <th>Fatica</th>
+      <th>Posizione</th>
+    </tr>
+    <tr><td>AH01</td><td>10.000</td><td>Veterana</td><td>8+</td><td>4</td><td>1</td><td>I2 L2</td></tr>
+    <tr><td>AH02</td><td>11.000</td><td>Regolare</td><td>9+</td><td>4</td><td>1</td><td>I3 L2</td></tr>
+    <tr><td>AH03</td><td>10.000</td><td>Regolare</td><td>9+</td><td>4</td><td>0</td><td>A3 L1</td></tr>
+    <tr><td>AH04</td><td>9.000</td><td>Veterana</td><td>8+</td><td>4</td><td>0</td><td>A4 L2</td></tr>
+    <tr><td>AH05</td><td>10.000</td><td>Regolare</td><td>9+</td><td>4</td><td>0</td><td>A5 L2</td></tr>
+    <tr><td>AH06</td><td>8.000</td><td>Reclute</td><td>10+</td><td>3</td><td>0</td><td>A1 L2</td></tr>
+  </table>
+
+  <h3>17.8.2 Riserve austro-ungariche</h3>
+
+  <table>
+    <tr>
+      <th>Codice</th>
+      <th>Uomini</th>
+      <th>Esperienza</th>
+      <th>Disponibilità</th>
+    </tr>
+    <tr><td>AH07</td><td>10.000</td><td>Regolare</td><td>Turno 3</td></tr>
+    <tr><td>AH08</td><td>9.000</td><td>Veterana</td><td>Turno 5</td></tr>
+  </table>
+
+  <p>
+    Le riserve austro-ungariche entrano da A2, A3 o A6, sempre in Linea 3, pagando 2 PL.
+  </p>
+
+  <h3>17.8.3 Supporti austro-ungarici</h3>
+
+  <table>
+    <tr>
+      <th>Supporto</th>
+      <th>Disponibilità</th>
+    </tr>
+    <tr><td>Artiglieria campale</td><td>3 batterie</td></tr>
+    <tr><td>Artiglieria pesante</td><td>2 batterie</td></tr>
+    <tr><td>Mortai</td><td>1 batteria, successo a 9+</td></tr>
+    <tr><td>MG</td><td>12 compagnie</td></tr>
+    <tr><td>Aviazione</td><td>1 ricognizione + 1 caccia</td></tr>
+  </table>
+
+  <h2>17.9 Logistica dello scenario</h2>
+
+  <table>
+    <tr>
+      <th>Giocatore</th>
+      <th>PL iniziali</th>
+      <th>PL per turno</th>
+      <th>Massimo accumulabile</th>
+    </tr>
+    <tr>
+      <td>Italiano</td>
+      <td>16</td>
+      <td>13</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>Austro-ungarico</td>
+      <td>12</td>
+      <td>10</td>
+      <td>20</td>
+    </tr>
+  </table>
+
+  <ul>
+    <li>Nel Turno 1 l’Italiano riceve +4 PL speciali per bombardamento, osservazione, genieri o piano offensivo.</li>
+    <li>Dal Turno 4 l’Austro-ungarico riceve +2 PL se controlla ancora A3 Gorizia.</li>
+    <li>Il gas non è disponibile nello scenario base Isonzo 1916.</li>
+  </ul>
+
+  <h2>17.10 Regole speciali scenario</h2>
+
+  <h3>17.10.1 Preparazione italiana</h3>
+
+  <p>
+    Nel Turno 1, l’Italiano può dichiarare un <strong>Piano d’Offensiva</strong> su uno tra:
+    I2 Sabotino, I3 Podgora/Oslavia, A4 San Michele. Se lo fa, paga 3 PL e riceve +1 al tiro iniziativa
+    nei Turni 1-2.
+  </p>
+
+  <h3>17.10.2 Alpini</h3>
+
+  <table>
+    <tr>
+      <th>Azione</th>
+      <th>Costo</th>
+      <th>Fattibile se...</th>
+      <th>Effetto</th>
+    </tr>
+    <tr>
+      <td>Assalto alpino su altura</td>
+      <td>1 PL</td>
+      <td>Unità Alpini, bersaglio Altura o Forte/Altura, ordine scritto.</td>
+      <td>
+        L’unità Alpini ignora il primo malus VT da Altura o Carso nel combattimento del turno.
+        Dopo il combattimento guadagna +1 Fatica.
+      </td>
+    </tr>
+  </table>
+
+  <h3>17.10.3 Trincee carsiche</h3>
+
+  <p>
+    In settori Carso o Carso/Fortificato, il difensore ignora 1 successo d’assalto.
+    Questo effetto non si applica se la linea è stata colpita da bombardamento preparatorio
+    con almeno 4 successi nello stesso turno.
+  </p>
+
+  <h3>17.10.4 Gorizia</h3>
+
+  <p>
+    A3 Gorizia è un settore Città/Obiettivo. Per ottenere i PV completi, l’Italiano deve controllare
+    almeno 2 linee su 3 e nessuna linea deve essere contesa. Se una divisione austro-ungarica resta
+    in una linea del settore, Gorizia è considerata contesa ai fini dei PV completi.
+  </p>
+
+  <h3>17.10.5 Intensità perdite</h3>
+
+  <p>
+    Lo scenario usa <strong>Intensità Alta</strong>: ogni 2 successi nemici causano 1.000 perdite.
+  </p>
+
+  <div class="box warning">
+    <strong>Nota di accuratezza storica:</strong>
+    le sezioni seguenti si concentrano principalmente sulla <strong>Sesta battaglia dell’Isonzo</strong>
+    (agosto 1916), ma includono elementi e settori che furono protagonisti in altre fasi della campagna
+    dell’Isonzo (1915-1917). La mappa operativa rappresenta un arco decisionale completo, pur comprimendo
+    eventi che nella realtà si svilupparono in battaglie successive e con intensità diverse. Questi trafiletti
+    storici non sono regole, salvo dove indicato esplicitamente.
+  </div>
+
+  <h2>17.11 Il contesto delle battaglie dell’Isonzo</h2>
+
+  <p>
+    Le <strong>battaglie dell’Isonzo</strong> furono una serie di dodici offensive italiane contro posizioni
+    austro-ungariche lungo il fiume Isonzo, nella regione del Friuli-Venezia Giulia, tra giugno 1915 e
+    novembre 1917. L’obiettivo strategico italiano era la conquista di <strong>Trieste</strong> e l’apertura
+    della via verso <strong>Lubiana</strong> e il cuore dell’Impero austro-ungarico.
+  </p>
+
+  <p>
+    La geografia del teatro operativo era estremamente sfavorevole all’attacco. Il fiume Isonzo costituiva
+    un ostacolo naturale significativo, le alture circostanti offrivano posizioni difensive dominanti, e
+    l’altopiano carsico era un terreno durissimo dove ogni posizione doveva essere conquistata con assalti
+    frontali contro trincee scavate nella roccia.
+  </p>
+
+  <div class="box history">
+    <strong>Lettura operativa:</strong>
+    la dottrina offensiva italiana sotto il generale Luigi Cadorna puntava sulla preparazione d’artiglieria
+    massiccia seguita da assalti di fanteria concentrati. La difesa austro-ungarica, guidata da Svetozar
+    Boroević, sfruttava la geografia, le fortificazioni in profondità e la capacità di resistere a perdite
+    enormi mantenendo le posizioni chiave.
+  </div>
+
+  <p>
+    La <strong>Sesta battaglia dell’Isonzo</strong> (6-17 agosto 1916) rappresentò il primo grande successo
+    italiano della campagna. La conquista di <strong>Monte Sabotino</strong> il 6 agosto e l’entrata a
+    <strong>Gorizia</strong> il 9 agosto furono celebrati come vittorie significative, anche se l’avanzata
+    si arrestò poco oltre la città.
+  </p>
+
+  <h2>17.12 Cronologia sintetica dell’estate 1916</h2>
+
+  <table>
+    <tr>
+      <th>Data storica</th>
+      <th>Evento storico sintetico</th>
+      <th>Riflesso nello scenario</th>
+    </tr>
+    <tr>
+      <td>4-5 agosto 1916</td>
+      <td>
+        Preparazione artiglieria italiana intensiva sulle posizioni austro-ungariche
+        intorno a Gorizia e sul Carso.
+      </td>
+      <td>
+        Turno 1: bonus PL italiani per bombardamento, osservazione e preparazione offensiva.
+      </td>
+    </tr>
+    <tr>
+      <td>6 agosto</td>
+      <td>
+        Assalto italiano al Monte Sabotino. Gli Alpini conquistano la vetta dopo combattimenti
+        durissimi, aprendo la via verso Gorizia da nord-ovest.
+      </td>
+      <td>
+        I2 Sabotino è il primo obiettivo critico. La sua caduta sbilancia la difesa di Gorizia.
+      </td>
+    </tr>
+    <tr>
+      <td>7-8 agosto</td>
+      <td>
+        Consolidamento italiano sul Sabotino e pressione su Podgora-Oslavia.
+        Gli austro-ungarici iniziano a ritirarsi da alcune posizioni avanzate.
+      </td>
+      <td>
+        I3 Podgora/Oslavia rappresenta il secondo asse d’attacco verso Gorizia.
+      </td>
+    </tr>
+    <tr>
+      <td>9 agosto</td>
+      <td>
+        Le truppe italiane entrano a Gorizia. La città viene conquistata dopo combattimenti
+        urbani, anche se la riva orientale (testa di ponte di Gorizia) resta contesa.
+      </td>
+      <td>
+        A3 Gorizia è l’obiettivo principale dello scenario. Il suo controllo operativo
+        assegna PV significativi.
+      </td>
+    </tr>
+    <tr>
+      <td>9-12 agosto</td>
+      <td>
+        Combattimenti intensi sul Carso. Gli italiani attaccano Monte San Michele, Doberdò
+        e altre posizioni carsiche, subendo perdite pesantissime contro difese fortissime.
+      </td>
+      <td>
+        A4 San Michele e A5 Doberdò sono settori ad alta intensità. Il terreno carsico
+        penalizza l’attacco.
+      </td>
+    </tr>
+    <tr>
+      <td>10-17 agosto</td>
+      <td>
+        Gli italiani tentano di sfruttare il successo verso est e nord-est, ma gli assalti
+        contro Monte Santo, San Gabriele e le posizioni carsiche in profondità falliscono.
+        L’offensiva si esaurisce.
+      </td>
+      <td>
+        A1 Monte Santo e A2 San Gabriele restano austro-ungarici nello scenario base,
+        rappresentando i limiti dell’avanzata italiana.
+      </td>
+    </tr>
+  </table>
+
+  <h2>17.13 Offensive locali e settori dello scenario</h2>
+
+  <h3>17.13.1 I1 Plava — Testa di ponte sull’Isonzo</h3>
+
+  <div class="box history">
+    <strong>Contesto storico:</strong>
+    Plava era una delle teste di ponte italiane sull’Isonzo, conquistata nelle prime fasi della guerra.
+    Costituiva una base logistica essenziale per le offensive verso Gorizia e verso le alture settentrionali.
+    Mantenere e rifornire le truppe oltre il fiume era una sfida costante.
+  </div>
+
+  <p>
+    Nel gioco, I1 Plava rappresenta il punto di partenza settentrionale dell’offensiva italiana.
+    Le divisioni italiane devono muovere da qui per attaccare il Sabotino e le alture circostanti.
+  </p>
+
+  <div class="box example">
+    <strong>In gioco:</strong>
+    gli attraversamenti dell’Isonzo costano PL. Plava come testa di ponte già consolidata
+    riduce questo costo per il primo movimento del turno.
+  </div>
+
+  <h3>17.13.2 I2 Monte Sabotino — L’altura decisiva</h3>
+
+  <div class="box history">
+    <strong>Contesto storico:</strong>
+    Il Monte Sabotino (609 m) dominava Gorizia da nord-ovest. La sua conquista il 6 agosto 1916
+    da parte degli Alpini della Brigata Sassari fu determinante per il successo dell’offensiva.
+    Le truppe italiane attaccarono di notte, sorprendendo i difensori e consolidando rapidamente
+    la posizione prima che arrivassero i contrattacchi.
+  </div>
+
+  <p>
+    Nello scenario, il Sabotino è il primo obiettivo critico. Senza la sua conquista, Gorizia
+    resta molto difficile da minacciare, perché i difensori austro-ungarici mantengono osservazione
+    e fuoco d’infilata sulle vie d’accesso.
+  </p>
+
+  <table>
+    <tr>
+      <th>Stato del Sabotino</th>
+      <th>Significato operativo</th>
+    </tr>
+    <tr>
+      <td>Controllo austro-ungarico</td>
+      <td>Gorizia ben difesa, gli italiani subiscono malus negli attacchi da ovest.</td>
+    </tr>
+    <tr>
+      <td>Controllo italiano</td>
+      <td>Via aperta verso Gorizia, osservazione italiana sulle retrovia nemiche.</td>
+    </tr>
+  </table>
+
+  <h3>17.13.3 I3 Oslavia-Podgora — Il fianco settentrionale</h3>
+
+  <div class="box history">
+    <strong>Contesto storico:</strong>
+    Il complesso di villaggi e posizioni di Oslavia e Podgora, a nord di Gorizia, fu teatro
+    di combattimenti durissimi in molte delle battaglie dell’Isonzo. La posizione permetteva
+    di minacciare Gorizia da nord, ma era ben difesa e richiedeva attacchi ripetuti.
+  </div>
+
+  <p>
+    Nello scenario, I3 rappresenta un secondo asse d’attacco verso Gorizia. Se l’italiano
+    conquista sia il Sabotino (I2) sia Podgora-Oslavia (I3), la difesa di Gorizia diventa
+    insostenibile per l’austro-ungarico.
+  </p>
+
+  <h3>17.13.4 I4 Lucinico — Passaggio intermedio</h3>
+
+  <div class="box history">
+    <strong>Contesto storico-operativo:</strong>
+    Lucinico era un villaggio a sud di Gorizia, sulla direttrice italiana che collegava
+    le teste di ponte dell’Isonzo con la città. Meno fortificato rispetto ai settori
+    montagnosi, ma comunque difeso e contestato.
+  </div>
+
+  <p>
+    Nel gioco, I4 è un settore di transito. L’italiano parte già con il controllo,
+    ma deve usarlo come base per attaccare Gorizia (A3) o il Carso (A4).
+  </p>
+
+  <h3>17.13.5 I5 Gradisca — Settore meridionale</h3>
+
+  <div class="box history">
+    <strong>Contesto storico:</strong>
+    Gradisca d’Isonzo era un punto di attraversamento meridionale del fiume. Il settore
+    rappresentava il collegamento logistico per le offensive sul Carso e permetteva
+    di minacciare il fianco sud della difesa austro-ungarica.
+  </div>
+
+  <p>
+    Nello scenario, I5 è la base di partenza per le offensive sul Carso (A4, A5).
+    Come Lucinico, parte sotto controllo italiano ma richiede investimento di PL
+    per sostenere le divisioni che attaccano verso est.
+  </p>
+
+  <h3>17.13.6 A1 Monte Santo — L’altura inespugnata</h3>
+
+  <div class="box history">
+    <strong>Contesto storico:</strong>
+    Il Monte Santo (Sveta Gora, 682 m) fu uno degli obiettivi più contesi e mai conquistati
+    stabilmente dagli italiani durante le battaglie dell’Isonzo. La sua posizione dominante,
+    le fortificazioni pesanti e la determinazione austro-ungarica ne fecero un simbolo della
+    resistenza. Solo nella disfatta di Caporetto (ottobre 1917) il Monte Santo cadde,
+    ma per via dell’avanzata austro-tedesca generale, non per assalto frontale italiano.
+  </div>
+
+  <p>
+    Nello scenario, A1 Monte Santo rappresenta un obiettivo molto difficile. Se l’italiano
+    riesce a conquistarlo, significa che ha ottenuto un successo operativo ben oltre quello
+    storico della Sesta battaglia.
+  </p>
+
+  <h3>17.13.7 A2 San Gabriele — La fortezza carsica</h3>
+
+  <div class="box history">
+    <strong>Contesto storico:</strong>
+    Il San Gabriele (646 m) faceva parte del sistema difensivo austro-ungarico a est di Gorizia.
+    Come il Monte Santo, resistette a tutti gli assalti italiani fino a Caporetto.
+    Le sue posizioni erano integrate con quelle del Monte Santo, creando una difesa in profondità
+    estremamente solida.
+  </div>
+
+  <p>
+    Nel gioco, A2 San Gabriele è la seconda linea difensiva austro-ungarica. Conquistarlo
+    significa penetrare nella retrovia nemica e minacciare il sistema logistico che sostiene
+    tutta la difesa dell’Isonzo.
+  </p>
+
+  <h3>17.13.8 A3 Gorizia — L’obiettivo simbolico</h3>
+
+  <div class="box history">
+    <strong>Contesto storico:</strong>
+    Gorizia aveva un valore militare, politico e simbolico enorme. La sua conquista
+    nell’agosto 1916 fu la prima grande vittoria italiana sul fronte dell’Isonzo e venne
+    celebrata con entusiasmo. Tuttavia, la città era devastata e la conquista non portò
+    a un crollo della difesa austro-ungarica, che si riorganizzò poco oltre.
+  </div>
+
+  <p>
+    Nello scenario, A3 Gorizia è l’obiettivo principale. Il controllo operativo del settore
+    (almeno 2 linee su 3 e nessuna linea contesa) assegna PV significativi all’italiano.
+    Se resta austro-ungarico, l’offensiva italiana è fallita.
+  </p>
+
+  <table>
+    <tr>
+      <th>Stato di Gorizia</th>
+      <th>Significato nel gioco</th>
+    </tr>
+    <tr>
+      <td>Controllo operativo italiano</td>
+      <td>Almeno 2 linee italiane, nessuna linea contesa. PV pieni.</td>
+    </tr>
+    <tr>
+      <td>Settore conteso</td>
+      <td>Almeno una linea contesa o presenza austro-ungarica significativa. PV ridotti.</td>
+    </tr>
+    <tr>
+      <td>Controllo austro-ungarico</td>
+      <td>L’offensiva italiana è fallita. PV zero o negativi per l’italiano.</td>
+    </tr>
+  </table>
+
+  <h3>17.13.9 A4 Monte San Michele — Il Carso sanguinoso</h3>
+
+  <div class="box history">
+    <strong>Contesto storico:</strong>
+    Il Monte San Michele (275 m) fu probabilmente il settore più sanguinoso dell’intero fronte
+    dell’Isonzo. Conquistato e perso più volte in battaglie diverse, divenne sinonimo di
+    logoramento, attacchi frontali disperati e perdite enormi da entrambe le parti.
+    Il terreno carsico, le trincee nella roccia e la posizione dominante rendevano ogni
+    assalto un massacro.
+  </div>
+
+  <p>
+    Nello scenario, A4 San Michele è un settore ad altissima intensità di perdite.
+    Il terreno Carso/Fortificato penalizza l’attacco italiano, ma la conquista è necessaria
+    per avanzare in profondità verso il Vallone del Carso (A6).
+  </p>
+
+  <div class="box rule">
+    <strong>Regola chiave:</strong>
+    in settori Carso il difensore ignora 1 successo d’assalto. Questo rende A4 San Michele
+    estremamente costoso da conquistare senza preparazione artiglieria massiccia.
+  </div>
+
+  <h3>17.13.10 A5 Doberdò — Le caverne del Carso</h3>
+
+  <div class="box history">
+    <strong>Contesto storico:</strong>
+    Doberdò (Doberdob) era un settore carsico dove le truppe austro-ungariche sfruttavano
+    caverne naturali e ricoveri scavati nella roccia per resistere ai bombardamenti italiani.
+    Anche dopo preparazioni d’artiglieria intense, i difensori uscivano dai ricoveri
+    e respingevano gli assalti.
+  </div>
+
+  <p>
+    Nello scenario, A5 Doberdò rappresenta la difesa carsica al suo massimo.
+    Le regole speciali sulle caverne austro-ungariche fanno sì che le divisioni in questo
+    settore ignorino il primo effetto Fatica da bombardamento se la fortificazione è 3+.
+  </p>
+
+  <h3>17.13.11 A6 Vallone del Carso — Retrovia e profondità</h3>
+
+  <div class="box history">
+    <strong>Contesto storico-operativo:</strong>
+    Il Vallone rappresenta la profondità strategica austro-ungarica sul Carso.
+    Le riserve, le retrovie logistiche e le seconde linee difensive erano organizzate
+    in questa fascia. Conquistarla significherebbe penetrare oltre la cintura difensiva
+    principale e minacciare Trieste stessa.
+  </div>
+
+  <p>
+    Nel gioco, A6 Vallone del Carso è il settore finale. Se l’italiano riesce a conquistarlo,
+    significa che ha ottenuto un successo operativo ben oltre quello storico della Sesta battaglia.
+    È il punto di entrata delle riserve austro-ungariche e il cuore del sistema difensivo.
+  </p>
+
+  <div class="box example">
+    <strong>Lettura da scenario:</strong>
+    se l’italiano controlla Gorizia (A3) e almeno due tra San Michele (A4), Doberdò (A5)
+    e Vallone (A6), ha ottenuto una vittoria decisiva che nella storia reale non si verificò mai.
+  </div>
+</section>

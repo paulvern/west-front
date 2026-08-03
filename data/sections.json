@@ -1,0 +1,120 @@
+{
+  "version": "v0.9.5",
+  "sections": [
+    {
+      "id": "copertina",
+      "title": "Copertina",
+      "file": "sections/00-copertina.html"
+    },
+    {
+      "id": "intro",
+      "title": "Introduzione storica",
+      "file": "sections/01-introduzione-storica.html"
+    },
+    {
+      "id": "principi",
+      "title": "Principi generali",
+      "file": "sections/02-principi-generali.html"
+    },
+    {
+      "id": "catalogo",
+      "title": "Catalogo completo delle azioni",
+      "file": "sections/03-catalogo-azioni.html"
+    },
+    {
+      "id": "sequenza",
+      "title": "Sequenza del turno",
+      "file": "sections/04-sequenza-turno.html"
+    },
+    {
+      "id": "settori",
+      "title": "Settori, linee e controllo",
+      "file": "sections/05-settori-linee-controllo.html"
+    },
+    {
+      "id": "divisioni",
+      "title": "Divisioni, morale e fatica",
+      "file": "sections/06-divisioni-morale-fatica.html"
+    },
+    {
+      "id": "logistica",
+      "title": "Logistica, riserve e rimpiazzi",
+      "file": "sections/07-logistica-riserve-rimpiazzi.html"
+    },
+    {
+      "id": "iniziativa",
+      "title": "Ordini simultanei e iniziativa",
+      "file": "sections/08-ordini-iniziativa.html"
+    },
+    {
+      "id": "movimento",
+      "title": "Movimento",
+      "file": "sections/09-movimento.html"
+    },
+    {
+      "id": "artiglieria",
+      "title": "Mitragliatrici e artiglieria",
+      "file": "sections/10-artiglieria-mg.html"
+    },
+    {
+      "id": "gas",
+      "title": "Gas",
+      "file": "sections/11-gas.html"
+    },
+    {
+      "id": "aviazione",
+      "title": "Aviazione",
+      "file": "sections/12-aviazione.html"
+    },
+    {
+      "id": "combattimento",
+      "title": "Combattimento",
+      "file": "sections/13-combattimento.html"
+    },
+    {
+      "id": "ritirate",
+      "title": "Perdite, ritirate, rotta e resa",
+      "file": "sections/14-ritirate-rotta-resa.html"
+    },
+    {
+      "id": "forti",
+      "title": "Fortificazioni, rifornimento e recupero",
+      "file": "sections/15-fortificazioni-rifornimento.html"
+    },
+    {
+      "id": "verdun",
+      "title": "Scenario Verdun 1916",
+      "file": "sections/16-scenario-verdun.html"
+    },
+    {
+      "id": "cronologia",
+      "title": "Trafili storici: offensive locali",
+      "file": "sections/17-cronologia-offensive-locali.html"
+    },
+    {
+      "id": "vittoria",
+      "title": "Condizioni di vittoria",
+      "file": "sections/18-condizioni-vittoria.html"
+    },
+    {
+      "id": "schede",
+      "title": "Schede stampabili",
+      "file": "sections/19-schede.html"
+    },
+    {
+      "id": "esempi",
+      "title": "Esempi completi",
+      "file": "sections/20-esempi.html"
+    },
+    {
+  "id": "isonzo",
+  "title": "Scenario Isonzo 1916",
+  "file": "sections/21-scenario-isonzo.html"
+},
+{
+  "id": "cronologia-isonzo",
+  "title": "Trafili storici: Battaglie dell’Isonzo",
+  "file": "sections/22-cronologia-isonzo.html"
+}
+  ]
+}

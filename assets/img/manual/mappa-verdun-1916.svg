@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1100" style="background:#f5f0e8">
+  <defs>
+    <!-- Decorative border pattern -->
+    <pattern id="borderPattern" patternUnits="userSpaceOnUse" width="20" height="20">
+      <circle cx="10" cy="10" r="1.5" fill="#8b7355" opacity="0.3"/>
+    </pattern>
+    
+    <!-- Aged paper texture -->
+    <filter id="aged">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="0 0 0 0.05"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="noise" mode="multiply"/>
+    </filter>
+    
+    <style>
+      .sector { stroke: #3d2b1f; stroke-width: 2.5; }
+      .german { fill: #8b9dc3; }
+      .french { fill: #c8b8a8; }
+      .empty { fill: #e8e0d8; opacity: 0.5; }
+      .fortress { fill: #6b5d4f; stroke-width: 3.5; }
+      .village { fill: #d4c4b4; }
+      .height { fill: #9d8d7d; }
+      .wood { fill: #7a9d7a; }
+      .open { fill: #e8dcc8; }
+      .objective { fill: #b89968; stroke-width: 4; stroke: #8b6914; }
+      .label { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #2d1f1f; text-anchor: middle; }
+      .subtitle { font-size: 10px; font-weight: normal; fill: #4d3d2d; }
+      .code { font-size: 10px; fill: #6d5d4d; }
+      .line-marker { stroke: #8b0000; stroke-width: 2.5; stroke-dasharray: 8,4; fill: none; opacity: 0.7; }
+    </style>
+    
+    <pattern id="fortPattern" patternUnits="userSpaceOnUse" width="10" height="10">
+      <rect width="10" height="10" fill="#6b5d4f"/>
+      <path d="M0,0 L10,10 M10,0 L0,10" stroke="#4d3f2f" stroke-width="1.5"/>
+    </pattern>
+    
+    <pattern id="woodPattern" patternUnits="userSpaceOnUse" width="12" height="12">
+      <rect width="12" height="12" fill="#7a9d7a"/>
+      <circle cx="3" cy="3" r="2" fill="#5d7d5d"/>
+      <circle cx="9" cy="8" r="2" fill="#5d7d5d"/>
+    </pattern>
+  </defs>
+
+  <!-- Decorative border -->
+  <rect x="10" y="10" width="1180" height="1080" fill="none" stroke="#8b7355" stroke-width="8" rx="15"/>
+  <rect x="20" y="20" width="1160" height="1060" fill="none" stroke="#c4a57b" stroke-width="2" rx="10"/>
+  
+  <!-- German Eagle with Iron Cross (Stemma tedesco - angolo superiore sinistro) -->
+  <g id="german-eagle" transform="translate(40, 30)">
+    <circle cx="35" cy="35" r="32" fill="#2b2b2b" opacity="0.9"/>
+    <!-- Iron Cross -->
+    <path d="M35,25 L37,27 L37,33 L43,33 L43,37 L37,37 L37,43 L33,43 L33,37 L27,37 L27,33 L33,33 L33,27 Z" fill="#ffffff" stroke="#2b2b2b" stroke-width="0.5"/>
+    <!-- Eagle -->
+    <path d="M35,20 L38,24 L42,23 L39,28 L42,32 L38,31 L35,35 L32,31 L28,32 L31,28 L28,23 L32,24 Z" fill="#d4af37" stroke="#8b7355" stroke-width="0.5" opacity="0.8"/>
+  </g>
+  <text x="75" y="73" style="font-size:7px; fill:#d4af37; text-anchor:middle; font-weight:bold;">DEUTSCHLAND</text>
+  
+  <!-- French Shield (Stemma francese - angolo superiore destro) -->
+  <g id="french-shield" transform="translate(1090, 30)">
+    <circle cx="35" cy="35" r="32" fill="#002654" opacity="0.9"/>
+    <rect x="23" y="22" width="8" height="26" fill="#002654"/>
+    <rect x="31" y="22" width="8" height="26" fill="#ffffff"/>
+    <rect x="39" y="22" width="8" height="26" fill="#ED2939"/>
+  </g>
+  <text x="1125" y="73" style="font-size:7px; fill:#002654; text-anchor:middle; font-weight:bold;">RÉPUBLIQUE</text>
+  
+  <!-- Verdun City Coat of Arms (Stemma di Verdun - sopra G2) -->
+  <g id="verdun-arms" transform="translate(475, 770)">
+    <path d="M15,5 L25,5 L25,20 L20,25 L15,20 Z" fill="#8B0000" stroke="#d4af37" stroke-width="1"/>
+    <path d="M17,8 L23,8 L23,18 L20,21 L17,18 Z" fill="#d4af37"/>
+    <text x="20" y="16" style="font-size:8px; fill:#8B0000; text-anchor:middle; font-weight:bold;">V</text>
+  </g>
+
+  <!-- Decorative cartouche (cartiglio) -->
+  <g id="cartouche" transform="translate(850, 950)">
+    <path d="M10,10 L240,10 L245,15 L245,65 L240,70 L10,70 L5,65 L5,15 Z"
+          fill="#f5f0e8" stroke="#8b7355" stroke-width="2" opacity="0.95"/>
+    <path d="M10,10 L15,15 L15,65 L10,70 M240,10 L235,15 L235,65 L240,70"
+          stroke="#c4a57b" stroke-width="1" fill="none"/>
+    <text x="125" y="30" style="font-size:11px; font-weight:bold; fill:#2b2b2b; text-anchor:middle;">BATAILLE DE VERDUN</text>
+    <text x="125" y="46" style="font-size:10px; fill:#4d3d2d; text-anchor:middle; font-style:italic;">21 février - 2 mars 1916</text>
+    <text x="125" y="62" style="font-size:9px; fill:#6d5d4d; text-anchor:middle;">"L'Enfer de Verdun"</text>
+  </g>
+  
+  <!-- Military symbols WWI style -->
+  <g id="german-helmet" transform="translate(140, 85)">
+    <ellipse cx="8" cy="6" rx="7" ry="5" fill="#4d4d4d"/>
+    <ellipse cx="8" cy="6" rx="5" ry="3" fill="#6d6d6d"/>
+    <rect x="7" y="2" width="2" height="3" fill="#8b7355"/>
+  </g>
+  
+  <g id="french-helmet" transform="translate(690, 315)">
+    <path d="M8,10 C8,6 6,4 8,4 C10,4 8,6 8,10" fill="#4682B4"/>
+    <ellipse cx="8" cy="9" rx="6" ry="4" fill="#4682B4"/>
+    <circle cx="8" cy="8" r="1.5" fill="#d4af37"/>
+  </g>
+
+  <text x="600" y="40" style="font-family:Georgia; font-size:32px; font-weight:bold; fill:#2d1f1f; text-anchor:middle;">VERDUN 1916</text>
+  <text x="600" y="65" style="font-size:16px; fill:#5d4d3d; font-style:italic; text-anchor:middle;">La Porta di Verdun — Mappa Operativa</text>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4d5d7d" />
+    </marker>
+  </defs>
+  
+  <line x1="100" y1="120" x2="100" y2="880" stroke="#4d5d7d" stroke-width="8" marker-end="url(#arrow)" opacity="0.3"/>
+  <text x="80" y="490" transform="rotate(-90 80 490)" style="font-size:16px; font-weight:bold; fill:#4d5d7d; opacity:0.5;">OFFENSIVA TEDESCA</text>
+  
+  <!-- Definisco dimensioni cella -->
+  <g id="grid">
+    <!-- RIGA A -->
+    <rect x="150" y="100" width="170" height="100" class="sector wood german" fill="url(#woodPattern)"/>
+    <text x="235" y="130" class="code">A1</text>
+    <text x="235" y="148" class="label">Bois des Caures</text>
+    <text x="235" y="163" class="subtitle">Bosco</text>
+    <circle cx="160" cy="110" r="7" fill="#8b9dc3" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="235" y="178" class="subtitle" style="font-size:9px; font-style:italic;">VT+1 senza ric.</text>
+    
+    <rect x="330" y="100" width="170" height="100" class="sector empty"/>
+    <text x="415" y="155" class="code" style="opacity:0.4;">A2</text>
+    
+    <rect x="510" y="100" width="170" height="100" class="sector empty"/>
+    <text x="595" y="155" class="code" style="opacity:0.4;">A3</text>
+    
+    <!-- RIGA B -->
+    <rect x="150" y="210" width="170" height="100" class="sector village german"/>
+    <text x="235" y="240" class="code">B1</text>
+    <text x="235" y="258" class="label">Haumont</text>
+    <text x="235" y="273" class="subtitle">Villaggio</text>
+    <circle cx="160" cy="220" r="7" fill="#8b9dc3" stroke="#3d2b1f" stroke-width="2"/>
+    
+    <rect x="330" y="210" width="170" height="100" class="sector village german"/>
+    <text x="415" y="240" class="code">B2</text>
+    <text x="415" y="258" class="label">Ornes</text>
+    <text x="415" y="273" class="subtitle">Villaggio</text>
+    <circle cx="340" cy="220" r="7" fill="#8b9dc3" stroke="#3d2b1f" stroke-width="2"/>
+    
+    <rect x="510" y="210" width="170" height="100" class="sector empty"/>
+    <text x="595" y="265" class="code" style="opacity:0.4;">B3</text>
+    
+    <!-- Linea fronte -->
+    <line x1="140" y1="320" x2="950" y2="320" class="line-marker"/>
+    <text x="970" y="325" style="font-size:11px; fill:#8b0000; font-weight:bold; font-style:italic;">21/2/1916</text>
+    
+    <!-- RIGA C -->
+    <rect x="150" y="330" width="170" height="100" class="sector open french"/>
+    <text x="235" y="360" class="code">C1</text>
+    <text x="235" y="378" class="label">Brabant</text>
+    <text x="235" y="393" class="subtitle">Aperto</text>
+    <circle cx="160" cy="340" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    
+    <rect x="330" y="330" width="170" height="100" class="sector village french"/>
+    <text x="415" y="360" class="code">C2</text>
+    <text x="415" y="378" class="label">Beaumont</text>
+    <text x="415" y="393" class="subtitle">Villaggio</text>
+    <circle cx="340" cy="340" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="415" y="408" class="subtitle" style="font-size:9px; font-style:italic;">Obj. ritmo T5</text>
+    
+    <rect x="510" y="330" width="170" height="100" class="sector open french"/>
+    <text x="595" y="360" class="code">C3</text>
+    <text x="595" y="378" class="label">Maucourt</text>
+    <text x="595" y="393" class="subtitle">Aperto</text>
+    <circle cx="520" cy="340" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    
+    <!-- RIGA D -->
+    <rect x="150" y="440" width="170" height="100" class="sector height french"/>
+    <text x="235" y="470" class="code">D1</text>
+    <text x="235" y="488" class="label">Côte du Poivre</text>
+    <text x="235" y="503" class="subtitle">Altura</text>
+    <circle cx="160" cy="450" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="235" y="518" class="subtitle" style="font-size:9px; font-style:italic;">-1 succ. ass.</text>
+    
+    <rect x="330" y="440" width="170" height="100" class="sector fortress french" fill="url(#fortPattern)"/>
+    <text x="415" y="470" class="code">D2</text>
+    <text x="415" y="488" class="label">DOUAUMONT ⭐</text>
+    <text x="415" y="503" class="subtitle">Forte/Altura</text>
+    <circle cx="340" cy="450" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="415" y="518" class="subtitle" style="font-size:9px; font-style:italic;">Fort. max 4</text>
+    
+    <rect x="510" y="440" width="170" height="100" class="sector fortress french" fill="url(#fortPattern)"/>
+    <text x="595" y="470" class="code">D3</text>
+    <text x="595" y="488" class="label">VAUX</text>
+    <text x="595" y="503" class="subtitle">Forte</text>
+    <circle cx="520" cy="450" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="595" y="518" class="subtitle" style="font-size:9px; font-style:italic;">Fort. max 4</text>
+    
+    <!-- RIGA E -->
+    <rect x="150" y="550" width="170" height="100" class="sector height french"/>
+    <text x="235" y="580" class="code">E1</text>
+    <text x="235" y="598" class="label">Mort-Homme</text>
+    <text x="235" y="613" class="subtitle">Altura</text>
+    <circle cx="160" cy="560" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="235" y="628" class="subtitle" style="font-size:9px; font-style:italic;">-1 succ. ass.</text>
+    
+    <rect x="330" y="550" width="170" height="100" class="sector village french"/>
+    <text x="415" y="580" class="code">E2</text>
+    <text x="415" y="598" class="label">Fleury</text>
+    <text x="415" y="613" class="subtitle">Villaggio</text>
+    <circle cx="340" cy="560" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    
+    <rect x="510" y="550" width="170" height="100" class="sector open french"/>
+    <text x="595" y="580" class="code">E3</text>
+    <text x="595" y="598" class="label">Damloup</text>
+    <text x="595" y="613" class="subtitle">Aperto</text>
+    <circle cx="520" cy="560" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    
+    <!-- RIGA F -->
+    <rect x="150" y="660" width="170" height="100" class="sector height french"/>
+    <text x="235" y="690" class="code">F1</text>
+    <text x="235" y="708" class="label">Côte 304</text>
+    <text x="235" y="723" class="subtitle">Altura</text>
+    <circle cx="160" cy="670" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="235" y="738" class="subtitle" style="font-size:9px; font-style:italic;">-1 succ. ass.</text>
+    
+    <rect x="330" y="660" width="170" height="100" class="sector fortress french" fill="url(#fortPattern)"/>
+    <text x="415" y="690" class="code">F2</text>
+    <text x="415" y="708" class="label">SOUVILLE</text>
+    <text x="415" y="723" class="subtitle">Forte/Altura</text>
+    <circle cx="340" cy="670" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="415" y="738" class="subtitle" style="font-size:9px; font-style:italic;">Fort. max 4</text>
+    
+    <rect x="510" y="660" width="170" height="100" class="sector open french"/>
+    <text x="595" y="690" class="code">F3</text>
+    <text x="595" y="708" class="label">Tavannes</text>
+    <text x="595" y="723" class="subtitle">Aperto</text>
+    <circle cx="520" cy="670" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    
+    <!-- RIGA G -->
+    <rect x="150" y="770" width="170" height="100" class="sector french" style="fill:#b8a898;"/>
+    <text x="235" y="800" class="code">G1</text>
+    <text x="235" y="818" class="label">Belleville</text>
+    <text x="235" y="833" class="subtitle">Retrovia</text>
+    <circle cx="160" cy="780" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="235" y="848" class="subtitle" style="font-size:9px; font-style:italic;">Rot. T4+</text>
+    
+    <rect x="330" y="770" width="350" height="100" class="sector objective french"/>
+    <text x="505" y="800" class="code">G2</text>
+    <text x="505" y="822" class="label" style="font-size:22px;">⚜️ VERDUN ⚜️</text>
+    <text x="505" y="841" class="subtitle" style="font-size:12px;">Obiettivo Strategico</text>
+    <circle cx="340" cy="780" r="7" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+    <text x="505" y="857" class="subtitle" style="font-size:9px; font-style:italic;">Non attaccabile prima T6</text>
+  </g>
+  
+  <!-- LEGENDA -->
+  <rect x="720" y="100" width="440" height="770" fill="white" stroke="#3d2b1f" stroke-width="2" rx="5"/>
+  <text x="940" y="130" style="font-size:18px; font-weight:bold; fill:#2d1f1f; text-anchor:middle;">LEGENDA</text>
+  
+  <text x="740" y="160" style="font-size:12px; font-weight:bold; fill:#2d1f1f;">Controllo Iniziale:</text>
+  <circle cx="750" cy="180" r="8" fill="#8b9dc3" stroke="#3d2b1f" stroke-width="2"/>
+  <text x="770" y="186" style="font-size:11px; fill:#2d1f1f;">Tedesco (3: A1, B1, B2)</text>
+  <circle cx="920" cy="180" r="8" fill="#c8b8a8" stroke="#3d2b1f" stroke-width="2"/>
+  <text x="940" y="186" style="font-size:11px; fill:#2d1f1f;">Francese (15)</text>
+  
+  <line x1="730" y1="200" x2="1150" y2="200" stroke="#3d2b1f" stroke-width="1"/>
+  
+  <text x="740" y="220" style="font-size:12px; font-weight:bold; fill:#2d1f1f;">Terreni:</text>
+  <rect x="740" y="230" width="45" height="25" class="sector village" style="fill:#d4c4b4;"/>
+  <text x="795" y="247" style="font-size:11px; fill:#2d1f1f;">Villaggio</text>
+  
+  <rect x="880" y="230" width="45" height="25" class="sector height" style="fill:#9d8d7d;"/>
+  <text x="935" y="247" style="font-size:11px; fill:#2d1f1f;">Altura</text>
+  
+  <rect x="1020" y="230" width="45" height="25" class="sector open" style="fill:#e8dcc8;"/>
+  <text x="1075" y="247" style="font-size:11px; fill:#2d1f1f;">Aperto</text>
+  
+  <rect x="740" y="265" width="45" height="25" class="sector wood" fill="url(#woodPattern)"/>
+  <text x="795" y="282" style="font-size:11px; fill:#2d1f1f;">Bosco</text>
+  
+  <rect x="880" y="265" width="45" height="25" class="sector fortress" fill="url(#fortPattern)"/>
+  <text x="935" y="282" style="font-size:11px; fill:#2d1f1f;">Forte</text>
+  
+  <rect x="1020" y="265" width="45" height="25" class="sector objective" style="fill:#b89968;"/>
+  <text x="1075" y="282" style="font-size:11px; fill:#2d1f1f;">Obiettivo</text>
+  
+  <line x1="730" y1="300" x2="1150" y2="300" stroke="#3d2b1f" stroke-width="1"/>
+  
+  <text x="740" y="320" style="font-size:12px; font-weight:bold; fill:#2d1f1f;">Scenario:</text>
+  <text x="745" y="340" style="font-size:11px; fill:#2d1f1f;">• Durata: 10 turni (21 feb - 2 mar 1916)</text>
+  <text x="745" y="358" style="font-size:11px; fill:#2d1f1f;">• Forti: D2 Douaumont ⭐, D3 Vaux, F2 Souville</text>
+  <text x="745" y="376" style="font-size:11px; fill:#2d1f1f;">• G2 non attaccabile prima del Turno 6</text>
+  <text x="745" y="394" style="font-size:11px; fill:#2d1f1f;">• Vittoria decisiva T se conquista G2 dal T6+</text>
+  
+  <line x1="730" y1="405" x2="1150" y2="405" stroke="#3d2b1f" stroke-width="1"/>
+  
+  <text x="740" y="425" style="font-size:12px; font-weight:bold; fill:#2d1f1f;">Forze Iniziali:</text>
+  <text x="745" y="445" style="font-size:11px; fill:#2d1f1f;">Tedesco: 6 div. (3V, 2R, 1Re) + 3 riserve</text>
+  <text x="745" y="463" style="font-size:11px; fill:#2d1f1f;">Francese: 7 div. (1V, 4R, 2Re) + 4 riserve</text>
+  
+  <line x1="730" y1="475" x2="1150" y2="475" stroke="#3d2b1f" stroke-width="1"/>
+  
+  <text x="740" y="495" style="font-size:12px; font-weight:bold; fill:#2d1f1f;">Supporti:</text>
+  <text x="745" y="515" style="font-size:11px; fill:#2d1f1f;">T: 4/3/2 Artiglieria | 8 MG | 2 Ric. + 1 Caccia</text>
+  <text x="745" y="533" style="font-size:11px; fill:#2d1f1f;">F: 3/2/1 Artiglieria | 14 MG | 1 Ric. + 1 Caccia</text>
+  
+  <line x1="730" y1="545" x2="1150" y2="545" stroke="#3d2b1f" stroke-width="1"/>
+  
+  <text x="740" y="565" style="font-size:12px; font-weight:bold; fill:#2d1f1f;">Logistica:</text>
+  <text x="745" y="585" style="font-size:11px; fill:#2d1f1f;">T: 18 iniz. + 14/turno (max 25) + 6 spec. T1</text>
+  <text x="745" y="603" style="font-size:11px; fill:#2d1f1f;">F: 12 iniz. + 12/turno (max 22) + 2 T4+ (G1/G2)</text>
+  
+  <line x1="730" y1="615" x2="1150" y2="615" stroke="#3d2b1f" stroke-width="1"/>
+  
+  <text x="740" y="635" style="font-size:12px; font-weight:bold; fill:#2d1f1f;">Regole Speciali:</text>
+  <text x="745" y="655" style="font-size:11px; fill:#2d1f1f;">• T1: Tedesco ha automaticamente iniziativa</text>
+  <text x="745" y="673" style="font-size:11px; fill:#2d1f1f;">• T1-3: Tedesco +1 missioni aeree</text>
+  <text x="745" y="691" style="font-size:11px; fill:#2d1f1f;">• Alture (D1, E1, F1): Difensore -1 successo</text>
+  <text x="745" y="709" style="font-size:11px; fill:#2d1f1f;">• Forti: Fortificazione massima 4</text>
+  <text x="745" y="727" style="font-size:11px; fill:#2d1f1f;">• A1 Bosco: Attaccante VT+1 senza ric.</text>
+  
+  <line x1="730" y1="740" x2="1150" y2="740" stroke="#3d2b1f" stroke-width="1"/>
+  
+  <text x="940" y="760" style="font-size:11px; fill:#2d1f1f; text-anchor:middle; font-weight:bold;">Griglia: 7 righe × 3 colonne</text>
+  <text x="940" y="777" style="font-size:10px; fill:#4d3d2d; text-anchor:middle;">A-G (Nord-Sud) × 1-3 (Ovest-Est)</text>
+  <text x="940" y="793" style="font-size:10px; fill:#4d3d2d; text-anchor:middle;">Settori vuoti (A2, A3, B3) non in gioco</text>
+  
+  <line x1="730" y1="805" x2="1150" y2="805" stroke="#3d2b1f" stroke-width="1"/>
+  
+  <text x="940" y="835" style="font-size:11px; fill:#5d4d3d; text-anchor:middle; font-style:italic;">"Ils ne passeront pas!"</text>
+  <text x="940" y="852" style="font-size:10px; fill:#6d5d4d; text-anchor:middle; font-style:italic;">— Général Philippe Pétain, Verdun 1916</text>
+  
+  <text x="600" y="1090" style="font-size:10px; fill:#7d6d5d; text-anchor:middle; font-style:italic;">Fronte Occidentale — Scenario Verdun 1916 — Mappa v1.0</text>
+</svg>

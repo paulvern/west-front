@@ -1,0 +1,219 @@
+<section id="settori" class="page-break">
+  <h1>4.0 Sectors, Lines, and Control</h1>
+
+  <p class="lead">
+    Each sector is an abstract operational area. It does not represent a fixed distance, but a
+    set of positions, trenches, villages, heights, woods, roads, and defensive works. Each
+    sector contains three internal lines: Line 1, Line 2, and Line 3.
+  </p>
+
+  <p>
+    This abstraction is deliberate. Representing every single trench, communication trench, or
+    machine-gun nest would have made the game unmanageable without adding any interesting
+    decisions: what matters operationally is not the exact metre of ground, but the depth of
+    the defense. A sector with three lines full, fortified, and connected to the rear is much
+    harder to conquer than the same sector with only one line manned, even though on the map
+    they occupy the same space. Thinking in terms of sectors and lines, rather than precise
+    coordinates, is also more faithful to how 1916 commands actually reasoned: a general rarely
+    knew the exact disposition of every company, but he always knew which positions were held
+    "in depth" and which were not.
+  </p>
+
+  <h2>4.1 The Three Lines</h2>
+
+  <table>
+    <tr>
+      <th>Line</th>
+      <th>Operational meaning</th>
+      <th>Typical use</th>
+    </tr>
+    <tr>
+      <td>Line 1</td>
+      <td>First position in contact with the enemy.</td>
+      <td>Forward defense, MGs, bombardments, main assaults.</td>
+    </tr>
+    <tr>
+      <td>Line 2</td>
+      <td>Second position, or support line.</td>
+      <td>Local reserves, counterattacks, absorbing retreats.</td>
+    </tr>
+    <tr>
+      <td>Line 3</td>
+      <td>Sector's rear line.</td>
+      <td>Reserve entry, last-ditch defense, connection to the rear.</td>
+    </tr>
+  </table>
+
+  <p>
+    The three lines are not interchangeable: they represent a progression, from the trench in
+    contact with the enemy to the area reinforcements come from. An attacker who breaks Line 1
+    has not yet won the sector; he must then face Line 2, where the defender typically keeps
+    his own local reserves for the counterattack, and only afterward Line 3, the last obstacle
+    before the sector is entirely lost. This structure is why, as will be seen in chapter 12.0,
+    even a winning attack rarely conquers an entire sector in a single turn.
+  </p>
+
+  <h2>4.2 Control of Lines</h2>
+
+  <table>
+    <tr>
+      <th>Situation</th>
+      <th>Control</th>
+    </tr>
+    <tr>
+      <td>Line with only one player's units</td>
+      <td>Line controlled by that player.</td>
+    </tr>
+    <tr>
+      <td>Line with both players' units</td>
+      <td>Contested line.</td>
+    </tr>
+    <tr>
+      <td>Empty line</td>
+      <td>Keeps its previous control, unless the scenario states otherwise.</td>
+    </tr>
+    <tr>
+      <td>At least one contested line in the sector</td>
+      <td>The sector is contested for purposes of victory, supply, and operational movement.</td>
+    </tr>
+    <tr>
+      <td>A player controls at least 2 of 3 lines and none is contested</td>
+      <td>That player operationally controls the sector.</td>
+    </tr>
+    <tr>
+      <td>A player controls all 3 lines</td>
+      <td>Full control of the sector.</td>
+    </tr>
+  </table>
+
+  <h2>4.3 Capacity</h2>
+
+  <p>
+    Capacity limits the concentration of troops and support elements in a single line. This
+    avoids unrealistic pile-ups and makes managing depth important.
+  </p>
+
+  <table>
+    <tr>
+      <th>Element</th>
+      <th>Limit</th>
+    </tr>
+    <tr>
+      <td>Friendly divisions on an uncontested line</td>
+      <td>Maximum 2.</td>
+    </tr>
+    <tr>
+      <td>Divisions per side on a contested line</td>
+      <td>Maximum 2 per player.</td>
+    </tr>
+    <tr>
+      <td>MG companies on a line</td>
+      <td>Maximum 4, unless stated otherwise by the scenario.</td>
+    </tr>
+    <tr>
+      <td>Fortification</td>
+      <td>Only one level per line.</td>
+    </tr>
+  </table>
+
+  <p>
+    This same limit also governs Operational Movement (chap. 3.0) when it is used to replace a
+    line left uncovered after a local division has advanced: if the destination line has no
+    free capacity, the movement fails and the LP spent is lost. It also governs how many
+    divisions can actually roll dice in a single turn of combat (chap. 12.1A).
+  </p>
+
+  <h2>4.4 Lines Without Divisions but With MGs or Fortification</h2>
+
+  <p>
+    Some lines may contain no divisions, but may still have machine guns, fortifications,
+    garrison detachments, observers, engineers, or local elements. These lines are not
+    considered completely empty for purposes of combat.
+  </p>
+
+  <p>
+    This distinction avoids an unnatural behavior often seen in simpler wargames: the idea
+    that a line "without troops" is automatically undefended and can be crossed without
+    consequence. In the reality of the Western Front, a lightly manned line of trenches could
+    still hold fixed machine-gun emplacements, small engineer detachments, or artillery
+    observers able to offer resistance for a limited time. The following rules distinguish four
+    cases, depending on whether the line has only machine guns, only fortification, both, or
+    neither.
+  </p>
+
+  <table>
+    <tr>
+      <th>Line situation</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Line with no divisions, no MGs, and no fortification</td>
+      <td>If attacked by an enemy division, it is automatically occupied.</td>
+    </tr>
+    <tr>
+      <td>Line with no divisions but with MGs</td>
+      <td>
+        The MGs may fire defensively. If the attacker gets at least 1 net success after
+        defensive fire, the line is taken.
+      </td>
+    </tr>
+    <tr>
+      <td>Line with no divisions but with fortification</td>
+      <td>
+        The line uses the fortification bonus as a local garrison. If the attacker gets at
+        least 1 net success, the line is taken.
+      </td>
+    </tr>
+    <tr>
+      <td>Line with no divisions but with MGs and fortification</td>
+      <td>
+        The line uses both the MGs and the fortification bonus. If the attacker gets at least
+        1 net success, the line is taken.
+      </td>
+    </tr>
+  </table>
+
+  <div class="box rule">
+    <strong>Key rule:</strong>
+    a line without divisions cannot retreat, cannot rout, and cannot test morale. If it is
+    overrun, MGs and fortifications are captured, eliminated, or abandoned according to the
+    outcome of the combat.
+  </div>
+
+  <h2>4.5 Fortified Sectors and Forts</h2>
+
+  <p>
+    In sectors with <strong>Fort</strong> or <strong>Fort/Height</strong> terrain, operational
+    control may not coincide with full control for Victory Point purposes. A fort can be
+    operationally dominated but not yet fully secured.
+  </p>
+
+  <table>
+    <tr>
+      <th>Situation</th>
+      <th>Operational control</th>
+      <th>Fort VP</th>
+    </tr>
+    <tr>
+      <td>A player controls 2 of 3 lines and no line is contested</td>
+      <td>Operationally controls the sector.</td>
+      <td>Gains the operational value stated by the scenario.</td>
+    </tr>
+    <tr>
+      <td>No enemy division remains in the sector</td>
+      <td>Full control.</td>
+      <td>Gains the full value stated by the scenario.</td>
+    </tr>
+    <tr>
+      <td>At least one line is contested</td>
+      <td>Contested sector.</td>
+      <td>No full fort VP.</td>
+    </tr>
+  </table>
+
+  <div class="box example">
+    <strong>Example:</strong>
+    the German controls D2 Douaumont L1 and L2, but French F04 remains in D2 L3.
+    The German operationally controls Douaumont, but does not fully control it.
+  </div>
+</section>

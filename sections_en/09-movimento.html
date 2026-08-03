@@ -1,0 +1,126 @@
+<section id="movimento" class="page-break">
+  <h1>8.0 Movement</h1>
+
+  <p class="lead">
+    Movement represents a division's ability to change operational position in one day. It
+    does not measure metres covered, but coordination, orders, roads, fatigue, enemy pressure,
+    and logistics.
+  </p>
+
+  <p>
+    Precisely because movement is an operational abstraction and not a measure of distance, the
+    following rules focus on what really matters at the level of command represented by the
+    game: what connections exist between sectors, what they cost in LP and time, and what
+    happens when two enemy divisions try to occupy the same space at the same moment. A player
+    does not need to calculate kilometres; he must decide whether it is worth moving a division
+    now, knowing that the move commits it for the rest of the turn and limits its other
+    options.
+  </p>
+
+  <h2>8.1 Types of Movement</h2>
+
+  <table>
+    <tr>
+      <th>Movement</th>
+      <th>Cost</th>
+      <th>Procedure</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Internal movement</td>
+      <td>0 LP</td>
+      <td>Order written; move of one line within the same controlled sector.</td>
+      <td>The division changes line.</td>
+    </tr>
+    <tr>
+      <td>Operational movement</td>
+      <td>1 LP</td>
+      <td>Order written; move toward an adjacent, connected, friendly sector.</td>
+      <td>The division changes sector.</td>
+    </tr>
+    <tr>
+      <td>Entering an enemy sector</td>
+      <td>0 LP base</td>
+      <td>Requires an attack order.</td>
+      <td>Not normal movement: resolved as combat.</td>
+    </tr>
+    <tr>
+      <td>Voluntary retreat</td>
+      <td>0 or 1 LP</td>
+      <td>Order written; see retreat rules.</td>
+      <td>The division falls back and may gain Fatigue.</td>
+    </tr>
+    <tr>
+      <td>Forced retreat</td>
+      <td>0 LP</td>
+      <td>Consequence of combat, morale, or rout.</td>
+      <td>The division falls back per mandatory priority.</td>
+    </tr>
+  </table>
+
+  <h2>8.2 Movement Restrictions</h2>
+
+  <ul>
+    <li>A division at Fatigue 3 or more cannot move and attack in the same turn.</li>
+    <li>A division at Fatigue 5 cannot attack.</li>
+    <li>A division on a contested line cannot move normally: it must fight or retreat per the rules.</li>
+    <li>An isolated division cannot carry out voluntary operational movement, unless stated by the scenario.</li>
+    <li>A division that has just entered from reserve cannot attack the same turn.</li>
+  </ul>
+
+  <h2>8.3 Simultaneous Movement and Conflicts</h2>
+
+  <table>
+    <tr>
+      <th>Situation</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>Two enemy divisions enter the same empty line</td>
+      <td>The line becomes contested; a meeting engagement is resolved.</td>
+    </tr>
+    <tr>
+      <td>A division attacks while the defender tries to retreat</td>
+      <td>Operational Initiative decides whether the defender disengages.</td>
+    </tr>
+    <tr>
+      <td>Two enemy divisions try to swap sectors</td>
+      <td>The swap is forbidden; both remain in their original sector and gain +1 Fatigue.</td>
+    </tr>
+    <tr>
+      <td>Two units enter the same line from different directions</td>
+      <td>Contested line. Defensive bonuses go only to whoever already controlled the line with units present.</td>
+    </tr>
+  </table>
+
+  <h2>8.4 Meeting Engagement</h2>
+
+  <p>
+    The meeting engagement represents a confused clash, not fully prepared.
+  </p>
+
+  <p>
+    Unlike the planned assault of chapter 12.0, which assumes a clearly defined attacker and
+    defender, the meeting engagement arises when neither player yet "owns" the contested line:
+    both arrive there in the same turn, with no time to prepare. For this reason a simpler
+    procedure is used, without fortifications and without the full resolution table of chapter
+    12.4 — just a direct comparison of net successes, consistent with the tactical confusion
+    the rule is meant to represent.
+  </p>
+
+  <ul>
+    <li>If the line was empty, neither side uses fortifications.</li>
+    <li>MGs fire only if they were already present and controlled by one side at the start of the turn.</li>
+    <li>Both sides roll the dice of the divisions involved normally.</li>
+    <li>With 3 or more net successes, the winner controls the line.</li>
+    <li>With 1-2 net successes, the line remains contested.</li>
+    <li>On a tie, both sides remain committed and gain +1 Fatigue.</li>
+  </ul>
+
+  <div class="box example">
+    <strong>Example:</strong>
+    G07 enters D2 L1 while F08 enters the same line from F2. The line was empty.
+    Neither side uses fortifications. A meeting engagement is resolved. If the German wins by 3
+    successes, he controls D2 L1; if he wins by 1-2, the line remains contested.
+  </div>
+</section>

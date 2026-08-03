@@ -1,0 +1,456 @@
+<section id="chemin-des-dames" class="page-break">
+  <h1>27.0 Scenario: Western Front — Chemin des Dames 1917</h1>
+
+  <p class="lead">
+    The only scenario in this manual where the real question is not how much ground is
+    captured, but whether the attacking army remains an army still capable of attacking.
+  </p>
+
+  <h2>27.1 Introduction to the Scenario</h2>
+
+  <p>
+    This scenario represents the opening phase of the Nivelle Offensive on the Chemin des
+    Dames (16-25 April 1917): the French attempt at a decisive breakthrough that, promised to
+    reach Laon within a day, instead stalled after a few hundred metres, at an enormous cost.
+    The French player must capture the limestone ridge that dominates the Aisne valley,
+    knowing the plan is already in enemy hands. The German player must defend a line already
+    prepared to receive the attack, on ground riddled with caves and quarries that no
+    bombardment can fully level.
+  </p>
+
+  <p>
+    Unlike every other scenario in this manual, territorial victory here is not the only
+    thing that matters, and may not even be the most important. The victory conditions in
+    chapter 28.0 also measure whether the French player manages to hold his own army
+    together — because in reality, by the end of May, he did not.
+  </p>
+
+  <div class="box warning">
+    <strong>A note on this scenario's tone:</strong>
+    the failure of the Nivelle Offensive led, in the following weeks, to a wave of collective
+    refusals to return to the attack across much of the French army — a grave historical fact,
+    which this manual treats with the seriousness it deserves. You will not find here any rule
+    that turns courts-martial or death sentences into a game mechanic: section 27.8 represents
+    only the most direct and best-documented consequence of that crisis — the collective
+    choice to keep defending but no longer to attack — through the Morale system already
+    present in the base rulebook.
+  </div>
+
+  <h2>27.2 Duration</h2>
+
+  <p>
+    The scenario lasts <strong>8 turns</strong>, corresponding to the main phase of the
+    offensive, from 16 to 25 April 1917. It does not cover the longer "Battle of the
+    Observatories" that dragged on through the summer, nor Pétain's methodical recapture of
+    the ridge at La Malmaison in October — an outcome that can only be inferred, not
+    represented, given the limits of this map.
+  </p>
+
+  <h2>27.3 Players</h2>
+
+  <table>
+    <tr>
+      <th>Player</th>
+      <th>Role</th>
+      <th>General objective</th>
+    </tr>
+    <tr>
+      <td>French</td>
+      <td>Attacker</td>
+      <td>Capture the Chemin des Dames ridge, ideally without wearing the army down past the breaking point.</td>
+    </tr>
+    <tr>
+      <td>German</td>
+      <td>Defender</td>
+      <td>Defend a line already prepared to receive the attack, exploiting natural caves and quarries.</td>
+    </tr>
+  </table>
+
+  <h2>27.4 Scenario Sectors</h2>
+
+  <p>
+    The map represents the Chemin des Dames ridge, from the Aisne valley to Laon, the
+    objective Nivelle had promised to reach in a single day. Each sector contains three
+    internal defensive lines, as in the base rulebook.
+  </p>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Terrain</th>
+      <th>Initial control</th>
+    </tr>
+    <tr><td>F1</td><td>Aisne rear area</td><td>Rear area</td><td>French</td></tr>
+    <tr><td>F2</td><td>Aisne valley</td><td>Open</td><td>French</td></tr>
+    <tr><td>G1</td><td>Cerny-en-Laonnois</td><td>Fortified</td><td>German</td></tr>
+    <tr><td>G2</td><td>Hurtebise</td><td>Fortified/Height</td><td>German</td></tr>
+    <tr><td>G3</td><td>Caverne du Dragon</td><td>Fortified/Cave</td><td>German</td></tr>
+    <tr><td>G4</td><td>Ailles</td><td>Village</td><td>German</td></tr>
+    <tr><td>G5</td><td>Plateau de Californie</td><td>Height</td><td>German</td></tr>
+    <tr><td>G6</td><td>Craonne</td><td>Village/Objective</td><td>German</td></tr>
+    <tr><td>G7</td><td>Plateau de Vauclerc</td><td>Woods/Height</td><td>German</td></tr>
+    <tr><td>G8</td><td>Laon</td><td>Rear area/Objective</td><td>German</td></tr>
+  </table>
+
+  <h2>27.5 Recommended Connections</h2>
+
+  <table>
+    <tr>
+      <th>Sector</th>
+      <th>Connected to</th>
+    </tr>
+    <tr><td>F1 Aisne rear area</td><td>F2</td></tr>
+    <tr><td>F2 Aisne valley</td><td>F1, G1, G2</td></tr>
+    <tr><td>G1 Cerny-en-Laonnois</td><td>F2, G3</td></tr>
+    <tr><td>G2 Hurtebise</td><td>F2, G4</td></tr>
+    <tr><td>G3 Caverne du Dragon</td><td>G1, G5</td></tr>
+    <tr><td>G4 Ailles</td><td>G2, G6</td></tr>
+    <tr><td>G5 Plateau de Californie</td><td>G3, G6</td></tr>
+    <tr><td>G6 Craonne</td><td>G4, G5, G7</td></tr>
+    <tr><td>G7 Plateau de Vauclerc</td><td>G6, G8</td></tr>
+    <tr><td>G8 Laon</td><td>G7</td></tr>
+  </table>
+
+  <h2>27.6 The Plan Already Known</h2>
+
+  <div class="box rule">
+    <strong>Rule:</strong>
+    the German had the entire French attack plan, captured in full two weeks before the
+    offensive. Because of this, in this scenario:
+    <ul>
+      <li>Every German MG in sectors G1-G8 is considered fully ready from the start: no surprise rule ever applies in the French's favor.</li>
+      <li>In Turns 1-2, the German receives +1 to Operational Initiative.</li>
+    </ul>
+  </div>
+
+  <h2>27.7 "To Laon in a Day"</h2>
+
+  <p>
+    Nivelle had promised the decisive breakthrough within the first day of fighting, or the
+    immediate halt of the offensive. The first promise was not kept; neither was the second.
+  </p>
+
+  <div class="box procedure">
+    <strong>Procedure, checked at the end of Turn 2:</strong>
+    <ol>
+      <li>If the French does not operationally control at least 2 sectors among G1-G7 by the end of Turn 2, every French division on the map immediately takes a morale test at -2 to the roll.</li>
+      <li>This test is taken only once, at the end of Turn 2, regardless of how many further turns are played.</li>
+    </ol>
+  </div>
+
+  <h2>27.8 "We Will Not Attack Anymore"</h2>
+
+  <p>
+    This rule represents, through the Morale system already in place, the best-documented
+    consequence of the crisis that really did sweep through the French army starting in late
+    April 1917: not a general refusal to fight, but a targeted refusal to go back on the
+    attack under conditions judged suicidal, while still remaining willing to defend their own
+    positions if attacked.
+  </p>
+
+  <div class="box procedure">
+    <strong>Procedure, checked at every Orders Phase from Turn 3 onward:</strong>
+    <ol>
+      <li>Count how many French divisions are at Morale 2 or lower at the start of the Orders Phase.</li>
+      <li>If the total is 3 or more, no French division may receive an Attack/assault order this turn, regardless of that individual division's own Morale.</li>
+      <li>French divisions may still defend, retreat, or carry out any other non-offensive action normally.</li>
+      <li>The condition is checked again every following turn: if overall Morale recovers and the count drops below 3, attack orders become available again from the next turn.</li>
+    </ol>
+  </div>
+
+  <div class="box rule">
+    <strong>An important detail:</strong>
+    the German player receives no information about this condition, and no direct mechanical
+    benefit when it triggers. It is not a tool the German can use or exploit in play: it is
+    simply a limit on French options, exactly as in reality German command did not, in April
+    and May 1917, grasp the real scale of what was happening in the French lines.
+  </div>
+
+  <h2>27.9 The Creutes: Caves and Quarries as Shelter</h2>
+
+  <p>
+    The limestone plateau of the Chemin des Dames is riddled with natural caves and
+    underground quarries — the "creutes" — used by the Germans as shelters nearly immune to
+    bombardment.
+  </p>
+
+  <div class="box rule">
+    <strong>Rule:</strong>
+    in sectors G1-G8, artillery must obtain 2 successes instead of 1 to reduce a line's
+    fortification by one level.
+  </div>
+
+  <h2>27.10 The Schneider Tanks</h2>
+
+  <p>
+    The combat debut of French tanks, on 16 April 1917, precedes Cambrai by seven months — but
+    here the tanks, like the rest of the plan, were expected.
+  </p>
+
+  <div class="box rule">
+    <strong>Rule:</strong>
+    the tank battalion rules of chapter 23.7 apply (direct breakthrough, mechanical
+    unreliability, vulnerability to anti-tank fire), with one difference: German anti-tank
+    fire (23.7.3) succeeds on 8+ instead of 9+, because the German already knew where and when
+    to expect the tanks.
+  </div>
+
+  <h2>27.11 French Forces</h2>
+
+  <h3>27.11.1 French Divisions on the Map</h3>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Men</th>
+      <th>Experience</th>
+      <th>VT</th>
+      <th>Morale</th>
+      <th>Fatigue</th>
+      <th>Position</th>
+    </tr>
+    <tr><td>FR01</td><td>12,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>F2 L1</td></tr>
+    <tr><td>FR02</td><td>11,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>F2 L1</td></tr>
+    <tr><td>FR03</td><td>11,000</td><td>Veteran</td><td>8+</td><td>4</td><td>0</td><td>F2 L2</td></tr>
+    <tr><td>FR04</td><td>10,000</td><td>Regular</td><td>9+</td><td>3</td><td>0</td><td>F1 L2</td></tr>
+    <tr><td>FR05</td><td>10,000</td><td>Regular</td><td>9+</td><td>3</td><td>0</td><td>F1 L3</td></tr>
+    <tr><td>FR06</td><td>9,000</td><td>Recruit</td><td>10+</td><td>3</td><td>0</td><td>F1 L3</td></tr>
+  </table>
+
+  <p class="small">
+    Starting Morale is deliberately good: the troops had been galvanized by the promise of a
+    decisive breakthrough. It is precisely this initial enthusiasm, not a starting weakness,
+    that makes the later collapse so abrupt.
+  </p>
+
+  <h3>27.11.2 French Reserves</h3>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Men</th>
+      <th>Experience</th>
+      <th>Availability</th>
+    </tr>
+    <tr><td>FR07</td><td>10,000</td><td>Regular</td><td>Turn 2</td></tr>
+    <tr><td>FR08</td><td>9,000</td><td>Regular</td><td>Turn 3</td></tr>
+    <tr><td>FR09</td><td>9,000</td><td>Recruit</td><td>Turn 5</td></tr>
+  </table>
+
+  <p>
+    French reserves enter from F1, always in Line 3, paying 2 LP.
+  </p>
+
+  <h3>27.11.3 French Support Assets</h3>
+
+  <table>
+    <tr>
+      <th>Support</th>
+      <th>Availability</th>
+    </tr>
+    <tr><td>Field artillery</td><td>6 batteries</td></tr>
+    <tr><td>Heavy artillery</td><td>4 batteries</td></tr>
+    <tr><td>Mortars</td><td>2 batteries, success on 9+</td></tr>
+    <tr><td>MG</td><td>8 companies</td></tr>
+    <tr><td>Aviation</td><td>2 reconnaissance + 2 fighters</td></tr>
+    <tr><td>Schneider tank battalions</td><td>2 battalions, rules in section 27.10</td></tr>
+  </table>
+
+  <h2>27.12 German Forces</h2>
+
+  <h3>27.12.1 German Divisions on the Map</h3>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Men</th>
+      <th>Experience</th>
+      <th>VT</th>
+      <th>Morale</th>
+      <th>Fatigue</th>
+      <th>Position</th>
+    </tr>
+    <tr><td>DE01</td><td>9,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>G1 L1</td></tr>
+    <tr><td>DE02</td><td>9,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>G2 L1</td></tr>
+    <tr><td>DE03</td><td>10,000</td><td>Veteran</td><td>8+</td><td>4</td><td>0</td><td>G3 L1</td></tr>
+    <tr><td>DE04</td><td>8,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>G4 L2</td></tr>
+    <tr><td>DE05</td><td>9,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>G6 L1</td></tr>
+    <tr><td>DE06</td><td>8,000</td><td>Regular</td><td>9+</td><td>4</td><td>0</td><td>G7 L2</td></tr>
+  </table>
+
+  <p class="small">
+    Uniformly good morale and preparation: unlike almost every other scenario in this manual,
+    here the defender is not surprised, not exhausted, not undermanned. He knew they were
+    coming.
+  </p>
+
+  <h3>27.12.2 German Reserves</h3>
+
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Men</th>
+      <th>Experience</th>
+      <th>Availability</th>
+    </tr>
+    <tr><td>DE07</td><td>9,000</td><td>Regular</td><td>Turn 3</td></tr>
+    <tr><td>DE08</td><td>8,000</td><td>Regular</td><td>Turn 4</td></tr>
+  </table>
+
+  <p>
+    German reserves enter from G8 Laon, always in Line 3, paying 2 LP.
+  </p>
+
+  <h3>27.12.3 German Support Assets</h3>
+
+  <table>
+    <tr>
+      <th>Support</th>
+      <th>Availability</th>
+    </tr>
+    <tr><td>Field artillery</td><td>3 batteries</td></tr>
+    <tr><td>Heavy artillery</td><td>3 batteries</td></tr>
+    <tr><td>Mortars</td><td>1 battery, success on 9+</td></tr>
+    <tr><td>MG</td><td>9 companies</td></tr>
+    <tr><td>Aviation</td><td>1 reconnaissance + 1 fighter</td></tr>
+  </table>
+
+  <h2>27.13 Scenario Logistics</h2>
+
+  <table>
+    <tr>
+      <th>Player</th>
+      <th>Starting LP</th>
+      <th>LP per turn</th>
+      <th>Maximum stockpile</th>
+    </tr>
+    <tr>
+      <td>French</td>
+      <td>18</td>
+      <td>13</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>German</td>
+      <td>12</td>
+      <td>9</td>
+      <td>20</td>
+    </tr>
+  </table>
+
+  <ul>
+    <li>In Turn 1 the French receives +6 special LP for the largest artillery preparation seen on the front up to this point: nearly 5,000 guns deployed on barely 40 kilometres of front.</li>
+    <li>Gas is available normally for both players from Turn 1.</li>
+  </ul>
+
+  <div class="box warning">
+    <strong>Historical accuracy note:</strong>
+    the following section tells the story of the battle and its sectors. These historical
+    notes are not rules, except where explicitly stated.
+  </div>
+
+  <h2>27.14 The Context of the Nivelle Offensive</h2>
+
+  <p>
+    Robert Nivelle had succeeded Joffre as French commander-in-chief after earning fame at
+    Verdun, particularly for recapturing Fort Douaumont using a creeping barrage that seemed
+    to have found the method for breaking the trench deadlock. Nivelle promised the French
+    government a decisive breakthrough within 24-48 hours, guaranteeing he would call off the
+    offensive if the promise were not met. General Micheler, commanding the army group
+    involved, voiced reservations; Nivelle threatened to resign if the offensive were denied,
+    and the government gave way.
+  </p>
+
+  <p>
+    The plan involved 1.2 million men, nearly 5,000 artillery pieces, and 200 tanks along a
+    front of roughly 40 kilometres, including Senegalese colonial units and a Russian
+    contingent. But two weeks before the attack, the Germans captured the entire French
+    operational plan, and reinforced precisely this sector in the meantime.
+  </p>
+
+  <div class="box history">
+    <strong>Operational reading:</strong>
+    the Chemin des Dames works, in the game as in reality, as a demonstration of what happens
+    when a rigid plan meets a prepared enemy: every turn that passes without the promised
+    breakthrough is not just a missed opportunity, but a direct blow to the morale of an army
+    that had been told the war would be over in a day.
+  </div>
+
+  <h2>27.15 Hurtebise and the Caverne du Dragon</h2>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    Hurtebise Farm and the Caverne du Dragon — an ancient stone quarry turned by the Germans
+    into an underground fortress able to shelter hundreds of men from any bombardment — were
+    among the points where the French advance bogged down hardest from the very first day. The
+    Caverne du Dragon would not be captured by the French until 25 June, over two months after
+    the offensive began, as part of the longer "Battle of the Observatories" that dragged on
+    through the summer.
+  </div>
+
+  <p>
+    Sectors G2 Hurtebise and G3 Caverne du Dragon represent these two obstacles, the hardest on
+    the entire map to reduce with artillery alone.
+  </p>
+
+  <h2>27.16 Craonne and Its Song</h2>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    the village of Craonne was almost completely levelled by the fighting. Associated with the
+    plateau of Californie above it is the "Chanson de Craonne," a protest song against the war
+    that mutinying soldiers spread clandestinely in the very weeks of the 1917 mutinies —
+    singing it was, at the time, a military offense. The lyrics are not reproduced here for
+    copyright reasons, but the song remains one of the most direct records of how the soldiers
+    themselves experienced this battle.
+  </div>
+
+  <p>
+    Sector G6 Craonne represents this place, as symbolic as it was militarily contested.
+  </p>
+
+  <h2>27.17 The Mutinies</h2>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    between late April and June 1917, a growing number of French units — up to around 68
+    divisions, by some historical estimates, involved in some form of collective protest —
+    refused to return to the attack, while still almost always continuing to defend their own
+    positions if attacked. This was not a general refusal to fight, but a targeted protest
+    against orders judged suicidal after weeks of unmet promises. On 5 May a first division
+    openly refused to attack; on 9 May Nivelle suspended the offensive, by then too late; on 15
+    May he was replaced by General Philippe Pétain.
+  </div>
+
+  <div class="box history">
+    <strong>Pétain's response:</strong>
+    Pétain responded with a combination of disciplinary measures — including courts-martial
+    and a limited but real number of death sentences carried out — and substantial reforms:
+    more regular rest rotations, less arbitrary leave, better food. Within a few weeks the
+    French army recovered its ability to fight, though it gave up any new major offensives for
+    the rest of 1917, waiting instead for greater numbers of tanks and the arrival of American
+    troops.
+  </div>
+
+  <p>
+    Section 27.8 translates, within the limits of what a game system can reasonably represent,
+    only the mechanical heart of this crisis: the collective choice to keep defending but no
+    longer to attack.
+  </p>
+
+  <h2>27.18 Laon, the Promise Never Kept</h2>
+
+  <div class="box history">
+    <strong>Historical context:</strong>
+    Nivelle had promised Laon within a single day of fighting. French troops never saw the
+    city: not even Pétain's methodical offensive at La Malmaison, in October, reached it. The
+    Germans would not withdraw from that sector until the spring of 1918, under the pressure of
+    far larger events.
+  </div>
+
+  <p>
+    Sector G8 Laon represents this promise never kept. Reaching it, in the scenario, means
+    achieving in a few days a result that never came in reality, not even in a full year.
+  </p>
+</section>

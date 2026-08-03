@@ -1,0 +1,321 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" style="font-family: 'Georgia', serif; background:#f5f0e8;">
+  
+  <!-- Decorative border -->
+  <rect x="10" y="10" width="1180" height="880" fill="none" stroke="#8b7355" stroke-width="8" rx="15"/>
+  <rect x="20" y="20" width="1160" height="860" fill="none" stroke="#c4a57b" stroke-width="2" rx="10"/>
+  
+  <!-- Italian Shield (Stemma Savoia - angolo superiore sinistro) -->
+  <g id="italian-shield" transform="translate(40, 30)">
+    <circle cx="35" cy="35" r="32" fill="#008C45" opacity="0.9"/>
+    <rect x="23" y="22" width="8" height="26" fill="#008C45"/>
+    <rect x="31" y="22" width="8" height="26" fill="#ffffff"/>
+    <rect x="39" y="22" width="8" height="26" fill="#CD212A"/>
+    <path d="M35,28 L37,34 L33,34 Z M33,36 L37,36 L35,42 Z" fill="#CD212A" stroke="#ffffff" stroke-width="0.5"/>
+  </g>
+  <text x="75" y="73" style="font-size:7px; fill:#008C45; text-anchor:middle; font-weight:bold;">ITALIA</text>
+  
+  <!-- Austro-Hungarian Double Eagle (angolo superiore destro) -->
+  <g id="ah-eagle" transform="translate(1090, 30)">
+    <circle cx="35" cy="35" r="32" fill="#1C1C1C" opacity="0.9"/>
+    <!-- Left eagle head -->
+    <path d="M25,28 L28,25 L30,28 L28,30 Z" fill="#FFD700"/>
+    <!-- Right eagle head -->
+    <path d="M45,28 L42,25 L40,28 L42,30 Z" fill="#FFD700"/>
+    <!-- Body -->
+    <ellipse cx="35" cy="38" rx="8" ry="10" fill="#FFD700"/>
+    <!-- Crown -->
+    <path d="M32,22 L38,22 L38,25 L32,25 Z" fill="#FFD700"/>
+  </g>
+  <text x="1125" y="73" style="font-size:7px; fill:#FFD700; text-anchor:middle; font-weight:bold;">K.u.K.</text>
+  
+  <!-- Gorizia Coat of Arms (Stemma di Gorizia - sopra A3) -->
+  <g id="gorizia-arms" transform="translate(380, 120)">
+    <path d="M15,5 L25,5 L25,20 L20,25 L15,20 Z" fill="#CD212A" stroke="#FFD700" stroke-width="1"/>
+    <path d="M17,10 L20,8 L23,10 L23,18 L20,21 L17,18 Z" fill="#FFD700"/>
+    <text x="20" y="16" style="font-size:7px; fill:#8B0000; text-anchor:middle; font-weight:bold;">G</text>
+  </g>
+
+  <!-- Decorative cartouche -->
+  <g id="cartouche" transform="translate(820, 750)">
+    <path d="M10,10 L280,10 L285,15 L285,75 L280,80 L10,80 L5,75 L5,15 Z"
+          fill="#f5f0e8" stroke="#8b7355" stroke-width="2" opacity="0.95"/>
+    <path d="M10,10 L15,15 L15,75 L10,80 M280,10 L275,15 L275,75 L280,80"
+          stroke="#c4a57b" stroke-width="1" fill="none"/>
+    <text x="145" y="32" style="font-size:12px; font-weight:bold; fill:#2b2b2b; text-anchor:middle;">SESTA BATTAGLIA DELL'ISONZO</text>
+    <text x="145" y="50" style="font-size:10px; fill:#4d3d2d; text-anchor:middle; font-style:italic;">6 - 17 agosto 1916</text>
+    <text x="145" y="66" style="font-size:9px; fill:#6d5d4d; text-anchor:middle;">Conquista di Gorizia e Monte Sabotino</text>
+  </g>
+  
+  <!-- Military symbols -->
+  <g id="italian-helmet" transform="translate(130, 85)">
+    <ellipse cx="8" cy="8" rx="6" ry="5" fill="#5d7d5d"/>
+    <path d="M5,8 L11,8 L10,11 L6,11 Z" fill="#4d6d4d"/>
+    <circle cx="8" cy="7" r="1" fill="#d4af37"/>
+  </g>
+  
+  <g id="alpini-feather" transform="translate(180, 85)">
+    <path d="M8,12 L8,4 Q10,2 12,4 L10,12 Z" fill="#228B22" stroke="#1a6b1a" stroke-width="0.5"/>
+  </g>
+  
+  <g id="ah-helmet" transform="translate(950, 85)">
+    <ellipse cx="8" cy="8" rx="6" ry="5" fill="#6d6d6d"/>
+    <rect x="6" y="4" width="4" height="2" fill="#8b7355"/>
+  </g>
+
+  <!-- Definitions -->
+  <defs>
+    <!-- Pattern for fortifications (diagonal lines) -->
+    <pattern id="fort-pattern-iso" patternUnits="userSpaceOnUse" width="8" height="8">
+      <path d="M0,8 l8,-8 M-2,2 l4,-4 M6,10 l4,-4" stroke="#8B4513" stroke-width="1" opacity="0.3"/>
+    </pattern>
+    
+    <!-- Pattern for heights/mountains (triangular pattern) -->
+    <pattern id="height-pattern-iso" patternUnits="userSpaceOnUse" width="12" height="12">
+      <path d="M6,2 L10,10 L2,10 Z" fill="none" stroke="#654321" stroke-width="0.8" opacity="0.3"/>
+    </pattern>
+    
+    <!-- Pattern for Carso (rocky dots) -->
+    <pattern id="carso-pattern-iso" patternUnits="userSpaceOnUse" width="10" height="10">
+      <circle cx="2" cy="2" r="1" fill="#555" opacity="0.3"/>
+      <circle cx="7" cy="5" r="1" fill="#555" opacity="0.3"/>
+      <circle cx="4" cy="8" r="1" fill="#555" opacity="0.3"/>
+    </pattern>
+    
+    <!-- Pattern for river (wavy lines) -->
+    <pattern id="river-pattern-iso" patternUnits="userSpaceOnUse" width="20" height="4">
+      <path d="M0,2 Q5,0 10,2 T20,2" stroke="#4682B4" stroke-width="1" fill="none" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    FRONTE ITALIANO — ISONZO 1916
+  </text>
+  <text x="600" y="60" font-size="14" text-anchor="middle" fill="#555" font-style="italic">
+    Sesta Battaglia dell'Isonzo — Agosto 1916
+  </text>
+
+  <!-- Main map group -->
+  <g id="map" transform="translate(100, 100)">
+    
+    <!-- ROW I (Italian front line - 5 sectors) -->
+    <!-- I1 Plava -->
+    <g id="sector-I1">
+      <rect x="0" y="0" width="180" height="120" fill="#F5DEB3" stroke="#333" stroke-width="2"/>
+      <rect x="0" y="0" width="180" height="120" fill="url(#river-pattern-iso)"/>
+      <text x="90" y="35" font-size="16" font-weight="bold" text-anchor="middle">I1</text>
+      <text x="90" y="55" font-size="13" text-anchor="middle" font-weight="bold">PLAVA</text>
+      <text x="90" y="75" font-size="10" text-anchor="middle" fill="#444">Fiume/Testa</text>
+      <text x="90" y="90" font-size="10" text-anchor="middle" fill="#444">di Ponte</text>
+      <circle cx="90" cy="105" r="8" fill="#228B22" stroke="#fff" stroke-width="1.5"/>
+      <text x="90" y="110" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">IT</text>
+    </g>
+
+    <!-- I2 Monte Sabotino -->
+    <g id="sector-I2">
+      <rect x="190" y="0" width="180" height="120" fill="#DEB887" stroke="#333" stroke-width="2"/>
+      <rect x="190" y="0" width="180" height="120" fill="url(#height-pattern-iso)"/>
+      <rect x="190" y="0" width="180" height="120" fill="url(#fort-pattern-iso)"/>
+      <text x="280" y="35" font-size="16" font-weight="bold" text-anchor="middle">I2</text>
+      <text x="280" y="55" font-size="13" text-anchor="middle" font-weight="bold">M. SABOTINO</text>
+      <text x="280" y="75" font-size="10" text-anchor="middle" fill="#444">Altura/</text>
+      <text x="280" y="90" font-size="10" text-anchor="middle" fill="#444">Fortificato</text>
+      <circle cx="280" cy="105" r="8" fill="#B8860B" stroke="#fff" stroke-width="1.5"/>
+      <text x="280" y="110" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">AH</text>
+    </g>
+
+    <!-- I3 Oslavia-Podgora -->
+    <g id="sector-I3">
+      <rect x="380" y="0" width="180" height="120" fill="#DEB887" stroke="#333" stroke-width="2"/>
+      <rect x="380" y="0" width="180" height="120" fill="url(#height-pattern-iso)"/>
+      <text x="470" y="30" font-size="16" font-weight="bold" text-anchor="middle">I3</text>
+      <text x="470" y="50" font-size="13" text-anchor="middle" font-weight="bold">OSLAVIA-</text>
+      <text x="470" y="68" font-size="13" text-anchor="middle" font-weight="bold">PODGORA</text>
+      <text x="470" y="88" font-size="10" text-anchor="middle" fill="#444">Altura/Villaggio</text>
+      <circle cx="470" cy="105" r="8" fill="#B8860B" stroke="#fff" stroke-width="1.5"/>
+      <text x="470" y="110" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">AH</text>
+    </g>
+
+    <!-- I4 Lucinico -->
+    <g id="sector-I4">
+      <rect x="570" y="0" width="180" height="120" fill="#F5DEB3" stroke="#333" stroke-width="2"/>
+      <text x="660" y="35" font-size="16" font-weight="bold" text-anchor="middle">I4</text>
+      <text x="660" y="55" font-size="13" text-anchor="middle" font-weight="bold">LUCINICO</text>
+      <text x="660" y="75" font-size="10" text-anchor="middle" fill="#444">Villaggio/</text>
+      <text x="660" y="90" font-size="10" text-anchor="middle" fill="#444">Aperto</text>
+      <circle cx="660" cy="105" r="8" fill="#228B22" stroke="#fff" stroke-width="1.5"/>
+      <text x="660" y="110" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">IT</text>
+    </g>
+
+    <!-- I5 Gradisca -->
+    <g id="sector-I5">
+      <rect x="760" y="0" width="180" height="120" fill="#F5DEB3" stroke="#333" stroke-width="2"/>
+      <rect x="760" y="0" width="180" height="120" fill="url(#river-pattern-iso)"/>
+      <text x="850" y="35" font-size="16" font-weight="bold" text-anchor="middle">I5</text>
+      <text x="850" y="55" font-size="13" text-anchor="middle" font-weight="bold">GRADISCA</text>
+      <text x="850" y="75" font-size="10" text-anchor="middle" fill="#444">Fiume/</text>
+      <text x="850" y="90" font-size="10" text-anchor="middle" fill="#444">Villaggio</text>
+      <circle cx="850" cy="105" r="8" fill="#228B22" stroke="#fff" stroke-width="1.5"/>
+      <text x="850" y="110" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">IT</text>
+    </g>
+
+    <!-- ROW A (Austro-Hungarian defensive line - 6 sectors) -->
+    <!-- A1 Monte Santo -->
+    <g id="sector-A1">
+      <rect x="0" y="130" width="155" height="120" fill="#D2B48C" stroke="#333" stroke-width="2"/>
+      <rect x="0" y="130" width="155" height="120" fill="url(#height-pattern-iso)"/>
+      <rect x="0" y="130" width="155" height="120" fill="url(#fort-pattern-iso)"/>
+      <text x="77.5" y="165" font-size="16" font-weight="bold" text-anchor="middle">A1</text>
+      <text x="77.5" y="185" font-size="13" text-anchor="middle" font-weight="bold">MONTE</text>
+      <text x="77.5" y="202" font-size="13" text-anchor="middle" font-weight="bold">SANTO</text>
+      <text x="77.5" y="222" font-size="10" text-anchor="middle" fill="#444">Altura/Forte</text>
+      <circle cx="77.5" cy="237" r="8" fill="#B8860B" stroke="#fff" stroke-width="1.5"/>
+      <text x="77.5" y="242" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">AH</text>
+    </g>
+
+    <!-- A2 San Gabriele -->
+    <g id="sector-A2">
+      <rect x="165" y="130" width="155" height="120" fill="#D2B48C" stroke="#333" stroke-width="2"/>
+      <rect x="165" y="130" width="155" height="120" fill="url(#height-pattern-iso)"/>
+      <rect x="165" y="130" width="155" height="120" fill="url(#fort-pattern-iso)"/>
+      <text x="242.5" y="165" font-size="16" font-weight="bold" text-anchor="middle">A2</text>
+      <text x="242.5" y="185" font-size="13" text-anchor="middle" font-weight="bold">SAN</text>
+      <text x="242.5" y="202" font-size="13" text-anchor="middle" font-weight="bold">GABRIELE</text>
+      <text x="242.5" y="222" font-size="10" text-anchor="middle" fill="#444">Altura/Forte</text>
+      <circle cx="242.5" cy="237" r="8" fill="#B8860B" stroke="#fff" stroke-width="1.5"/>
+      <text x="242.5" y="242" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">AH</text>
+    </g>
+
+    <!-- A3 Gorizia (MAIN OBJECTIVE) -->
+    <g id="sector-A3">
+      <rect x="330" y="130" width="155" height="120" fill="#CD853F" stroke="#333" stroke-width="3"/>
+      <rect x="330" y="130" width="155" height="120" fill="#FFD700" opacity="0.15"/>
+      <text x="407.5" y="165" font-size="16" font-weight="bold" text-anchor="middle">A3</text>
+      <text x="407.5" y="185" font-size="14" text-anchor="middle" font-weight="bold">GORIZIA</text>
+      <text x="407.5" y="205" font-size="10" text-anchor="middle" fill="#444">Città/</text>
+      <text x="407.5" y="220" font-size="10" text-anchor="middle" fill="#444">★ OBIETTIVO ★</text>
+      <circle cx="407.5" cy="237" r="8" fill="#B8860B" stroke="#fff" stroke-width="1.5"/>
+      <text x="407.5" y="242" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">AH</text>
+    </g>
+
+    <!-- A4 Monte San Michele -->
+    <g id="sector-A4">
+      <rect x="495" y="130" width="155" height="120" fill="#BC8F8F" stroke="#333" stroke-width="2"/>
+      <rect x="495" y="130" width="155" height="120" fill="url(#carso-pattern-iso)"/>
+      <rect x="495" y="130" width="155" height="120" fill="url(#height-pattern-iso)"/>
+      <text x="572.5" y="160" font-size="16" font-weight="bold" text-anchor="middle">A4</text>
+      <text x="572.5" y="178" font-size="12" text-anchor="middle" font-weight="bold">MONTE SAN</text>
+      <text x="572.5" y="194" font-size="12" text-anchor="middle" font-weight="bold">MICHELE</text>
+      <text x="572.5" y="213" font-size="10" text-anchor="middle" fill="#444">Carso/Altura</text>
+      <circle cx="572.5" cy="237" r="8" fill="#B8860B" stroke="#fff" stroke-width="1.5"/>
+      <text x="572.5" y="242" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">AH</text>
+    </g>
+
+    <!-- A5 Doberdò -->
+    <g id="sector-A5">
+      <rect x="660" y="130" width="155" height="120" fill="#BC8F8F" stroke="#333" stroke-width="2"/>
+      <rect x="660" y="130" width="155" height="120" fill="url(#carso-pattern-iso)"/>
+      <rect x="660" y="130" width="155" height="120" fill="url(#fort-pattern-iso)"/>
+      <text x="737.5" y="165" font-size="16" font-weight="bold" text-anchor="middle">A5</text>
+      <text x="737.5" y="185" font-size="13" text-anchor="middle" font-weight="bold">DOBERDÒ</text>
+      <text x="737.5" y="205" font-size="10" text-anchor="middle" fill="#444">Carso/</text>
+      <text x="737.5" y="220" font-size="10" text-anchor="middle" fill="#444">Fortificato</text>
+      <circle cx="737.5" cy="237" r="8" fill="#B8860B" stroke="#fff" stroke-width="1.5"/>
+      <text x="737.5" y="242" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">AH</text>
+    </g>
+
+    <!-- A6 Vallone del Carso -->
+    <g id="sector-A6">
+      <rect x="825" y="130" width="155" height="120" fill="#BC8F8F" stroke="#333" stroke-width="2"/>
+      <rect x="825" y="130" width="155" height="120" fill="url(#carso-pattern-iso)"/>
+      <text x="902.5" y="160" font-size="16" font-weight="bold" text-anchor="middle">A6</text>
+      <text x="902.5" y="178" font-size="12" text-anchor="middle" font-weight="bold">VALLONE</text>
+      <text x="902.5" y="194" font-size="12" text-anchor="middle" font-weight="bold">DEL CARSO</text>
+      <text x="902.5" y="213" font-size="10" text-anchor="middle" fill="#444">Carso/Retrovia</text>
+      <circle cx="902.5" cy="237" r="8" fill="#B8860B" stroke="#fff" stroke-width="1.5"/>
+      <text x="902.5" y="242" font-size="10" fill="#fff" font-weight="bold" text-anchor="middle">AH</text>
+    </g>
+
+  </g>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(100, 420)">
+    <rect x="0" y="0" width="980" height="440" fill="#f9f9f9" stroke="#333" stroke-width="2" rx="5"/>
+    
+    <text x="490" y="25" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      LEGENDA SCENARIO ISONZO 1916
+    </text>
+
+    <!-- Control markers -->
+    <g transform="translate(20, 45)">
+      <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">Controllo iniziale:</text>
+      <circle cx="10" cy="20" r="8" fill="#228B22" stroke="#fff" stroke-width="1.5"/>
+      <text x="25" y="25" font-size="12">Italiano (3 settori: I1, I4, I5)</text>
+      <circle cx="10" cy="45" r="8" fill="#B8860B" stroke="#fff" stroke-width="1.5"/>
+      <text x="25" y="50" font-size="12">Austro-ungarico (8 settori)</text>
+    </g>
+
+    <!-- Terrain types -->
+    <g transform="translate(20, 130)">
+      <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">Tipi di terreno:</text>
+      <rect x="0" y="10" width="30" height="20" fill="#F5DEB3" stroke="#333"/>
+      <rect x="0" y="10" width="30" height="20" fill="url(#river-pattern-iso)"/>
+      <text x="35" y="25" font-size="11">Fiume/Testa di ponte (attraversamento difficile)</text>
+      
+      <rect x="0" y="35" width="30" height="20" fill="#DEB887" stroke="#333"/>
+      <rect x="0" y="35" width="30" height="20" fill="url(#height-pattern-iso)"/>
+      <text x="35" y="50" font-size="11">Altura (difensore ignora 1 successo d'assalto)</text>
+      
+      <rect x="0" y="60" width="30" height="20" fill="#D2B48C" stroke="#333"/>
+      <rect x="0" y="60" width="30" height="20" fill="url(#fort-pattern-iso)"/>
+      <text x="35" y="75" font-size="11">Fortificato (difesa rinforzata)</text>
+      
+      <rect x="0" y="85" width="30" height="20" fill="#BC8F8F" stroke="#333"/>
+      <rect x="0" y="85" width="30" height="20" fill="url(#carso-pattern-iso)"/>
+      <text x="35" y="100" font-size="11">Carso (terreno roccioso, trincee nella pietra)</text>
+      
+      <rect x="0" y="110" width="30" height="20" fill="#CD853F" stroke="#333" stroke-width="2"/>
+      <rect x="0" y="110" width="30" height="20" fill="#FFD700" opacity="0.15"/>
+      <text x="35" y="125" font-size="11" font-weight="bold">Gorizia: Obiettivo principale (★)</text>
+    </g>
+
+    <!-- Forces -->
+    <g transform="translate(500, 45)">
+      <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">Forze italiane:</text>
+      <text x="0" y="20" font-size="11">• 6 divisioni in mappa (inclusi Alpini)</text>
+      <text x="0" y="35" font-size="11">• 3 divisioni di riserva (Turni 3, 4, 5)</text>
+      <text x="0" y="50" font-size="11">• Artiglieria: 4 campale + 3 pesante + 2 mortai</text>
+      <text x="0" y="65" font-size="11">• 8 compagnie MG, 3 squadriglie aviazione</text>
+      <text x="0" y="80" font-size="11">• PL: 16 iniziali, 13/turno (max 24)</text>
+      <text x="0" y="95" font-size="11" font-style="italic">  +4 PL speciali Turno 1 per bombardamento</text>
+    </g>
+
+    <g transform="translate(500, 155)">
+      <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">Forze austro-ungariche:</text>
+      <text x="0" y="20" font-size="11">• 6 divisioni in mappa</text>
+      <text x="0" y="35" font-size="11">• 2 divisioni di riserva (Turni 3, 5)</text>
+      <text x="0" y="50" font-size="11">• Artiglieria: 3 campale + 2 pesante + 1 mortaio</text>
+      <text x="0" y="65" font-size="11">• 12 compagnie MG, 2 squadriglie aviazione</text>
+      <text x="0" y="80" font-size="11">• PL: 12 iniziali, 10/turno (max 20)</text>
+      <text x="0" y="95" font-size="11" font-style="italic">  +2 PL dal Turno 4 se controlla A3 Gorizia</text>
+    </g>
+
+    <!-- Special Rules -->
+    <g transform="translate(20, 270)">
+      <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">Regole speciali scenario:</text>
+      <text x="0" y="20" font-size="11">• <tspan font-weight="bold">Durata:</tspan> 8 turni (ogni turno = 1 giorno)</text>
+      <text x="0" y="40" font-size="11">• <tspan font-weight="bold">Isonzo:</tspan> Attraversamento preparato costa 2 PL, improvvisato +1 VT +1 Fatica</text>
+      <text x="0" y="60" font-size="11">• <tspan font-weight="bold">Carso:</tspan> Difensore ignora 1 successo d'assalto; artiglieria ridotta contro fortificazioni 3-4</text>
+      <text x="0" y="80" font-size="11">• <tspan font-weight="bold">Caverne austro-ungariche:</tspan> Linee in Carso/Altura con Fort. 3+ ignorano 1° effetto Fatica da bombardamento</text>
+      <text x="0" y="100" font-size="11">• <tspan font-weight="bold">Alpini (IT06):</tspan> Assalto su altura costa 1 PL, ignora malus VT, poi +1 Fatica</text>
+      <text x="0" y="120" font-size="11">• <tspan font-weight="bold">Piano d'Offensiva:</tspan> Italiano può pagare 3 PL (Turno 1) per +1 iniziativa nei Turni 1-2</text>
+      <text x="0" y="140" font-size="11">• <tspan font-weight="bold">Intensità perdite:</tspan> Alta (ogni 2 successi nemici = 1.000 perdite)</text>
+    </g>
+
+  </g>
+
+  <!-- Footer note -->
+  <text x="600" y="880" font-size="11" text-anchor="middle" fill="#666" font-style="italic">
+    Scenario basato sulla Sesta Battaglia dell'Isonzo (Agosto 1916) — Conquista di Gorizia e Monte Sabotino
+  </text>
+</svg>

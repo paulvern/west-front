@@ -1,0 +1,439 @@
+<section id="catalogo">
+  <h1>2.0 Catalogo completo delle azioni</h1>
+
+  <p class="lead">
+    Questa sezione è il riferimento principale. Ogni azione possibile è elencata con costo,
+    fase, condizioni, procedura ed effetto. Le regole dettagliate nei capitoli successivi
+    spiegano i casi particolari.
+  </p>
+
+  <p>
+    Si consiglia di trattare questo capitolo come una consultazione rapida durante la partita,
+    non come lettura preparatoria: ogni riga risponde alle cinque domande del capitolo 1.0
+    in forma compressa, e rimanda implicitamente al capitolo del regolamento base dove la
+    procedura è spiegata per esteso, con esempi. Le azioni sono raggruppate per area funzionale —
+    logistica, movimento, combattimento, aviazione, gas/morale/rifornimento — perché in pratica
+    un giocatore tende a decidere per aree: prima quanta logistica destinare alle operazioni del
+    turno, poi come muovere le divisioni, poi dove e come attaccare, e così via. Tenere a portata
+    di mano anche il capitolo 3.0 (Sequenza del turno) aiuta a capire in che ordine queste azioni,
+    anche se elencate qui per categoria, verranno effettivamente risolte al tavolo.
+  </p>
+
+  <h2>2.1 Azioni logistiche e amministrative</h2>
+
+  <p>
+    Le azioni di questa categoria non spostano truppe né provocano combattimenti: regolano il
+    flusso di Punti Logistica che rende possibile tutto il resto. Ricevere, conservare e spendere
+    PL è un’attività che si ripete ogni turno e che spesso decide, con largo anticipo, quanto
+    un’offensiva potrà essere sostenuta. Anche l’ingresso di riserve, l’assegnazione di rimpiazzi
+    e la costruzione di fortificazioni rientrano qui, perché condividono la stessa natura
+    amministrativa: sono decisioni che preparano il terreno per i turni successivi più che
+    risolvere qualcosa nell’immediato.
+  </p>
+
+  <table>
+    <tr>
+      <th>Azione</th>
+      <th>Fase</th>
+      <th>Costo</th>
+      <th>Fattibile se...</th>
+      <th>Come si fa</th>
+      <th>Effetto</th>
+    </tr>
+
+    <tr>
+      <td>Ricevere PL</td>
+      <td>Logistica</td>
+      <td>0 PL</td>
+      <td>Ogni turno, secondo scenario.</td>
+      <td>Aggiungere i PL ricevuti ai PL conservati, rispettando il massimo accumulabile.</td>
+      <td>PL disponibili per pagare azioni.</td>
+    </tr>
+
+    <tr>
+      <td>Conservare PL</td>
+      <td>Fine Logistica</td>
+      <td>0 PL</td>
+      <td>Il totale non supera il massimo accumulabile.</td>
+      <td>Annotare PL non spesi.</td>
+      <td>I PL restano disponibili nel turno successivo.</td>
+    </tr>
+
+    <tr>
+      <td>Entrata riserva</td>
+      <td>Logistica + Ordini + Movimento</td>
+      <td>2 PL</td>
+      <td>La divisione è disponibile e il settore di ingresso è valido.</td>
+      <td>Pagare 2 PL, scrivere ordine, collocare in Linea 3 del settore di ingresso.</td>
+      <td>La divisione entra in mappa; non può attaccare nello stesso turno.</td>
+    </tr>
+
+    <tr>
+      <td>Assegnare rimpiazzi</td>
+      <td>Logistica</td>
+      <td>1 PL per 1.000 uomini</td>
+      <td>La divisione non è in Linea 1, non è contesa, non è isolata e ha accesso a retrovia.</td>
+      <td>Pagare PL e aggiungere uomini alla divisione.</td>
+      <td>Aumenta gli uomini disponibili. Se riceve reclute, può perdere esperienza.</td>
+    </tr>
+
+    <tr>
+      <td>Costruire/riparare fortificazione</td>
+      <td>Logistica</td>
+      <td>2 PL per livello</td>
+      <td>Linea controllata, non contesa, non bombardata nello stesso turno.</td>
+      <td>Pagare 2 PL e aumentare di 1 il livello, entro il massimo consentito.</td>
+      <td>Migliora la difesa della linea.</td>
+    </tr>
+
+    <tr>
+      <td>Recupero extra Fatica</td>
+      <td>Recupero</td>
+      <td>1 PL</td>
+      <td>La divisione è idonea al recupero base.</td>
+      <td>Pagare 1 PL durante la Fase Recupero.</td>
+      <td>Rimuove 1 Fatica aggiuntiva.</td>
+    </tr>
+
+    <tr>
+      <td>Dichiarare Piano d’Offensiva</td>
+      <td>Ordini</td>
+      <td>3 PL per turno di preparazione</td>
+      <td>Il giocatore indica settore principale e settori secondari.</td>
+      <td>Scrivere piano e pagare preparazione per almeno 2 turni.</td>
+      <td>Quando attivato, dà bonus agli attacchi preparati.</td>
+    </tr>
+  </table>
+
+  <h2>2.2 Azioni di movimento</h2>
+
+  <p>
+    Muovere una divisione sembra l’azione più semplice del gioco, ma il sistema distingue con
+    cura tra spostarsi all’interno del proprio settore, spostarsi verso un settore amico e
+    tentare di entrare in un settore nemico. Solo le prime due sono “movimento” in senso stretto;
+    la terza, come si vede nella tabella, non è movimento affatto ma un attacco mascherato da
+    spostamento, e viene risolta con le regole di combattimento del capitolo 12.0. Questa
+    distinzione evita ambiguità sul campo: una divisione non “scivola” mai in una linea contesa
+    senza combattere.
+  </p>
+
+  <table>
+    <tr>
+      <th>Azione</th>
+      <th>Fase</th>
+      <th>Costo</th>
+      <th>Fattibile se...</th>
+      <th>Come si fa</th>
+      <th>Effetto</th>
+    </tr>
+
+    <tr>
+      <td>Movimento interno</td>
+      <td>Movimento</td>
+      <td>0 PL</td>
+      <td>Linea di destinazione nello stesso settore amico, non piena e non vietata.</td>
+      <td>Scrivere ordine e spostare la divisione di una linea.</td>
+      <td>La divisione cambia linea nello stesso settore.</td>
+    </tr>
+
+    <tr>
+      <td>Movimento operativo</td>
+      <td>Movimento</td>
+      <td>1 PL</td>
+      <td>
+        Settore adiacente, collegato e amico; divisione non bloccata da Fatica o combattimento;
+        linea di destinazione con capienza disponibile (cap. 4.3). Usata anche per rimpiazzare
+        una linea rimasta scoperta dopo l’avanzata di una divisione locale.
+      </td>
+      <td>Pagare 1 PL, scrivere ordine, spostare in Linea 3 o linea consentita.</td>
+      <td>
+        La divisione cambia settore. Se la linea di destinazione non ha più capienza al momento
+        della risoluzione, il movimento fallisce, la divisione resta nel settore di partenza e
+        il PL speso è comunque perso.
+      </td>
+    </tr>
+
+    <tr>
+      <td>Entrare in settore nemico</td>
+      <td>Combattimento</td>
+      <td>0 PL + eventuali supporti</td>
+      <td>È scritto un ordine di attacco e c’è linea nemica bersaglio.</td>
+      <td>Non si muove come movimento normale: si risolve un assalto.</td>
+      <td>Se l’attacco riesce, l’attaccante può entrare nella linea.</td>
+    </tr>
+
+    <tr>
+      <td>Spostare 1 compagnia MG</td>
+      <td>Logistica + Movimento</td>
+      <td>1 PL</td>
+      <td>Linea di partenza e arrivo controllate, non contese; percorso valido.</td>
+      <td>Pagare 1 PL e indicare origine/destinazione.</td>
+      <td>La MG cambia linea o settore secondo scenario; non spara se ha mosso.</td>
+    </tr>
+
+    <tr>
+      <td>Ritirata volontaria</td>
+      <td>Ordini + Movimento</td>
+      <td>0 PL stessa linea interna; 1 PL verso settore adiacente</td>
+      <td>Unità non isolata, non contesa, con via valida.</td>
+      <td>Scrivere ordine di ritirata e spostare secondo priorità.</td>
+      <td>La divisione arretra; può guadagnare Fatica.</td>
+    </tr>
+
+    <tr>
+      <td>Ritirata forzata</td>
+      <td>Ritirate</td>
+      <td>0 PL</td>
+      <td>Un risultato di combattimento o morale la impone.</td>
+      <td>Seguire la tabella Vie di Ritirata.</td>
+      <td>La divisione arretra, perde Morale/Fatica; se impossibile testa resa.</td>
+    </tr>
+  </table>
+
+  <h2>2.3 Azioni di combattimento e supporto terrestre</h2>
+
+  <p>
+    Il combattimento vero e proprio è quasi sempre il punto d’arrivo di una preparazione più
+    lunga: un bombardamento che sopprime le mitragliatrici, uno sbarramento mobile che
+    accompagna l’assalto, un tiro di controbatteria che riduce la risposta d’artiglieria nemica.
+    La tabella seguente elenca queste azioni insieme, dal fuoco difensivo automatico fino
+    all’avanzata che segue una vittoria, per mostrare come si incastrano nella stessa sequenza
+    causale: prima si prepara il terreno con l’artiglieria, poi si dichiara l’assalto, poi si
+    gestiscono le conseguenze immediate sul campo.
+  </p>
+
+  <table>
+    <tr>
+      <th>Azione</th>
+      <th>Fase</th>
+      <th>Costo</th>
+      <th>Fattibile se...</th>
+      <th>Come si fa</th>
+      <th>Effetto</th>
+    </tr>
+
+    <tr>
+      <td>Attacco / assalto</td>
+      <td>Ordini + Combattimento</td>
+      <td>0 PL base</td>
+      <td>Divisione può attaccare, bersaglio adiacente o nella linea indicata.</td>
+      <td>Scrivere ordine, indicare divisioni e linea bersaglio, risolvere combattimento.</td>
+      <td>Può causare perdite, linea contesa, ritirata nemica o avanzata.</td>
+    </tr>
+
+    <tr>
+      <td>Fuoco di supporto MG</td>
+      <td>Combattimento</td>
+      <td>0 PL</td>
+      <td>MG non soppressa, linea non contesa, bersaglio valido; si applica sia se la linea attacca sia se viene attaccata (12.3).</td>
+      <td>Ogni MG tira 2d12 nel settore o 1d12 in supporto da settore adiacente.</td>
+      <td>Successi aggiunti al totale della parte a cui la MG appartiene, in attacco o in difesa.</td>
+    </tr>
+
+    <tr>
+      <td>Bombardamento preparatorio</td>
+      <td>Artiglieria</td>
+      <td>3 PL</td>
+      <td>Batterie disponibili, bersaglio valido, ordine scritto.</td>
+      <td>Ogni batteria tira 4d12; successo a 10+ o 9+ con osservazione.</td>
+      <td>Sopprime MG, riduce fortificazioni, infligge Fatica, test morale o bonus assalto.</td>
+    </tr>
+
+    <tr>
+      <td>Sbarramento mobile</td>
+      <td>Artiglieria + Combattimento</td>
+      <td>2 PL</td>
+      <td>Collegato a un assalto dichiarato nello stesso turno.</td>
+      <td>Tirare batterie assegnate e applicare tabella sbarramento.</td>
+      <td>Sopprime MG e può dare +1 successo all’assalto.</td>
+    </tr>
+
+    <tr>
+      <td>Controbatteria</td>
+      <td>Artiglieria</td>
+      <td>2 PL</td>
+      <td>Batterie disponibili e tipo di artiglieria nemica scelto.</td>
+      <td>Tirare batterie assegnate; ogni 10+ è successo.</td>
+      <td>Sopprime o danneggia batterie nemiche.</td>
+    </tr>
+
+    <tr>
+      <td>Tiro di disturbo</td>
+      <td>Artiglieria</td>
+      <td>1 PL</td>
+      <td>Batteria disponibile, settore bersaglio valido.</td>
+      <td>Tirare dadi della batteria.</td>
+      <td>Infligge Fatica o aumenta costo movimento nemico.</td>
+    </tr>
+
+    <tr>
+      <td>Avanzata dopo combattimento</td>
+      <td>Ritirate e avanzate</td>
+      <td>0 PL</td>
+      <td>Risultato di combattimento lo consente e linea non piena.</td>
+      <td>Spostare l’unità vincitrice nella linea conquistata.</td>
+      <td>L’attaccante occupa o contesta la linea.</td>
+    </tr>
+  </table>
+
+  <h2>2.4 Azioni aeree</h2>
+
+  <p>
+    L’aviazione, come spiega più diffusamente il capitolo 11.0, raramente decide da sola
+    l’esito di un turno: il suo compito è rendere più efficaci le altre armi. Una ricognizione
+    riuscita toglie al nemico il vantaggio della sorpresa, un’osservazione riuscita rende
+    l’artiglieria più precisa, una scorta o un’intercettazione riuscita decidono chi controlla
+    il cielo sopra un settore per quel turno. Sono azioni relativamente economiche in PL, ma
+    il loro valore si misura negli effetti che sbloccano altrove, non nei danni diretti che
+    infliggono.
+  </p>
+
+  <table>
+    <tr>
+      <th>Azione</th>
+      <th>Fase</th>
+      <th>Costo</th>
+      <th>Fattibile se...</th>
+      <th>Come si fa</th>
+      <th>Effetto</th>
+    </tr>
+
+    <tr>
+      <td>Ricognizione</td>
+      <td>Aviazione</td>
+      <td>1 PL</td>
+      <td>Squadriglia ricognizione disponibile, meteo consente volo.</td>
+      <td>Scrivere settore; tirare 1d12, successo 7+.</td>
+      <td>Ottieni due informazioni sul settore e annulli penalità “senza ricognizione”.</td>
+    </tr>
+
+    <tr>
+      <td>Osservazione artiglieria</td>
+      <td>Aviazione</td>
+      <td>1 PL</td>
+      <td>Squadriglia ricognizione disponibile e missione artiglieria collegata.</td>
+      <td>Indicare settore, linea e bombardamento collegato; tirare 1d12, successo 7+.</td>
+      <td>La missione artiglieria collegata colpisce a 9+ invece di 10+.</td>
+    </tr>
+
+    <tr>
+      <td>Scorta caccia</td>
+      <td>Aviazione</td>
+      <td>1 PL</td>
+      <td>Squadriglia caccia disponibile e missione amica nello stesso settore.</td>
+      <td>Risolvere eventuale duello caccia; se riesce, applicare +1.</td>
+      <td>Missione aerea amica riceve +1.</td>
+    </tr>
+
+    <tr>
+      <td>Intercettazione</td>
+      <td>Aviazione</td>
+      <td>1 PL</td>
+      <td>Squadriglia caccia disponibile e missione nemica nello stesso settore.</td>
+      <td>Risolvere duello o tiro missione caccia.</td>
+      <td>Missione aerea nemica riceve -1.</td>
+    </tr>
+
+    <tr>
+      <td>Superiorità locale</td>
+      <td>Aviazione</td>
+      <td>1 PL</td>
+      <td>Caccia disponibile, settore indicato.</td>
+      <td>Tirare 1d12, successo 7+.</td>
+      <td>Missioni aeree amiche nel settore ricevono +1 nella fase.</td>
+    </tr>
+
+    <tr>
+      <td>Interdizione aerea</td>
+      <td>Aviazione</td>
+      <td>2 PL</td>
+      <td>Squadriglia abilitata e meteo consente volo.</td>
+      <td>Indicare settore; tirare 1d12, successo 7+.</td>
+      <td>Aumenta costo movimento nemico o infligge Fatica.</td>
+    </tr>
+  </table>
+
+  <h2>2.5 Gas, morale, rifornimento e resa</h2>
+
+  <p>
+    Quest’ultimo gruppo raccoglie azioni molto diverse tra loro — un’arma chimica, un test
+    psicologico, un controllo amministrativo di fine turno — ma tutte condividono lo stesso
+    ruolo: misurano quanto una divisione può ancora reggere. Il gas indebolisce prima che
+    la fanteria attacchi; il test morale verifica la tenuta dopo un colpo subito; il controllo
+    rifornimento stabilisce se una divisione è ancora collegata alla propria organizzazione
+    logistica; il test di resa è l’ultima istanza, quando ritirarsi non è più possibile.
+    Il controllo vittoria, infine, chiude il turno traducendo tutto quello che è successo
+    in punteggio.
+  </p>
+
+  <table>
+    <tr>
+      <th>Azione / Controllo</th>
+      <th>Fase</th>
+      <th>Costo</th>
+      <th>Fattibile se...</th>
+      <th>Come si fa</th>
+      <th>Effetto</th>
+    </tr>
+
+    <tr>
+      <td>Missione Gas</td>
+      <td>Artiglieria e Gas</td>
+      <td>4 PL</td>
+      <td>Scenario consente gas, vento non impedisce, ordine scritto.</td>
+      <td>Tirare 4d12, successo 9+; applicare effetti per successo.</td>
+      <td>Sopprime MG, infligge Fatica, test Morale, disordine o perdite limitate.</td>
+    </tr>
+
+    <tr>
+      <td>Test morale</td>
+      <td>Quando richiesto</td>
+      <td>0 PL</td>
+      <td>Perdite, gas, isolamento, combattimento o regola lo impongono.</td>
+      <td>Tirare 1d12 + Morale.</td>
+      <td>Può causare Fatica, perdita Morale, ritirata, rotta o resa.</td>
+    </tr>
+
+    <tr>
+      <td>Controllo rifornimento</td>
+      <td>Isolamento e rifornimento</td>
+      <td>0 PL</td>
+      <td>Ogni divisione sulla mappa.</td>
+      <td>Tracciare percorso di settori amici fino a retrovia valida.</td>
+      <td>Se isolata: niente rimpiazzi/supporto, -1 Morale e +1 Fatica.</td>
+    </tr>
+
+    <tr>
+      <td>Recupero base</td>
+      <td>Recupero</td>
+      <td>0 PL</td>
+      <td>Divisione non in L1, non contesa, non isolata, non bombardata, non ha attaccato.</td>
+      <td>Rimuovere 1 Fatica.</td>
+      <td>La divisione recupera efficienza.</td>
+    </tr>
+
+    <tr>
+      <td>Test di resa</td>
+      <td>Ritirate / Rifornimento</td>
+      <td>0 PL</td>
+      <td>Nessuna via di ritirata, isolamento critico o condizioni di resa.</td>
+      <td>Tirare 1d12 + Morale - Fatica e modificatori.</td>
+      <td>Resiste, rotta, resa parziale o rimozione.</td>
+    </tr>
+
+    <tr>
+      <td>Controllo vittoria</td>
+      <td>Fine turno</td>
+      <td>0 PL</td>
+      <td>Ogni turno o fine scenario.</td>
+      <td>Calcolare PV secondo scenario.</td>
+      <td>Determina livello di vittoria.</td>
+    </tr>
+  </table>
+
+  <div class="box warning">
+    <strong>Nota di coerenza:</strong>
+    un’azione può costare 0 PL ma richiedere comunque un ordine. Per esempio l’attacco base costa 0 PL,
+    ma deve essere scritto negli ordini. Senza ordine, la divisione non attacca.
+  </div>
+</section>
