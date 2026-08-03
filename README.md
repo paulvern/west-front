@@ -2,6 +2,8 @@
 
 A bilingual digital rulebook and scenario-map toolkit for an operational wargame set during the First World War. The project combines the complete game rules, historical scenarios, victory conditions, printable player aids, worked examples, and browser-based editing tools.
 
+**Live rulebook:** the current version of the rules is deployed at [paulvern.free.nf/Verdun](https://paulvern.free.nf/Verdun).
+
 ![Operational map for the Verdun scenario](assets/img/manual/mappa-verdun-1916.svg)
 
 ## Features
@@ -300,4 +302,4 @@ Before creating a release, align the displayed version strings, verify both lang
 
 ## License
 
-EVERYTHING IS CC0
+The project does not currently include a `LICENSE` file. Before public distribution or accepting contributions, add a licence that separately clarifies the permitted use of the source code, written content, maps, and images.
