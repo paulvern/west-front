@@ -1,0 +1,195 @@
+{
+  "version": "v1.0",
+  "sections": [
+    {
+      "id": "copertina",
+      "title": "Cover",
+      "file": "sections_en/00-copertina.html"
+    },
+    {
+      "id": "intro",
+      "title": "Historical Introduction",
+      "file": "sections_en/01-introduzione-storica.html"
+    },
+    {
+      "id": "principi",
+      "number": 1,
+      "title": "General Principles",
+      "file": "sections_en/02-principi-generali.html"
+    },
+    {
+      "id": "catalogo",
+      "number": 2,
+      "title": "Full Catalogue of Actions",
+      "file": "sections_en/03-catalogo-azioni.html"
+    },
+    {
+      "id": "sequenza",
+      "number": 3,
+      "title": "Turn Sequence",
+      "file": "sections_en/04-sequenza-turno.html"
+    },
+    {
+      "id": "settori",
+      "number": 4,
+      "title": "Sectors, Lines, and Control",
+      "file": "sections_en/05-settori-linee-controllo.html"
+    },
+    {
+      "id": "divisioni",
+      "number": 5,
+      "title": "Divisions, Morale, and Fatigue",
+      "file": "sections_en/06-divisioni-morale-fatica.html"
+    },
+    {
+      "id": "logistica",
+      "number": 6,
+      "title": "Logistics, Reserves, and Replacements",
+      "file": "sections_en/07-logistica-riserve-rimpiazzi.html"
+    },
+    {
+      "id": "iniziativa",
+      "number": 7,
+      "title": "Simultaneous Orders and Initiative",
+      "file": "sections_en/08-ordini-iniziativa.html"
+    },
+    {
+      "id": "movimento",
+      "number": 8,
+      "title": "Movement",
+      "file": "sections_en/09-movimento.html"
+    },
+    {
+      "id": "artiglieria",
+      "number": 9,
+      "title": "Machine Guns and Artillery",
+      "file": "sections_en/10-artiglieria-mg.html"
+    },
+    {
+      "id": "gas",
+      "number": 10,
+      "title": "Gas",
+      "file": "sections_en/11-gas.html"
+    },
+    {
+      "id": "aviazione",
+      "number": 11,
+      "title": "Aviation",
+      "file": "sections_en/12-aviazione.html"
+    },
+    {
+      "id": "combattimento",
+      "number": 12,
+      "title": "Combat",
+      "file": "sections_en/13-combattimento.html"
+    },
+    {
+      "id": "ritirate",
+      "number": 13,
+      "title": "Losses, Retreats, Rout, and Surrender",
+      "file": "sections_en/14-ritirate-rotta-resa.html"
+    },
+    {
+      "id": "forti",
+      "number": 14,
+      "title": "Fortifications, Supply, and Recovery",
+      "file": "sections_en/15-fortificazioni-rifornimento.html"
+    },
+    {
+      "id": "verdun",
+      "number": 15,
+      "title": "Scenario: Verdun 1916",
+      "file": "sections_en/16-scenario-verdun.html"
+    },
+    {
+      "id": "vittoria",
+      "number": 16,
+      "title": "Victory Conditions — Verdun",
+      "file": "sections_en/17-condizioni-vittoria-verdun.html"
+    },
+    {
+      "id": "isonzo",
+      "number": 17,
+      "title": "Scenario: Isonzo 1916",
+      "file": "sections_en/18-scenario-isonzo.html"
+    },
+    {
+      "id": "vittoria-isonzo",
+      "number": 18,
+      "title": "Victory Conditions — Isonzo",
+      "file": "sections_en/19-condizioni-vittoria-isonzo.html"
+    },
+    {
+      "id": "messines",
+      "number": 19,
+      "title": "Scenario: Messines 1917",
+      "file": "sections_en/20-scenario-messines.html"
+    },
+    {
+      "id": "vittoria-messines",
+      "number": 20,
+      "title": "Victory Conditions — Messines",
+      "file": "sections_en/21-condizioni-vittoria-messines.html"
+    },
+    {
+      "id": "piave",
+      "number": 21,
+      "title": "Scenario: Piave 1918",
+      "file": "sections_en/22-scenario-piave.html"
+    },
+    {
+      "id": "vittoria-piave",
+      "number": 22,
+      "title": "Victory Conditions — Piave",
+      "file": "sections_en/23-condizioni-vittoria-piave.html"
+    },
+    {
+      "id": "cambrai",
+      "number": 23,
+      "title": "Scenario: Cambrai 1917",
+      "file": "sections_en/24-scenario-cambrai.html"
+    },
+    {
+      "id": "vittoria-cambrai",
+      "number": 24,
+      "title": "Victory Conditions — Cambrai",
+      "file": "sections_en/25-condizioni-vittoria-cambrai.html"
+    },
+    {
+      "id": "passchendaele",
+      "number": 25,
+      "title": "Scenario: Passchendaele 1917",
+      "file": "sections_en/26-scenario-passchendaele.html"
+    },
+    {
+      "id": "vittoria-passchendaele",
+      "number": 26,
+      "title": "Victory Conditions — Passchendaele",
+      "file": "sections_en/27-condizioni-vittoria-passchendaele.html"
+    },
+    {
+      "id": "chemin-des-dames",
+      "number": 27,
+      "title": "Scenario: Chemin des Dames 1917",
+      "file": "sections_en/28-scenario-chemin-des-dames.html"
+    },
+    {
+      "id": "vittoria-chemin-des-dames",
+      "number": 28,
+      "title": "Victory Conditions — Chemin des Dames",
+      "file": "sections_en/29-condizioni-vittoria-chemin-des-dames.html"
+    },
+    {
+      "id": "schede",
+      "number": 29,
+      "title": "Printable Sheets",
+      "file": "sections_en/30-schede.html"
+    },
+    {
+      "id": "esempi",
+      "number": 30,
+      "title": "Complete Examples",
+      "file": "sections_en/31-esempi.html"
+    }
+  ]
+}

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Editor Mappe Wargame con Layer Storici</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <style>
+    :root {
+      --panel-bg: #e8e2d5;
+      --border-color: #8c8275;
+      --font-main: "Georgia", serif;
+      --active-color: #4a5d4e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 10px;
+      background-color: #f4efe6;
+      font-family: var(--font-main);
+      color: #2b2b2b;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      gap: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 5px;
+    }
+
+    .app-layout {
+      display: flex;
+      flex: 1;
+      gap: 10px;
+      min-height: 0;
+    }
+
+    .sidebar-left, .sidebar-right {
+      background: var(--panel-bg);
+      padding: 12px;
+      border: 2px solid var(--border-color);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow-y: auto;
+    }
+
+    .sidebar-left { width: 300px; }
+    .sidebar-right { width: 360px; }
+
+    .panel-title {
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 3px;
+    }
+
+    .tool-palette { display: flex; gap: 5px; }
+
+    .tool-btn {
+      flex: 1;
+      padding: 8px 2px;
+      background: #fff;
+      border: 2px solid var(--border-color);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .tool-btn.active {
+      background: var(--active-color);
+      color: white;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 4px; }
+    label { font-weight: bold; font-size: 11px; text-transform: uppercase; }
+    input, select, button { padding: 6px; border: 1px solid var(--border-color); font-family: inherit; font-size: 11px; }
+
+    button.action-btn { background: var(--active-color); color: white; font-weight: bold; cursor: pointer; border: none; padding: 8px; }
+    button.danger { background: #8b3a3a; color: white; border: none; cursor: pointer; }
+
+    /* CONTENITORE MAPPA LEAFLET */
+    #map {
+      flex: 1;
+      border: 2px solid var(--border-color);
+      border-radius: 4px;
+      background: #e5e0d8;
+    }
+
+    /* LISTA ESAGONI RAPIDA */
+    .hex-list-scroll { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
+
+    .hex-card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      padding: 6px;
+      display: grid;
+      grid-template-columns: 45px 1fr 65px 65px 20px;
+      gap: 4px;
+      align-items: center;
+      font-size: 10px;
+    }
+
+    .hex-card.selected { border: 2px solid #d9534f; background: #fff8f8; }
+    .hex-card input, .hex-card select { padding: 2px; font-size: 10px; }
+
+    /* STYLE SVG OVERLAY */
+    .hex-label {
+      font-family: Georgia, serif;
+      font-weight: bold;
+      text-anchor: middle;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Editor Mappa Operativa con Layer Storici</h1>
+
+  <div class="app-layout">
+    
+    <!-- PANNELLO SINISTRO -->
+    <div class="sidebar-left">
+      <div class="panel-title">Palette Strumenti</div>
+      <div class="tool-palette">
+        <button id="toolSelect" class="tool-btn active" onclick="setTool('select')">👆 Posiziona</button>
+        <button id="toolLink" class="tool-btn" onclick="setTool('link')">🔗 Linka</button>
+      </div>
+
+      <div class="panel-title">Sfondo e Mappa Storica WMS</div>
+      
+      <div class="form-group">
+        <label>Seleziona Provider Mappa</label>
+        <select id="mapProvider" onchange="changeMapProvider()">
+          <option value="topo_historic">Carta Topografica Vintage (OpenTopo)</option>
+          <option value="osm">OpenStreetMap Standard</option>
+          <option value="igm_25k">Cartografia IGM 1:25.000 (Italia)</option>
+          <option value="ign_france">Cartes de l'État-Major (Fronte Occidentale)</option>
+          <option value="esri_sat">Fotografia Satellitare (Esri)</option>
+          <option value="wms_custom">URL WMS Personalizzato</option>
+        </select>
+      </div>
+
+      <div id="wmsInputs" class="form-group" style="display:none;">
+        <label>URL Server WMS</label>
+        <input type="text" id="wmsUrl" placeholder="https://.../wms">
+        <label>Nome Layer WMS</label>
+        <input type="text" id="wmsLayer" placeholder="es. layer_1916">
+        <button class="action-btn" onclick="loadCustomWMS()">Carica WMS</button>
+      </div>
+
+      <div class="form-group">
+        <label>Opacità Mappa Storica: <span id="opacityVal">80%</span></label>
+        <input type="range" id="mapOpacity" min="0" max="1" step="0.1" value="0.8" oninput="updateOpacity(this.value)">
+      </div>
+
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 6px;">
+        <button class="action-btn" onclick="addNewHexCenter()">+ Esagono al Centro</button>
+        <button class="danger" onclick="clearAll()">🗑 Svuota Tutto</button>
+      </div>
+    </div>
+
+    <!-- MAPPA INTERATTIVA (LEAFLET) -->
+    <div id="map"></div>
+
+    <!-- PANNELLO DESTRO -->
+    <div class="sidebar-right">
+      <div class="panel-title">Lista Esagoni (<span id="hexCount">0</span>)</div>
+      <div class="hex-list-scroll" id="hexListContainer"></div>
+    </div>
+
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // Inizializzazione Mappa Leaflet (Centrata sull'Isonzo)
+    const map = L.map('map').setView([45.9402, 13.6217], 12);
+
+    let currentTileLayer = null;
+
+    // Server e Layer di base configurati
+    const mapProviders = {
+      topo_historic: L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        maxZoom: 17,
+        opacity: 0.8,
+        attribution: 'Map data: OpenStreetMap, SRTM | Map style: OpenTopoMap'
+      }),
+      
+      osm: L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        opacity: 0.8
+      }),
+
+      // Cartografia Storica IGM 1:25.000 (Geoportale Nazionale Italiano) - Ottimo per l'Isonzo
+      igm_25k: L.tileLayer.wms('http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/ortofoto_bn_88.map', {
+        layers: 'Ortofoto_bn_88_f32',
+        format: 'image/png',
+        transparent: true,
+        opacity: 0.8,
+        attribution: 'Ministero dell\'Ambiente - IGM'
+      }),
+
+      // Cartes de l'État-Major (1820-1866) - Stupende per mappe del Fronte Occidentale
+      ign_france: L.tileLayer('https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.ETATMAJOR40&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
+        maxZoom: 18,
+        opacity: 0.8,
+        attribution: 'IGN France - Cartes de l\'État-Major'
+      }),
+
+      // Satellite (Esri World Imagery)
+      esri_sat: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 19,
+        opacity: 0.8,
+        attribution: 'Tiles &copy; Esri'
+      })
+    };
+
+    // Attiva layer di default
+    currentTileLayer = mapProviders.topo_historic.addTo(map);
+
+    // Gestione Cambio Provider WMS
+    function changeMapProvider() {
+      const val = document.getElementById('mapProvider').value;
+      const wmsInputs = document.getElementById('wmsInputs');
+
+      if (currentTileLayer) map.removeLayer(currentTileLayer);
+
+      if (val === 'wms_custom') {
+        wmsInputs.style.display = 'flex';
+      } else {
+        wmsInputs.style.display = 'none';
+        currentTileLayer = mapProviders[val].addTo(map);
+        updateOpacity(document.getElementById('mapOpacity').value);
+      }
+    }
+
+    function loadCustomWMS() {
+      const url = document.getElementById('wmsUrl').value;
+      const layer = document.getElementById('wmsLayer').value;
+      if (!url || !layer) {
+        alert('Inserisci sia L\'URL che il nome del Layer WMS');
+        return;
+      }
+
+      if (currentTileLayer) map.removeLayer(currentTileLayer);
+
+      // Caricamento standard WMS Leaflet
+      currentTileLayer = L.tileLayer.wms(url, {
+        layers: layer,
+        format: 'image/png',
+        transparent: true,
+        opacity: parseFloat(document.getElementById('mapOpacity').value)
+      }).addTo(map);
+    }
+
+    function updateOpacity(val) {
+      document.getElementById('opacityVal').innerText = Math.round(val * 100) + '%';
+      if (currentTileLayer) {
+        currentTileLayer.setOpacity(val);
+      }
+    }
+
+    // --- LOGICA NODI ESAGONALI E WARGAME ---
+    let hexes = [];
+    let manualLinks = [];
+    let currentTool = 'select';
+    let selectedHexId = null;
+    let linkSourceId = null;
+
+    // Group SVG / Marker in Leaflet
+    const hexLayerGroup = L.layerGroup().addTo(map);
+    const linkLayerGroup = L.layerGroup().addTo(map);
+
+    const NATIONS = {
+      NEUTRAL: { bg: '#e0d8c3', border: '#7a7265', text: '#222', label: '' },
+      IT: { bg: '#d4e3d4', border: '#006622', text: '#004011', label: 'IT' },
+      AH: { bg: '#f0d3d3', border: '#8b0000', text: '#500000', label: 'AH' }
+    };
+
+    const ICONS = { NONE: '', ALTURA: '▲', FORTE: '🏰', CITTA: '★', CARSO: '🪨', FIUME: '〰' };
+
+    function setTool(tool) {
+      currentTool = tool;
+      document.getElementById('toolSelect').classList.toggle('active', tool === 'select');
+      document.getElementById('toolLink').classList.toggle('active', tool === 'link');
+      linkSourceId = null;
+      renderMapOverlay();
+    }
+
+    // Click sulla mappa per aggiungere nodi con coordinate reali (Lat/Lng)
+    map.on('click', (e) => {
+      if (currentTool === 'select') {
+        const newHex = {
+          id: Date.now(),
+          lat: e.latlng.lat,
+          lng: e.latlng.lng,
+          code: `N${hexes.length + 1}`,
+          name: 'SETTORE',
+          nation: 'NEUTRAL',
+          icon: 'NONE'
+        };
+        hexes.push(newHex);
+        selectedHexId = newHex.id;
+        renderHexList();
+        renderMapOverlay();
+      }
+    });
+
+    function addNewHexCenter() {
+      const center = map.getCenter();
+      map.fire('click', { latlng: center });
+    }
+
+    // Calcolo Geometria Esagonale in metri intorno alle coordinate GPS
+    function getHexPolygonCoords(lat, lng, radiusMeters = 800) {
+      const coords = [];
+      for (let i = 0; i < 6; i++) {
+        const angle = (Math.PI / 3) * i;
+        const dx = radiusMeters * Math.cos(angle);
+        const dy = radiusMeters * Math.sin(angle);
+        
+        // Approssimazione WGS84 veloce
+        const dLat = dy / 111111;
+        const dLng = dx / (111111 * Math.cos(lat * Math.PI / 180));
+        coords.push([lat + dLat, lng + dLng]);
+      }
+      return coords;
+    }
+
+    function renderMapOverlay() {
+      hexLayerGroup.clearLayers();
+      linkLayerGroup.clearLayers();
+
+      // Disegna Collegamenti
+      manualLinks.forEach(([id1, id2]) => {
+        const h1 = hexes.find(h => h.id === id1);
+        const h2 = hexes.find(h => h.id === id2);
+        if (h1 && h2) {
+          L.polyline([[h1.lat, h1.lng], [h2.lat, h2.lng]], {
+            color: '#333',
+            weight: 3,
+            dashArray: '5, 5'
+          }).addTo(linkLayerGroup);
+        }
+      });
+
+      // Disegna Esagoni
+      hexes.forEach(hex => {
+        const nat = NATIONS[hex.nation] || NATIONS.NEUTRAL;
+        const isSelected = hex.id === selectedHexId;
+        const hexPolygonCoords = getHexPolygonCoords(hex.lat, hex.lng);
+
+        const polygon = L.polygon(hexPolygonCoords, {
+          color: isSelected ? '#d9534f' : nat.border,
+          fillColor: nat.bg,
+          fillOpacity: 0.85,
+          weight: isSelected ? 4 : 2
+        });
+
+        // Eventi sull'esagono
+        polygon.on('click', (e) => {
+          L.DomEvent.stopPropagation(e);
+          if (currentTool === 'select') {
+            selectedHexId = hex.id;
+          } else if (currentTool === 'link') {
+            if (!linkSourceId) {
+              linkSourceId = hex.id;
+            } else if (linkSourceId !== hex.id) {
+              toggleLink(linkSourceId, hex.id);
+              linkSourceId = null;
+            }
+          }
+          renderHexList();
+          renderMapOverlay();
+        });
+
+        // Trascina esagono (Drag and drop su Leaflet)
+        polygon.on('mousedown', () => {
+          if (currentTool === 'select') {
+            map.dragging.disable();
+            const onMouseMove = (ev) => {
+              hex.lat = ev.latlng.lat;
+              hex.lng = ev.latlng.lng;
+              renderMapOverlay();
+            };
+            map.once('mouseup', () => {
+              map.dragging.enable();
+              map.off('mousemove', onMouseMove);
+              renderHexList();
+            });
+            map.on('mousemove', onMouseMove);
+          }
+        });
+
+        polygon.addTo(hexLayerGroup);
+
+        // Testo / Etichetta centrale via DivIcon
+        const iconSymbol = ICONS[hex.icon] || '';
+        const labelHtml = `
+          <div style="text-align:center; transform: translateY(-12px); pointer-events:none;">
+            <strong style="font-size:12px; color:${nat.text}; display:block;">${hex.code}</strong>
+            <span style="font-size:10px; text-transform:uppercase;">${hex.name}</span>
+            <div style="font-size:12px;">${iconSymbol}</div>
+          </div>
+        `;
+
+        L.marker([hex.lat, hex.lng], {
+          icon: L.divIcon({
+            className: 'hex-label',
+            html: labelHtml,
+            iconSize: [80, 40]
+          }),
+          interactive: false
+        }).addTo(hexLayerGroup);
+      });
+    }
+
+    function toggleLink(id1, id2) {
+      const idx = manualLinks.findIndex(l => (l[0]===id1 && l[1]===id2) || (l[0]===id2 && l[1]===id1));
+      if (idx >= 0) manualLinks.splice(idx, 1);
+      else manualLinks.push([id1, id2]);
+    }
+
+    function renderHexList() {
+      const container = document.getElementById('hexListContainer');
+      document.getElementById('hexCount').innerText = hexes.length;
+      container.innerHTML = '';
+
+      hexes.forEach(hex => {
+        const isSelected = hex.id === selectedHexId;
+        const card = document.createElement('div');
+        card.className = `hex-card ${isSelected ? 'selected' : ''}`;
+        
+        card.innerHTML = `
+          <input type="text" value="${hex.code}" onchange="updateHex(${hex.id}, 'code', this.value)">
+          <input type="text" value="${hex.name}" onchange="updateHex(${hex.id}, 'name', this.value)">
+          <select onchange="updateHex(${hex.id}, 'nation', this.value)">
+            <option value="NEUTRAL" ${hex.nation==='NEUTRAL'?'selected':''}>NEU</option>
+            <option value="IT" ${hex.nation==='IT'?'selected':''}>IT</option>
+            <option value="AH" ${hex.nation==='AH'?'selected':''}>AH</option>
+          </select>
+          <select onchange="updateHex(${hex.id}, 'icon', this.value)">
+            <option value="NONE" ${hex.icon==='NONE'?'selected':''}>-</option>
+            <option value="ALTURA" ${hex.icon==='ALTURA'?'selected':''}>▲ Altura</option>
+            <option value="FORTE" ${hex.icon==='FORTE'?'selected':''}>🏰 Forte</option>
+            <option value="CITTA" ${hex.icon==='CITTA'?'selected':''}>★ Città</option>
+            <option value="CARSO" ${hex.icon==='CARSO'?'selected':''}>🪨 Carso</option>
+            <option value="FIUME" ${hex.icon==='FIUME'?'selected':''}>〰 Fiume</option>
+          </select>
+          <button class="danger" onclick="deleteHex(${hex.id})">✕</button>
+        `;
+
+        card.addEventListener('click', (e) => {
+          if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'SELECT' && e.target.tagName !== 'BUTTON') {
+            selectedHexId = hex.id;
+            map.panTo([hex.lat, hex.lng]);
+            renderHexList();
+            renderMapOverlay();
+          }
+        });
+
+        container.appendChild(card);
+      });
+    }
+
+    function updateHex(id, key, val) {
+      const h = hexes.find(x => x.id === id);
+      if (h) { h[key] = val; renderMapOverlay(); }
+    }
+
+    function deleteHex(id) {
+      hexes = hexes.filter(h => h.id !== id);
+      manualLinks = manualLinks.filter(l => l[0]!==id && l[1]!==id);
+      if (selectedHexId === id) selectedHexId = null;
+      renderHexList();
+      renderMapOverlay();
+    }
+
+    function clearAll() {
+      if (confirm('Svuotare interamente la mappa?')) {
+        hexes = []; manualLinks = []; selectedHexId = null;
+        renderHexList(); renderMapOverlay();
+      }
+    }
+
+    // Carica dati geografici reali per l'Isonzo
+    function loadIsonzoRealCoords() {
+      hexes = [
+        { id: 1, lat: 46.002, lng: 13.585, code: 'I1', name: 'Plava', nation: 'IT', icon: 'FIUME' },
+        { id: 2, lat: 45.979, lng: 13.632, code: 'I2', name: 'M. Sabotino', nation: 'AH', icon: 'ALTURA' },
+        { id: 3, lat: 45.962, lng: 13.608, code: 'I3', name: 'Oslavia', nation: 'AH', icon: 'ALTURA' },
+        { id: 4, lat: 45.945, lng: 13.590, code: 'I4', name: 'Lucinico', nation: 'IT', icon: 'NONE' },
+        { id: 5, lat: 45.895, lng: 13.439, code: 'I5', name: 'Gradisca', nation: 'IT', icon: 'FIUME' },
+        { id: 6, lat: 45.991, lng: 13.652, code: 'A1', name: 'M. Santo', nation: 'AH', icon: 'FORTE' },
+        { id: 7, lat: 45.963, lng: 13.645, code: 'A2', name: 'S. Gabriele', nation: 'AH', icon: 'FORTE' },
+        { id: 8, lat: 45.940, lng: 13.621, code: 'A3', name: 'Gorizia', nation: 'AH', icon: 'CITTA' },
+        { id: 9, lat: 45.897, lng: 13.550, code: 'A4', name: 'M. S. Michele', nation: 'AH', icon: 'CARSO' },
+        { id: 10, lat: 45.845, lng: 13.560, code: 'A5', name: 'Doberdò', nation: 'AH', icon: 'CARSO' }
+      ];
+
+      manualLinks = [
+        [1,2], [2,3], [3,4], [4,5], [6,7], [7,8], [8,9], [9,10],
+        [1,6], [2,7], [3,8], [4,9], [5,10]
+      ];
+
+      renderHexList();
+      renderMapOverlay();
+    }
+
+    loadIsonzoRealCoords();
+  </script>
+</body>
+</html>

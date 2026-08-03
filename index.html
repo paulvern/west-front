@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Fronte Occidentale — Manuale v0.9.5</title>
+
+  <link rel="stylesheet" href="assets/css/manual.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="topbar__title">FRONTE OCCIDENTALE</span>
+      <span class="topbar__version">Manuale v0.9.5</span>
+    </div>
+
+    <div class="topbar__actions">
+      <select id="language-selector" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; background: white; cursor: pointer; font-size: 14px;">
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+      <button id="btn-load-all" type="button">Carica tutto</button>
+      <button id="btn-print" type="button">Stampa / PDF</button>
+      <button id="btn-toggle-nav" type="button">Indice</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar">
+      <h2>Indice</h2>
+      <nav id="nav-sections" class="nav-sections">
+        <p class="muted">Caricamento indice…</p>
+      </nav>
+    </aside>
+
+    <main id="manual-root" class="manual">
+     
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>Fronte Occidentale — Manuale v1.0</span>
+  </footer>
+
+  <script src="assets/js/manual.js"></script>
+</body>
+</html>

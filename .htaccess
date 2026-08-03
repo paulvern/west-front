@@ -1,0 +1,36 @@
+# Disabilita cache per file HTML, JSON e PHP
+<IfModule mod_headers.c>
+    # Per file HTML (sezioni del manuale)
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    # Per file JSON (manifest)
+    <FilesMatch "\.json$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    # Per file PHP (API)
+    <FilesMatch "\.php$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+</IfModule>
+
+# Forza ricaricamento per richieste con query string
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Non cachare richieste con parametri _= (cache busting)
+    RewriteCond %{QUERY_STRING} _=
+    RewriteRule .* - [E=no-cache:1]
+</IfModule>
+
+# Abilita CORS per sviluppo locale (se necessario)
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>

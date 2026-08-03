@@ -1,0 +1,195 @@
+{
+  "version": "v1.0",
+  "sections": [
+    {
+      "id": "copertina",
+      "title": "Copertina",
+      "file": "sections/00-copertina.html"
+    },
+    {
+      "id": "intro",
+      "title": "Introduzione storica",
+      "file": "sections/01-introduzione-storica.html"
+    },
+    {
+      "id": "principi",
+      "number": 1,
+      "title": "Principi generali",
+      "file": "sections/02-principi-generali.html"
+    },
+    {
+      "id": "catalogo",
+      "number": 2,
+      "title": "Catalogo completo delle azioni",
+      "file": "sections/03-catalogo-azioni.html"
+    },
+    {
+      "id": "sequenza",
+      "number": 3,
+      "title": "Sequenza del turno",
+      "file": "sections/04-sequenza-turno.html"
+    },
+    {
+      "id": "settori",
+      "number": 4,
+      "title": "Settori, linee e controllo",
+      "file": "sections/05-settori-linee-controllo.html"
+    },
+    {
+      "id": "divisioni",
+      "number": 5,
+      "title": "Divisioni, morale e fatica",
+      "file": "sections/06-divisioni-morale-fatica.html"
+    },
+    {
+      "id": "logistica",
+      "number": 6,
+      "title": "Logistica, riserve e rimpiazzi",
+      "file": "sections/07-logistica-riserve-rimpiazzi.html"
+    },
+    {
+      "id": "iniziativa",
+      "number": 7,
+      "title": "Ordini simultanei e iniziativa",
+      "file": "sections/08-ordini-iniziativa.html"
+    },
+    {
+      "id": "movimento",
+      "number": 8,
+      "title": "Movimento",
+      "file": "sections/09-movimento.html"
+    },
+    {
+      "id": "artiglieria",
+      "number": 9,
+      "title": "Mitragliatrici e artiglieria",
+      "file": "sections/10-artiglieria-mg.html"
+    },
+    {
+      "id": "gas",
+      "number": 10,
+      "title": "Gas",
+      "file": "sections/11-gas.html"
+    },
+    {
+      "id": "aviazione",
+      "number": 11,
+      "title": "Aviazione",
+      "file": "sections/12-aviazione.html"
+    },
+    {
+      "id": "combattimento",
+      "number": 12,
+      "title": "Combattimento",
+      "file": "sections/13-combattimento.html"
+    },
+    {
+      "id": "ritirate",
+      "number": 13,
+      "title": "Perdite, ritirate, rotta e resa",
+      "file": "sections/14-ritirate-rotta-resa.html"
+    },
+    {
+      "id": "forti",
+      "number": 14,
+      "title": "Fortificazioni, rifornimento e recupero",
+      "file": "sections/15-fortificazioni-rifornimento.html"
+    },
+    {
+      "id": "verdun",
+      "number": 15,
+      "title": "Scenario: Verdun 1916",
+      "file": "sections/16-scenario-verdun.html"
+    },
+    {
+      "id": "vittoria",
+      "number": 16,
+      "title": "Condizioni di vittoria — Verdun",
+      "file": "sections/17-condizioni-vittoria-verdun.html"
+    },
+    {
+      "id": "isonzo",
+      "number": 17,
+      "title": "Scenario: Isonzo 1916",
+      "file": "sections/18-scenario-isonzo.html"
+    },
+    {
+      "id": "vittoria-isonzo",
+      "number": 18,
+      "title": "Condizioni di vittoria — Isonzo",
+      "file": "sections/19-condizioni-vittoria-isonzo.html"
+    },
+    {
+      "id": "messines",
+      "number": 19,
+      "title": "Scenario: Messines 1917",
+      "file": "sections/20-scenario-messines.html"
+    },
+    {
+      "id": "vittoria-messines",
+      "number": 20,
+      "title": "Condizioni di vittoria — Messines",
+      "file": "sections/21-condizioni-vittoria-messines.html"
+    },
+    {
+      "id": "piave",
+      "number": 21,
+      "title": "Scenario: Piave 1918",
+      "file": "sections/22-scenario-piave.html"
+    },
+    {
+      "id": "vittoria-piave",
+      "number": 22,
+      "title": "Condizioni di vittoria — Piave",
+      "file": "sections/23-condizioni-vittoria-piave.html"
+    },
+    {
+      "id": "cambrai",
+      "number": 23,
+      "title": "Scenario: Cambrai 1917",
+      "file": "sections/24-scenario-cambrai.html"
+    },
+    {
+      "id": "vittoria-cambrai",
+      "number": 24,
+      "title": "Condizioni di vittoria — Cambrai",
+      "file": "sections/25-condizioni-vittoria-cambrai.html"
+    },
+    {
+      "id": "passchendaele",
+      "number": 25,
+      "title": "Scenario: Passchendaele 1917",
+      "file": "sections/26-scenario-passchendaele.html"
+    },
+    {
+      "id": "vittoria-passchendaele",
+      "number": 26,
+      "title": "Condizioni di vittoria — Passchendaele",
+      "file": "sections/27-condizioni-vittoria-passchendaele.html"
+    },
+    {
+      "id": "chemin-des-dames",
+      "number": 27,
+      "title": "Scenario: Chemin des Dames 1917",
+      "file": "sections/28-scenario-chemin-des-dames.html"
+    },
+    {
+      "id": "vittoria-chemin-des-dames",
+      "number": 28,
+      "title": "Condizioni di vittoria — Chemin des Dames",
+      "file": "sections/29-condizioni-vittoria-chemin-des-dames.html"
+    },
+    {
+      "id": "schede",
+      "number": 29,
+      "title": "Schede stampabili",
+      "file": "sections/30-schede.html"
+    },
+    {
+      "id": "esempi",
+      "number": 30,
+      "title": "Esempi completi",
+      "file": "sections/31-esempi.html"
+    }
+  ]
+}
