@@ -1,4 +1,4 @@
-# Fronte Occidentale
+# Fronte Occidentale - West Front
 
 A bilingual digital rulebook and scenario-map toolkit for an operational wargame set during the First World War. The project combines the complete game rules, historical scenarios, victory conditions, printable player aids, worked examples, and browser-based editing tools.
 
