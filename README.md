@@ -142,8 +142,12 @@ Available sector symbols include height, fort, city, karst, river, trench, woods
 | 1988 black-and-white orthophoto | Italian PCN/Geoportal WMS, HTTP and HTTPS variants |
 | État-Major historical map | IGN/Geoportail France |
 | Satellite imagery | Esri World Imagery |
+| Verdun, Messines, Cambrai, Passchendaele and Chemin des Dames | Local AI-generated illustrative Western Front bases |
+| Isonzo and Piave | Local AI-generated illustrative Italian Front bases |
 
 The built-in WMS diagnostic reports the selected PCN endpoint, map file, layer name, HTTP response, and whether the requested layer appears in `GetCapabilities`.
+
+The local scenario bases are original AI-generated illustrations made for this project. They are historically plausible visual backgrounds, not scans of archival maps and not georeferenced historical sources. Their fixed Leaflet bounds are intended for scenario design and visual composition.
 
 ### `editoretto.php`: main editor
 
@@ -167,25 +171,25 @@ It can read scenarios created by the main editor because both variants use the s
 The editors create a `saved_maps` SQLite table with the following data:
 
 - scenario title;
-- Base64 PNG preview;
+- optional Base64 PNG preview field, retained for database compatibility;
 - JSON editing state;
 - creation timestamp.
 
 The JSON state preserves the sectors, manual links, map centre, zoom, map provider, opacity, hex radius, and label settings. `editoretto.php` also saves the active language and floating-window layout.
 
-The saved-scenario panel lists the 100 most recent entries and allows each scenario to be reopened or permanently deleted.
+The saved-scenario panel lists the 100 most recent entries and allows each scenario to be reopened or permanently deleted. Saving the editable JSON state is deliberately independent of PNG export, so a CORS failure from a remote tile provider no longer prevents the scenario from being saved.
 
-### Database filename note
+### Local database
 
-Both PHP editors currently point to:
+Both PHP editors use the database supplied with the project:
 
 ```php
-$db_file = __DIR__ . '/ww1_wargame_maps.sqlite';
+$db_file = __DIR__ . '/mappe_wargame.sqlite';
 ```
 
-The supplied project archive instead contains `mappe_wargame.sqlite`. If the project directory is writable, the editors will create a new `ww1_wargame_maps.sqlite` automatically. To use the supplied database, either rename it to `ww1_wargame_maps.sqlite` or change `$db_file` in both PHP files so that the names match.
+The editor displays a storage-status indicator at startup. PHP must have the `PDO` and `pdo_sqlite` extensions enabled, and both the project directory and `mappe_wargame.sqlite` must be writable by the PHP process because SQLite creates journal files next to the database. Server errors are returned as JSON and shown in the interface instead of being reduced to a generic “Save failed” message.
 
-Because each save includes a Base64 PNG preview, the database can grow quickly. Keep periodic backups and remove obsolete scenario versions when they are no longer needed.
+After deployment, open `check-map-editor.php` once to test PHP, SQLite permissions, a transactional save/load cycle, and all seven local basemap files. Remove that diagnostic page after testing a public server.
 
 ### Exporting and printing scenario maps
 
@@ -253,7 +257,9 @@ The public reader is static and can be hosted with GitHub Pages. In the reposito
 ├── assets/
 │   ├── css/manual.css           # Screen and print styles
 │   ├── js/                      # Rulebook reader and editor modules
-│   └── img/manual/              # Italian/English scenario maps and uploaded images
+│   └── img/
+│       ├── basemaps/            # Local illustrative editor backgrounds
+│       └── manual/              # Italian/English scenario maps and uploaded images
 ├── admin.php                    # Rulebook editor login and interface
 ├── api-editor.php               # Rulebook read/write API
 ├── editor-config.php            # Sessions, paths, and authentication
@@ -295,7 +301,7 @@ Production deployments should review each external provider's availability, attr
 
 - both manifests identify the rulebook as version **v1.0**;
 - `index.html` still contains a `v0.9.5` document title, while its footer reports `v1.0`;
-- the scenario editors expect `ww1_wargame_maps.sqlite`, while the supplied file is named `mappe_wargame.sqlite`;
+- the scenario editors share the supplied `mappe_wargame.sqlite` database and report its availability in the interface;
 - scenario printing is performed through PNG export rather than a dedicated print view;
 - the project is designed for continuing playtest and editorial revision.
 

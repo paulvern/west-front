@@ -1,20 +1,59 @@
 <?php
-$db_file = __DIR__ . '/ww1_wargame_maps.sqlite';
+$db_file = __DIR__ . '/mappe_wargame.sqlite';
+$pdo = null;
+$storage_error = null;
+
+function storage_json(array $payload, int $http_status = 200): void {
+    http_response_code($http_status);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    exit;
+}
 
 try {
+    if (!class_exists('PDO') || !in_array('sqlite', PDO::getAvailableDrivers(), true)) {
+        throw new RuntimeException('The PHP PDO SQLite extension is not installed or enabled.');
+    }
+    if (!is_writable(__DIR__)) {
+        throw new RuntimeException('The project directory is not writable by PHP; SQLite cannot create its journal files.');
+    }
+    if (file_exists($db_file) && !is_writable($db_file)) {
+        throw new RuntimeException('mappe_wargame.sqlite is not writable by PHP.');
+    }
+
     $pdo = new PDO('sqlite:' . $db_file);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo->exec('PRAGMA busy_timeout = 5000');
     $pdo->exec("
         CREATE TABLE IF NOT EXISTS saved_maps (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT,
-            image_base64 TEXT,
-            map_state TEXT,
+            title TEXT NOT NULL,
+            image_base64 TEXT NOT NULL DEFAULT '',
+            map_state TEXT NOT NULL,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )
     ");
-} catch (Exception $e) {
-    die("Database error: " . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8'));
+} catch (Throwable $e) {
+    $storage_error = $e->getMessage();
+}
+
+$requested_action = $_POST['action'] ?? $_GET['action'] ?? '';
+
+if ($requested_action === 'storage_status') {
+    storage_json([
+        'status' => $storage_error === null ? 'success' : 'error',
+        'available' => $storage_error === null,
+        'database' => basename($db_file),
+        'message' => $storage_error ?? 'SQLite storage is ready.'
+    ], $storage_error === null ? 200 : 503);
+}
+
+if ($requested_action !== '' && $storage_error !== null) {
+    storage_json([
+        'status' => 'error',
+        'message' => 'Local storage unavailable: ' . $storage_error
+    ], 503);
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'save') {
@@ -26,6 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'save'
 
     if ($title === '') {
         $title = 'Unknown Scenario';
+    }
+
+    json_decode($state, true);
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        storage_json(['status' => 'error', 'message' => 'Invalid scenario state JSON.'], 422);
+    }
+
+    if (strlen($state) > 5 * 1024 * 1024) {
+        storage_json(['status' => 'error', 'message' => 'Scenario state is too large.'], 413);
     }
 
     try {
@@ -40,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'save'
             'message' => 'Saved to local database!',
             'id' => $pdo->lastInsertId()
         ]);
-    } catch (Exception $e) {
+    } catch (Throwable $e) {
         echo json_encode([
             'status' => 'error',
             'message' => 'Save error: ' . $e->getMessage()
@@ -65,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && ($_GET['action'] ?? '') === 'list') 
             'status' => 'success',
             'maps' => $stmt->fetchAll(PDO::FETCH_ASSOC)
         ]);
-    } catch (Exception $e) {
+    } catch (Throwable $e) {
         echo json_encode([
             'status' => 'error',
             'message' => $e->getMessage()
@@ -101,7 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && ($_GET['action'] ?? '') === 'load') 
             'status' => 'success',
             'map' => $map
         ]);
-    } catch (Exception $e) {
+    } catch (Throwable $e) {
         echo json_encode([
             'status' => 'error',
             'message' => $e->getMessage()
@@ -124,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'delet
             'status' => 'success',
             'message' => 'Scenario deleted.'
         ]);
-    } catch (Exception $e) {
+    } catch (Throwable $e) {
         echo json_encode([
             'status' => 'error',
             'message' => $e->getMessage()
@@ -749,7 +797,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'delet
         <div class="form-group">
           <label data-i18n="mapType">Map Type</label>
           <select id="mapProvider" onchange="changeMapProvider()">
-            <option value="topo_historic" data-i18n="mapTopo">Vintage Map — OpenTopo</option>
+            <optgroup label="Illustrative local bases — Western Front" data-i18n-label="localWestGroup">
+              <option value="local_verdun" data-i18n="mapLocalVerdun">Illustrative base — Verdun 1916</option>
+              <option value="local_messines" data-i18n="mapLocalMessines">Illustrative base — Messines 1917</option>
+              <option value="local_cambrai" data-i18n="mapLocalCambrai">Illustrative base — Cambrai 1917</option>
+              <option value="local_passchendaele" data-i18n="mapLocalPasschendaele">Illustrative base — Passchendaele 1917</option>
+              <option value="local_chemin" data-i18n="mapLocalChemin">Illustrative base — Chemin des Dames 1917</option>
+            </optgroup>
+            <optgroup label="Illustrative local bases — Italian Front" data-i18n-label="localItalyGroup">
+              <option value="local_isonzo" data-i18n="mapLocalIsonzo">Illustrative base — Isonzo 1916</option>
+              <option value="local_piave" data-i18n="mapLocalPiave">Illustrative base — Piave 1918</option>
+            </optgroup>
+            <option value="topo_historic" data-i18n="mapTopo" selected>Vintage Map — OpenTopo</option>
             <option value="osm" data-i18n="mapOsm">OpenStreetMap Standard</option>
             <option value="igm_25k_http" data-i18n="mapIgmHttp">IGM 1:25,000 — Italy, PCN HTTP</option>
             <option value="igm_25k_https" data-i18n="mapIgmHttps">IGM 1:25,000 — Italy, PCN HTTPS</option>
@@ -771,6 +830,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'delet
         </div>
 
         <button class="secondary-btn" onclick="testCurrentMapProvider()" data-i18n="testMap">🧪 Test Map/WMS</button>
+
+        <div id="storageStatus" class="small-note">Checking local SQLite storage…</div>
 
         <div class="small-note">
           <strong data-i18n="wmsNoteTitle">WMS note:</strong>
@@ -863,6 +924,15 @@ const I18N = {
     panelSaved: 'Saved Scenarios',
     panelLegend: 'WWI Flag Legend',
     mapType: 'Map Type',
+    localWestGroup: 'Illustrative local bases — Western Front',
+    localItalyGroup: 'Illustrative local bases — Italian Front',
+    mapLocalVerdun: 'Illustrative base — Verdun 1916',
+    mapLocalMessines: 'Illustrative base — Messines 1917',
+    mapLocalCambrai: 'Illustrative base — Cambrai 1917',
+    mapLocalPasschendaele: 'Illustrative base — Passchendaele 1917',
+    mapLocalChemin: 'Illustrative base — Chemin des Dames 1917',
+    mapLocalIsonzo: 'Illustrative base — Isonzo 1916',
+    mapLocalPiave: 'Illustrative base — Piave 1918',
     mapTopo: 'Vintage Map — OpenTopo',
     mapOsm: 'OpenStreetMap Standard',
     mapIgmHttp: 'IGM 1:25,000 — Italy, PCN HTTP',
@@ -937,6 +1007,15 @@ const I18N = {
     panelSaved: 'Scenari Salvati',
     panelLegend: 'Legenda Bandiere WWI',
     mapType: 'Tipo mappa',
+    localWestGroup: 'Basi illustrative locali — Fronte occidentale',
+    localItalyGroup: 'Basi illustrative locali — Fronte italiano',
+    mapLocalVerdun: 'Base illustrativa — Verdun 1916',
+    mapLocalMessines: 'Base illustrativa — Messines 1917',
+    mapLocalCambrai: 'Base illustrativa — Cambrai 1917',
+    mapLocalPasschendaele: 'Base illustrativa — Passchendaele 1917',
+    mapLocalChemin: 'Base illustrativa — Chemin des Dames 1917',
+    mapLocalIsonzo: 'Base illustrativa — Isonzo 1916',
+    mapLocalPiave: 'Base illustrativa — Piave 1918',
     mapTopo: 'Carta Vintage — OpenTopo',
     mapOsm: 'OpenStreetMap Standard',
     mapIgmHttp: 'IGM 1:25.000 — Italia, PCN HTTP',
@@ -1013,6 +1092,10 @@ function setLanguage(lang) {
 
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     el.placeholder = tr(el.dataset.i18nPlaceholder);
+  });
+
+  document.querySelectorAll('[data-i18n-label]').forEach(el => {
+    el.label = tr(el.dataset.i18nLabel);
   });
 
   renderLegend();
@@ -1260,7 +1343,62 @@ const ICON_LABELS = {
   }
 };
 
+const LOCAL_BASEMAPS = {
+  local_verdun: {
+    url: 'assets/img/basemaps/base-illustrativa-verdun-1916.png',
+    bounds: [[49.05, 5.05], [49.35, 5.75]],
+    label: 'Verdun 1916'
+  },
+  local_messines: {
+    url: 'assets/img/basemaps/base-illustrativa-messines-1917.png',
+    bounds: [[50.68, 2.70], [50.88, 3.17]],
+    label: 'Messines 1917'
+  },
+  local_cambrai: {
+    url: 'assets/img/basemaps/base-illustrativa-cambrai-1917.png',
+    bounds: [[50.05, 2.90], [50.27, 3.42]],
+    label: 'Cambrai 1917'
+  },
+  local_passchendaele: {
+    url: 'assets/img/basemaps/base-illustrativa-passchendaele-1917.png',
+    bounds: [[50.82, 2.78], [51.02, 3.26]],
+    label: 'Passchendaele 1917'
+  },
+  local_chemin: {
+    url: 'assets/img/basemaps/base-illustrativa-chemin-des-dames-1917.png',
+    bounds: [[49.30, 3.30], [49.54, 3.87]],
+    label: 'Chemin des Dames 1917'
+  },
+  local_isonzo: {
+    url: 'assets/img/basemaps/base-illustrativa-isonzo-1916.png',
+    bounds: [[45.78, 13.30], [46.08, 14.00]],
+    label: 'Isonzo 1916'
+  },
+  local_piave: {
+    url: 'assets/img/basemaps/base-illustrativa-piave-1918.png',
+    bounds: [[45.35, 11.95], [45.80, 13.00]],
+    label: 'Piave 1918'
+  }
+};
+
+function createLocalBasemap(providerKey) {
+  const config = LOCAL_BASEMAPS[providerKey];
+  return L.imageOverlay(config.url, config.bounds, {
+    opacity: 0.8,
+    interactive: false,
+    crossOrigin: false,
+    attribution: `Illustrative AI-generated base — ${config.label}`
+  });
+}
+
 const MAP_PROVIDERS = {
+  local_verdun: () => createLocalBasemap('local_verdun'),
+  local_messines: () => createLocalBasemap('local_messines'),
+  local_cambrai: () => createLocalBasemap('local_cambrai'),
+  local_passchendaele: () => createLocalBasemap('local_passchendaele'),
+  local_chemin: () => createLocalBasemap('local_chemin'),
+  local_isonzo: () => createLocalBasemap('local_isonzo'),
+  local_piave: () => createLocalBasemap('local_piave'),
   topo_historic: () => L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 17,
     opacity: 0.8,
@@ -1369,6 +1507,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setLanguage(currentLang);
   refreshSavedMaps();
+  checkStorageStatus();
   makeFloatingWindowsDraggable();
   restoreFloatingWindowLayout();
 
@@ -1387,6 +1526,48 @@ function escapeHtml(value) {
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#039;');
+}
+
+function editorEndpoint(params = {}) {
+  const url = new URL(window.location.href);
+  url.search = '';
+  url.hash = '';
+  Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value));
+  return url.toString();
+}
+
+async function requestEditorJson(url, options = {}) {
+  const response = await fetch(url, options);
+  const raw = await response.text();
+  let result;
+
+  try {
+    result = JSON.parse(raw);
+  } catch {
+    throw new Error(`The server returned a non-JSON response (HTTP ${response.status}). Check PHP and PDO SQLite.`);
+  }
+
+  if (!response.ok || result.status === 'error') {
+    throw new Error(result.message || `HTTP ${response.status}`);
+  }
+
+  return result;
+}
+
+async function checkStorageStatus() {
+  const status = document.getElementById('storageStatus');
+  if (!status) return;
+
+  try {
+    const result = await requestEditorJson(editorEndpoint({ action: 'storage_status' }));
+    status.style.color = '#285d36';
+    status.textContent = currentLang === 'it'
+      ? `✅ Archivio locale pronto: ${result.database}`
+      : `✅ Local storage ready: ${result.database}`;
+  } catch (error) {
+    status.style.color = '#8b1f1f';
+    status.textContent = `❌ ${error.message}`;
+  }
 }
 
 function slugifyFileName(name) {
@@ -1427,6 +1608,9 @@ function getSelectedProviderKey() {
 function attachTileDiagnostics(layer, providerKey) {
   layer.on('tileerror', e => {
     console.warn('Tile/WMS loading error:', providerKey, e);
+  });
+  layer.on('error', e => {
+    console.warn('Local image loading error:', providerKey, e);
   });
 }
 
@@ -1704,6 +1888,10 @@ window.changeMapProvider = function() {
   currentTileLayer.addTo(map);
 
   updateOpacity(document.getElementById('mapOpacity').value);
+
+  if (LOCAL_BASEMAPS[val]) {
+    map.fitBounds(LOCAL_BASEMAPS[val].bounds, { padding: [12, 12] });
+  }
 };
 
 window.updateOpacity = function(val) {
@@ -1717,6 +1905,24 @@ window.updateOpacity = function(val) {
 window.testCurrentMapProvider = async function() {
   const provider = getSelectedProviderKey();
   let message = `${tr('activeProvider')}: ${provider}\n\n`;
+
+  if (LOCAL_BASEMAPS[provider]) {
+    const config = LOCAL_BASEMAPS[provider];
+    try {
+      const response = await fetch(config.url, { cache: 'no-store' });
+      message += response.ok
+        ? `✅ ${config.label}: local image available.\n\n`
+        : `❌ ${config.label}: HTTP ${response.status}.\n\n`;
+    } catch (error) {
+      message += `❌ ${config.label}: local image unavailable.\n\n`;
+      console.error(error);
+    }
+    message += currentLang === 'it'
+      ? 'Base illustrativa generata con IA: non è una carta storica georeferenziata.'
+      : 'Illustrative AI-generated base: this is not a georeferenced historical map.';
+    alert(message);
+    return;
+  }
 
   if (
     provider === 'igm_25k_http' ||
@@ -1828,8 +2034,8 @@ window.saveToDatabase = async function() {
   if (!title) return;
 
   try {
-    const canvas = await captureMapAsCanvas();
-    const imgBase64 = canvas.toDataURL('image/png');
+    // Persist editable JSON even when remote tiles prevent PNG capture via CORS.
+    const imgBase64 = '';
 
     saveFloatingWindowLayout();
 
@@ -1864,12 +2070,10 @@ window.saveToDatabase = async function() {
     formData.append('image', imgBase64);
     formData.append('state', stateJSON);
 
-    const response = await fetch(window.location.href, {
+    const result = await requestEditorJson(editorEndpoint(), {
       method: 'POST',
       body: formData
     });
-
-    const result = await response.json();
 
     if (result.status === 'success') {
       alert('✅ ' + result.message);
@@ -1879,7 +2083,7 @@ window.saveToDatabase = async function() {
       alert('❌ ' + tr('error') + ': ' + result.message);
     }
   } catch (error) {
-    alert(tr('saveFailed'));
+    alert(tr('saveFailed') + '\n' + error.message);
     console.error(error);
   }
 };
@@ -1892,8 +2096,7 @@ window.refreshSavedMaps = async function(showLoading = true) {
   }
 
   try {
-    const response = await fetch(window.location.href + '?action=list');
-    const result = await response.json();
+    const result = await requestEditorJson(editorEndpoint({ action: 'list' }));
 
     if (result.status !== 'success') {
       container.innerHTML = `<em style="font-size:10px;">${escapeHtml(tr('error'))}: ${escapeHtml(result.message)}</em>`;
@@ -1923,7 +2126,7 @@ window.refreshSavedMaps = async function(showLoading = true) {
       container.appendChild(row);
     });
   } catch (error) {
-    container.innerHTML = `<em style="font-size:10px;">${escapeHtml(tr('errorLoading'))}</em>`;
+    container.innerHTML = `<em style="font-size:10px;">${escapeHtml(tr('errorLoading'))} ${escapeHtml(error.message)}</em>`;
     console.error(error);
   }
 };
@@ -1932,8 +2135,7 @@ window.loadSavedMap = async function(id) {
   if (!confirm(tr('loadConfirm'))) return;
 
   try {
-    const response = await fetch(window.location.href + '?action=load&id=' + encodeURIComponent(id));
-    const result = await response.json();
+    const result = await requestEditorJson(editorEndpoint({ action: 'load', id }));
 
     if (result.status !== 'success') {
       alert(tr('error') + ': ' + result.message);
@@ -2007,7 +2209,7 @@ window.loadSavedMap = async function(id) {
 
     alert(tr('scenarioLoaded') + result.map.title);
   } catch (error) {
-    alert(tr('loadFailed'));
+    alert(tr('loadFailed') + '\n' + error.message);
     console.error(error);
   }
 };
@@ -2020,12 +2222,10 @@ window.deleteSavedMap = async function(id) {
     formData.append('action', 'delete_saved');
     formData.append('id', id);
 
-    const response = await fetch(window.location.href, {
+    const result = await requestEditorJson(editorEndpoint(), {
       method: 'POST',
       body: formData
     });
-
-    const result = await response.json();
 
     if (result.status === 'success') {
       refreshSavedMaps();
@@ -2033,7 +2233,7 @@ window.deleteSavedMap = async function(id) {
       alert(tr('error') + ': ' + result.message);
     }
   } catch (error) {
-    alert(tr('deleteFailed'));
+    alert(tr('deleteFailed') + '\n' + error.message);
     console.error(error);
   }
 };
