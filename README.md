@@ -1,10 +1,10 @@
-# Fronte Occidentale - West Front
+# Fronte Occidentale
 
 A bilingual digital rulebook and scenario-map toolkit for an operational wargame set during the First World War. The project combines the complete game rules, historical scenarios, victory conditions, printable player aids, worked examples, and browser-based editing tools.
 
 **Live rulebook:** the current version of the rules is deployed at [paulvern.free.nf/Verdun](https://paulvern.free.nf/Verdun).
 
-![Operational map for the Verdun scenario](assets/img/manual/mappa-verdun-1916.svg)
+![Operational map for the Verdun scenario](assets/img/manual/mappa-verdun-1916-realistica-en.png)
 
 ## Features
 
@@ -17,7 +17,8 @@ A bilingual digital rulebook and scenario-map toolkit for an operational wargame
 - automatic HTML backups before existing sections are changed;
 - visual tools for chapters, tables, images, rule boxes, examples, and page breaks;
 - two Leaflet-based editors for building operational scenario maps;
-- SVG scenario maps and local SQLite scenario storage.
+- realistic bilingual topographic maps embedded in all seven scenario chapters;
+- SVG map prototypes and local SQLite scenario storage.
 
 ## Included scenarios
 
@@ -252,7 +253,7 @@ The public reader is static and can be hosted with GitHub Pages. In the reposito
 ├── assets/
 │   ├── css/manual.css           # Screen and print styles
 │   ├── js/                      # Rulebook reader and editor modules
-│   └── img/manual/              # Uploaded images and SVG maps
+│   └── img/manual/              # Italian/English scenario maps and uploaded images
 ├── admin.php                    # Rulebook editor login and interface
 ├── api-editor.php               # Rulebook read/write API
 ├── editor-config.php            # Sessions, paths, and authentication

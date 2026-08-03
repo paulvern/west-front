@@ -38,7 +38,7 @@ define('UPLOAD_URL_PREFIX', 'assets/img/manual');
  *
  * Poi incolla qui il risultato.
  */
-define('EDITOR_PASSWORD_HASH', 'YOUR PASSWORD');
+define('EDITOR_PASSWORD_HASH', '$2y$10$HpjWHZfByNFE2svNrWg4.OAiY6JPjWEdKNiubVUPxBtFX/BDeItlm');
 
 /**
  * Verifica se l'utente è autenticato.
