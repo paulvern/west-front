@@ -300,4 +300,4 @@ Before creating a release, align the displayed version strings, verify both lang
 
 ## License
 
-The project does not currently include a `LICENSE` file. Before public distribution or accepting contributions, add a licence that separately clarifies the permitted use of the source code, written content, maps, and images.
+EVERYTHING IS CC0
